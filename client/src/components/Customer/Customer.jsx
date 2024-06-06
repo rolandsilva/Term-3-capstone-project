@@ -15,6 +15,7 @@ function Customer({ customer }) {
   } = customer;
 
   return (
+
     <div className="customerContainer" key={id}>
       <h2> Customer Information</h2>
       <p>Customer Name

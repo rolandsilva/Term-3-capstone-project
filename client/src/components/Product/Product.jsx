@@ -1,18 +1,27 @@
 function Product({ product }) {
-    const { id, name, category, price, features, specifications, availability, image_url } = product;
-  
-    return (
-      <div className="productContainer" key={id}>
-              <h2> Product Information</h2>
-        <p>Product Name: {name}</p>
-        <p>Category: {category}</p>
-        <p>Price: {price}</p>
-        <p>Features: {features}</p>
-        <p>Specifications: {specifications}</p>
-        <p>Availability: {availability}</p>
-        <img src={image_url} alt={name} />
-      </div>
-    );
-  }
+  const {
+    id,
+    name,
+    category,
+    price,
+    features,
+    specifications,
+    availability,
+    image_url,
+  } = product;
 
-export default Product
+  return product.map((productItem) => (
+    <div className="productContainer" key={id}>
+      <h2> Product Information</h2>
+      <p>Product Name: {productItem.name}</p>
+      <p>Category: {productItem.category}</p>
+      <p>Price: {productItem.price}</p>
+      <p>Features: {productItem.features}</p>
+      <p>Specifications: {productItem.specifications}</p>
+      <p>Availability: {productItem.availability}</p>
+      <img src={productItem.image_url} alt={productItem.name} />
+    </div>
+  ));
+}
+
+export default Product;

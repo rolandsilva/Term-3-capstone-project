@@ -9,7 +9,7 @@ import Customer from "./components/Customer/Customer";
 import StockAlerts from "./components/StockAlerts/StockAlerts";
 import Reviews from "./components/Reviews/Reviews";
 import Faqs from "./components/Faqs/Faqs";
-import * as exampleData from "./exampleData"
+import * as exampleData from "./exampleData";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -17,23 +17,22 @@ function App() {
   return (
     <>
       <Header />
-      <div>
-      <Product product={exampleData.exampleProductData} /> 
+      <div className="appContainer">
 
-      <Order order={exampleData.exampleOrderData} /> 
+          <Product product={exampleData.exampleProductData} />
 
-      <Customer customer={exampleData.exampleCustomerData} /> 
+          <Order order={exampleData.exampleOrderData} />
 
-      <Reviews reviews={exampleData.exampleReviewsData} /> 
+          <Customer customer={exampleData.exampleCustomerData} />
 
-      <StockAlerts stockAlerts={exampleData.exampleStockAlertData} /> 
-      
-      <Faqs faqs={exampleData.exampleFAQsData} /> 
-      
-    </div>
+          <Reviews reviews={exampleData.exampleReviewsData} />
+
+          <StockAlerts stockAlerts={exampleData.exampleStockAlertData} />
+
+          <Faqs faqs={exampleData.exampleFAQsData} />
+        </div>
     </>
   );
 }
 
 export default App;
-
