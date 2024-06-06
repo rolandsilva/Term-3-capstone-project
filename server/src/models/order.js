@@ -16,7 +16,7 @@ const ordersSchema = new mongoose.Schema(
       required: true,
     },
     itemQuantity: {
-      type: Float,
+      type: Number,
       required: true,
     },
     specifications: {
