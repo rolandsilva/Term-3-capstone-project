@@ -1,6 +1,5 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import Product from "./components/Product/Product";
@@ -10,27 +9,25 @@ import StockAlerts from "./components/StockAlerts/StockAlerts";
 import Reviews from "./components/Reviews/Reviews";
 import Faqs from "./components/Faqs/Faqs";
 import * as exampleData from "./exampleData";
+import HomePage from "./Pages/HomePage";
+import Layout from "./components/Layout";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <Header />
-      <div className="appContainer">
-
-          <Product product={exampleData.exampleProductData} />
-
-          <Order order={exampleData.exampleOrderData} />
-
-          <Customer customer={exampleData.exampleCustomerData} />
-
-          <Reviews reviews={exampleData.exampleReviewsData} />
-
-          <StockAlerts stockAlerts={exampleData.exampleStockAlertData} />
-
-          <Faqs faqs={exampleData.exampleFAQsData} />
-        </div>
+      {/* <ErrorBoundary> */}
+        <Layout>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<HomePage />} />
+          {/* <Route exact path="/p/:pid" element={<ProductDetailPage />} />
+            <Route exact path="/cart" element={<ShoppingCartPage />} />
+            <Route exact path="/checkout" element={<CheckoutPage />} /> */}
+          {/* <Route path="*" element={<NotFoundPage />} /> */}
+        </Routes>
+      </Router>
+      </Layout>
+      {/* </ErrorBoundary> */}
     </>
   );
 }
