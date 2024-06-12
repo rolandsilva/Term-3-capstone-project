@@ -9,6 +9,7 @@ function Layout({ children }) {
       <Header />
       <ToastContainer />
       <main className="main">{children}</main>
+      {/* <Footer /> */}
     </>
   );
 }

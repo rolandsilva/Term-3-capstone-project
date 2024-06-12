@@ -41,10 +41,10 @@ const customerSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  customerPassword: {
-    type: String,
-    required: true,
-  },
+  // customerPassword: {
+  //   type: String,
+  //   required: true,
+  // },
 
   orders: [
     {
