@@ -100,3 +100,39 @@ export async function handleRegister(req, res) {
     res.status(500).json({ error: "Internal server error" });
   }
 }
+
+export async function handleLogin(req, res) {
+  const { customerEmail, password } = req.body;
+
+  if (!customerEmail || !password) {
+    return res.status(422).json({ error: "All fields are required" });
+  }
+
+  try {
+    const customer = await Customer.findOne({
+      customerEmail,
+    });
+
+    if (!customer) {
+      return res.status(404).json({ error: "customer not found." });
+    }
+
+    const isValidPassword = validatePassword(
+      password,
+      customer.passwordHash
+    );
+
+    if (!isValidPassword) {
+      return res.status(401).json({ error: "Invalid credentials." });
+    }
+
+    const token = generateToken(customer);
+
+    return res
+      .status(200)
+      .json({ token, customer: sanitizeCustomer(customer) });
+  } catch (error) {
+    console.log(error); // todo: in production(deploy), don't console.log errors
+    return res.status(500).json({ error: "Error logging in" });
+  }
+}
