@@ -1,5 +1,9 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import Product from "./components/Product/Product";
@@ -11,21 +15,23 @@ import Faqs from "./components/Faqs/Faqs";
 import * as exampleData from "./exampleData";
 import HomePage from "./Pages/HomePage";
 import Layout from "./components/Layout";
+import RegisterPage from "./Pages/Register/RegisterPage";
 
 function App() {
   return (
     <>
       {/* <ErrorBoundary> */}
-        <Layout>
-      <Router>
-        <Routes>
-          <Route exact path="/" element={<HomePage />} />
-          {/* <Route exact path="/p/:pid" element={<ProductDetailPage />} />
+      <Layout>
+        <Router>
+          <Routes>
+            <Route exact path="/" element={<HomePage />} />
+            <Route path="/register" element={<RegisterPage />} />
+            {/* <Route exact path="/p/:pid" element={<ProductDetailPage />} />
             <Route exact path="/cart" element={<ShoppingCartPage />} />
             <Route exact path="/checkout" element={<CheckoutPage />} /> */}
-          {/* <Route path="*" element={<NotFoundPage />} /> */}
-        </Routes>
-      </Router>
+            {/* <Route path="*" element={<NotFoundPage />} /> */}
+          </Routes>
+        </Router>
       </Layout>
       {/* </ErrorBoundary> */}
     </>
