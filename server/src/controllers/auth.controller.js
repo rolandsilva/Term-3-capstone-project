@@ -2,7 +2,8 @@ import { Customer } from "../models";
 import bcrypt from "bcrypt";
 import jsonwebtoken from "jsonwebtoken";
 
-// Helpers
+// Helpers.
+// Note: A lot of these could be mongoose middleware. But I want to keep it simple. - Tim Q.
 function generateToken(customer) {
   return jsonwebtoken.sign(
     {
@@ -18,11 +19,17 @@ function hashPassword(password) {
   return bcrypt.hashSync(password, 10);
 }
 
+function validatePassword(password, hash) {
+  return bcrypt.compareSync(password, hash);
+}
+
 function sanitizeCustomer(customer) {
   const copy = customer.toJSON();
   delete copy.passwordHash;
   return copy;
 }
+
+// end of helpers
 
 export async function handleRegister(req, res) {
   const {
@@ -54,7 +61,7 @@ export async function handleRegister(req, res) {
   } else if (password.length < 6) {
     return res
       .status(422)
-      .send("Password must be at least 6 characters");
+      .json({ error: "Password must be at least 6 characters" });
   }
 
   try {
@@ -63,7 +70,9 @@ export async function handleRegister(req, res) {
     });
 
     if (doesCustomerExist) {
-      return res.status(400).send("Customer already exists");
+      return res
+        .status(400)
+        .json({ error: "customer already exists" });
     }
 
     const hashedPassword = hashPassword(password);
@@ -83,12 +92,11 @@ export async function handleRegister(req, res) {
 
     await newCustomer.save();
 
-    const token = generateToken(newCustomer);
     return res
       .status(201)
-      .send({ token, customer: sanitizeCustomer(newCustomer) });
+      .json({ customer: sanitizeCustomer(newCustomer) }); // The client will route the user to the login endpoint, so I am not sending a token here.
   } catch (error) {
     console.log(error); // Todo: in production(deploy), don't console.log errors
-    res.status(500).send("Error registering customer");
+    res.status(500).json({ error: "Internal server error" });
   }
 }
