@@ -1,0 +1,11 @@
+#headercontainer span.navbar-brand {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 800px;
+    min-height: 70px;
+    }
+
+    #headerdiv1 {
+        font-size: 30px;
+    }

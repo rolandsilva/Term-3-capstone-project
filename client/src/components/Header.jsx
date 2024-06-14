@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";ß
+import { Link } from "react-router-dom";
 import {
   Navbar,
   Nav,
@@ -10,6 +10,7 @@ import {
 } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingBag } from "@fortawesome/free-solid-svg-icons/faShoppingBag";
+import "./Header.css";
 // import { useUI, useProvideCart, useCurrency } from "../hooks";
 // import CartSidebar from "./CartSidebar";
 
@@ -24,10 +25,10 @@ function Header() {
     <>
       {/* <CartSidebar /> */}
       <Navbar expand="lg" style={{ backgroundColor: "#1D3868" }}>
-        <Container>
-          <Navbar.Brand style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
-            <Nav.Link to={"/"}>
-              <h2>Roland's Computers, Devices and Accessories</h2>
+        <Container id="headercontainer">
+          <Navbar.Brand >
+            <Nav.Link  to={"/"}>
+              <div id="headerdiv1">Roland's Computers, Devices and Accessories</div>
             </Nav.Link>
             <Nav.Link
                   className="d-flex align-items-center ms-1"
