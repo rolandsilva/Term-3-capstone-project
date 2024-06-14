@@ -16,6 +16,7 @@ import * as exampleData from "./exampleData";
 import HomePage from "./Pages/HomePage";
 import Layout from "./components/Layout";
 import RegisterPage from "./Pages/Register/RegisterPage";
+import LoginPage from "./Pages/Login/LoginPage";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<HomePage />} />
             <Route path="/register" element={<RegisterPage />} />
+            <Route path="/login" element={<LoginPage />} />
             {/* <Route exact path="/p/:pid" element={<ProductDetailPage />} />
             <Route exact path="/cart" element={<ShoppingCartPage />} />
             <Route exact path="/checkout" element={<CheckoutPage />} /> */}
