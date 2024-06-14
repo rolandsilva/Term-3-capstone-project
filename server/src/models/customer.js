@@ -23,7 +23,6 @@ const customerSchema = new mongoose.Schema({
   },
   customerAddress2: {
     type: String,
-    required: true,
   },
   customerCity: {
     type: String,
