@@ -43,7 +43,7 @@ export async function handleRegister(req, res) {
     customerZipCode,
     customerPhone,
     password,
-  } = req.body;
+  } = req.body.user;
 
   // Let's check that we have the data we need from the request body.
   if (
@@ -103,7 +103,7 @@ export async function handleRegister(req, res) {
 
 export async function handleLogin(req, res) {
   const { customerEmail, password } = req.body;
-
+  console.log(req.body);
   if (!customerEmail || !password) {
     return res.status(422).json({ error: "All fields are required" });
   }
