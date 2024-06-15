@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Container } from "react-bootstrap";
+import { useProvideAuth } from "../../hooks/useAuth";
 import "./RegisterPage.css";
 
 const initialFormState = {
@@ -19,21 +20,25 @@ const initialFormState = {
 const RegisterPage = () => {
   const [formData, setFormData] = useState(initialFormState);
 
+  const auth = useProvideAuth();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    /*
-    TODO: Implement form submission
-    endpoint: POST /api/auth/register
-    */
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await auth.register(formData);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
     <Container id="register-container">
-      <form id="register-form">
+      <form id="register-form" onSubmit={handleSubmit}>
         <label htmlFor="customerFirstName">First Name</label>
         <input
           type="text"
