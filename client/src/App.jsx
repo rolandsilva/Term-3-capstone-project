@@ -10,22 +10,22 @@ import Reviews from "./components/Reviews/Reviews";
 import Faqs from "./components/Faqs/Faqs";
 import * as exampleData from "./exampleData";
 import HomePage from "./Pages/HomePage";
-import Layout from "./components/Layout";
+import Layout from "./components/Layout/Layout";
 
 function App() {
   return (
     <>
       {/* <ErrorBoundary> */}
-        <Layout>
-      <Router>
-        <Routes>
-          <Route exact path="/" element={<HomePage />} />
-          {/* <Route exact path="/p/:pid" element={<ProductDetailPage />} />
+      <Layout>
+        <Router>
+          <Routes>
+            <Route exact path="/" element={<HomePage />} />
+            {/* <Route exact path="/p/:pid" element={<ProductDetailPage />} />
             <Route exact path="/cart" element={<ShoppingCartPage />} />
             <Route exact path="/checkout" element={<CheckoutPage />} /> */}
-          {/* <Route path="*" element={<NotFoundPage />} /> */}
-        </Routes>
-      </Router>
+            {/* <Route path="*" element={<NotFoundPage />} /> */}
+          </Routes>
+        </Router>
       </Layout>
       {/* </ErrorBoundary> */}
     </>

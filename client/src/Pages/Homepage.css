@@ -1,0 +1,46 @@
+.maincontainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.imagescontainer {
+    width: 70%;
+}
+
+
+.featuredimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    max-width: 1500px;
+    width: 100%;
+    height: auto;
+}
+
+.featurescontainer {
+    width: 100%;
+
+}
+
+.productimgcontainer {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    border: 1px solid black;
+    border-top: none;
+    margin-left: 30px;
+    height: 300px;
+}
+
+#airpods {
+ max-width: 125px;
+ width: 100%;
+ height: auto;   
+}
+
+#airtags {
+    max-width: 125px;
+    width: 100%;
+    height: auto;   
+    margin-top: 15px;
+   }
