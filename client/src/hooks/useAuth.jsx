@@ -51,7 +51,7 @@ export function useProvideAuth() {
 
   const register = async (user) => {
     try {
-      await api.post("/auth/register", { user });
+      await api.post("/auth/register", user);
 
       return await login(user.customerEmail, user.password); // log user in after register.
     } catch (error) {
@@ -65,11 +65,10 @@ export function useProvideAuth() {
 
   const login = async (customerEmail, password) => {
     try {
-      const res = await api.post(
-        "/auth/login",
+      const res = await api.post("/auth/login", {
         customerEmail,
-        password
-      );
+        password,
+      });
 
       localStorage.setItem(
         "rolands-app-customer",
