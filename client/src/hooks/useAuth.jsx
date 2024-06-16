@@ -35,6 +35,7 @@ const AuthContext = createContext();
 
 export function ProvideAuth({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
+
   return (
     <AuthContext.Provider value={{ state, dispatch }}>
       {children}
@@ -91,7 +92,7 @@ export function useProvideAuth() {
   };
 
   const logout = () => {
-    // Todo clear token and local state
+    localStorage.removeItem("rolands-app-customer");
     dispatch({
       type: "LOGOUT",
     });
