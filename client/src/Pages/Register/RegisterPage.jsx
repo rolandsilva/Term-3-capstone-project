@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
 import { useProvideAuth } from "../../hooks/useAuth";
 import "./RegisterPage.css";
 
@@ -15,6 +15,8 @@ const initialFormState = {
   customerPhone: "",
   password: "",
   confirmPassword: "",
+  errorMsg: null,
+  loading: false,
 };
 
 const RegisterPage = () => {
@@ -29,10 +31,23 @@ const RegisterPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    setFormData({ ...formData, loading: true, errorMsg: null });
     try {
-      await auth.register(formData);
+      const user = { ...formData };
+      await auth.register(user);
     } catch (error) {
       console.log(error);
+      setFormData({
+        ...formData,
+        loading: false,
+        errorMsg: error ? error.message || error.statusText : null,
+      });
+    } finally {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        loading: false,
+      }));
     }
   };
 
@@ -130,7 +145,13 @@ const RegisterPage = () => {
           onChange={handleChange}
         />
 
-        <button type="submit">Register</button>
+        <Button type="submit" disabled={formData.loading}>
+          {formData.loading ? "Loading..." : "Register"}
+        </Button>
+
+        {formData.errorMsg && (
+          <span className="register-error">{formData.errorMsg}</span>
+        )}
       </form>
     </Container>
   );
