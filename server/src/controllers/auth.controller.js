@@ -43,7 +43,7 @@ export async function handleRegister(req, res) {
     customerZipCode,
     customerPhone,
     password,
-  } = req.body.user;
+  } = req.body;
 
   // Let's check that we have the data we need from the request body.
   if (
