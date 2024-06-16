@@ -27,7 +27,10 @@ const LoginPage = () => {
     setFormData({ ...formData, loading: true, errorMsg: null });
 
     try {
-      const res = await auth.login(formData);
+      const res = await auth.login(
+        formData.customerEmail,
+        formData.password
+      );
 
       setAuthToken(res.data.token);
     } catch (error) {
