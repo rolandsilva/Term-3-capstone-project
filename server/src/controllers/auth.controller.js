@@ -57,7 +57,7 @@ export async function handleRegister(req, res) {
     !customerPhone ||
     !password
   ) {
-    return res.status(422).send("All fields are required");
+    return res.status(422).json({ error: "All fields are required" });
   } else if (password.length < 6) {
     return res
       .status(422)
