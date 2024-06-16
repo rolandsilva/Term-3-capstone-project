@@ -23,7 +23,7 @@
   margin-top: 5px;
 }
 
-#login-form button {
+#login-form > Button {
   margin-top: 20px;
   padding: 10px 20px;
   background-color: #007bff;
@@ -33,6 +33,11 @@
   cursor: pointer;
 }
 
-#login-form button:hover {
+#login-form > Button:hover {
   background-color: #0056b3;
+}
+
+.login-error {
+  color: red;
+  margin-top: 100px;
 }

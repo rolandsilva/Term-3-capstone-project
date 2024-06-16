@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
 import { useProvideAuth } from "../../hooks/useAuth";
 import { setAuthToken } from "../../utils/api.utils";
 import "./LoginPage.css";
@@ -7,6 +7,8 @@ import "./LoginPage.css";
 const initialFormState = {
   customerEmail: "",
   password: "",
+  errorMsg: null,
+  loading: false,
 };
 
 const LoginPage = () => {
@@ -20,17 +22,25 @@ const LoginPage = () => {
   };
 
   const handleSubmit = async (e) => {
-    /*
-    TODO: Implement form submission
-    endpoint: POST /api/auth/register
-    */
     e.preventDefault();
+
+    setFormData({ ...formData, loading: true, errorMsg: null });
 
     try {
       const res = await auth.login(formData);
+
       setAuthToken(res.data.token);
     } catch (error) {
-      console.log(error);
+      setFormData({
+        ...formData,
+        loading: false,
+        errorMsg: error ? error.message || error.statusText : null,
+      });
+    } finally {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        loading: false,
+      }));
     }
   };
 
@@ -55,7 +65,14 @@ const LoginPage = () => {
           onChange={handleChange}
         />
 
-        <button type="submit">Login</button>
+        <Button type="submit" disabled={formData.loading}>
+          {formData.loading ? "Loading..." : "Login"}
+        </Button>
+        <span>
+          {formData.errorMsg && (
+            <span className="login-error">{formData.errorMsg}</span>
+          )}
+        </span>
       </form>
     </Container>
   );

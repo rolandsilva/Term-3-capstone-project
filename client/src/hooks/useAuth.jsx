@@ -65,10 +65,11 @@ export function useProvideAuth() {
 
   const login = async (customerEmail, password) => {
     try {
-      const res = await api.post("/auth/login", {
+      const res = await api.post(
+        "/auth/login",
         customerEmail,
-        password,
-      });
+        password
+      );
 
       localStorage.setItem(
         "rolands-app-customer",
@@ -79,8 +80,14 @@ export function useProvideAuth() {
         type: "LOGIN",
         payload: res.data.customer,
       });
+      return res; // return the response
     } catch (error) {
       console.log(error);
+      if (error.response) {
+        throw new Error(error.response.data.error);
+      } else {
+        throw error;
+      }
     }
   };
 
