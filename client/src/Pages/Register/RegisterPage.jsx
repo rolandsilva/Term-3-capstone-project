@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Container, Button } from "react-bootstrap";
 import { useProvideAuth } from "../../hooks/useAuth";
+import { useNavigate } from "react-router-dom";
 import "./RegisterPage.css";
 
 const initialFormState = {
@@ -23,6 +24,7 @@ const RegisterPage = () => {
   const [formData, setFormData] = useState(initialFormState);
 
   const auth = useProvideAuth();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,6 +38,8 @@ const RegisterPage = () => {
     try {
       const user = { ...formData };
       await auth.register(user);
+
+      navigate("/"); // TODO: Redirect to protected page.
     } catch (error) {
       console.log(error);
       setFormData({

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Container, Button } from "react-bootstrap";
 import { useProvideAuth } from "../../hooks/useAuth";
 import { setAuthToken } from "../../utils/api.utils";
+import { useNavigate } from "react-router-dom";
 import "./LoginPage.css";
 
 const initialFormState = {
@@ -15,6 +16,7 @@ const LoginPage = () => {
   const [formData, setFormData] = useState(initialFormState);
 
   const auth = useProvideAuth();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -33,6 +35,8 @@ const LoginPage = () => {
       );
 
       setAuthToken(res.data.token);
+
+      navigate("/"); // TODO: Redirect to protected page.
     } catch (error) {
       setFormData({
         ...formData,
