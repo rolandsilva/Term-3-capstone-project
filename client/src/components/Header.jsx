@@ -24,7 +24,7 @@ function Header() {
   return (
     <>
       {/* <CartSidebar /> */}
-      <Navbar className="header vertical-gradient" expand="lg" style={{ backgroundColor: "#1D3868" }}>
+      <Navbar className="header vertical-gradient" expand="lg" style={{ backgroundColor: "#688ac6" }}>
         <Container id="headercontainer">
           <Navbar.Brand  className="brandcontainer">
             <Nav.Link  to={"/"}>

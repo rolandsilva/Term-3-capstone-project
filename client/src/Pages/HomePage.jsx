@@ -20,7 +20,7 @@ const HomePage = () => {
                 backgroundColor: "lightblue",
                 border: "1px solid black",
                 padding: "4px",
-                marginLeft: "30px",
+                marginLeft: "19px",
               }}
             >
               <h2 className="searchtext">
@@ -39,22 +39,26 @@ const HomePage = () => {
             </div>
             <div className="productimgcontainer">
               <Link to="/productairpods">
-              <figure>
-                <img src="./airpods _1_png.png" id="airpods" />
-                <figcaption>AirPods</figcaption>
-              </figure>
+                <figure>
+                  <img src="./airpods _1_png.png" id="airpods" />
+                  <figcaption>AirPods</figcaption>
+                </figure>
               </Link>
               <Link to="/productaccessories">
-              <figure>
-                <img src="./airtag_single_png.png" id="airtags" />
-                <figcaption>AirTags</figcaption>
-              </figure>
+                <figure>
+                  <img src="./airtag_single_png.png" id="airtags" />
+                  <figcaption>AirTags</figcaption>
+                </figure>
               </Link>
             </div>
           </div>
         </div>
       </div>
-      test
+      <div className="newProductscontainer">
+        <h2 className="newProductbar">New Products</h2>
+        <img src="/M3MBP.png" alt="M3 MacBook Pro" className="M3MBPimage" />
+        <p className="M3MBPname">M3 MacBook Pro</p>
+      </div>
     </div>
   );
 };

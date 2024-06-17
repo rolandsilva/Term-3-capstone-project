@@ -28,9 +28,17 @@
     grid-template-columns: repeat(4, 150px);
     border: 1px solid black;
     border-top: none;
-    margin-left: 30px;
+    margin-left: 19px;
     height: 300px;
+    max-width: 1500px;
 }
+
+.searchcontainer {
+    display: flex;
+    flex-direction: column;
+}
+
+
 figure {
     padding: 0;
     margin: 0;
@@ -39,14 +47,41 @@ figure {
 }
 
 #airpods {
- max-width: 125px;
- width: 100%;
- height: auto;   
+    max-width: 125px;
+    width: 100%;
+    height: auto;
 }
 
 #airtags {
     max-width: 125px;
     width: 100%;
-    height: auto;   
+    height: auto;
     margin-top: 15px;
-   }
+}
+
+.newProductscontainer {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    outline: 1px solid black;
+    width: 225px;
+    margin: 10px;
+    max-height: 400px;
+}
+
+.newProductbar {
+    background-color: lightblue;
+    height: 40px;
+    font-size: 24px;
+    padding-top: 10px;
+
+}
+
+.M3MBPimage {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 160px;
+    max-width: 100%;
+}
