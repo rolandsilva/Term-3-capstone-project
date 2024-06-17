@@ -8,4 +8,42 @@
 
     #headerdiv1 {
         font-size: 30px;
+        color: white
+        /* background-image: url("../public/Capstone\ home\ page\ gradient\ \ 1psd.png");
+        background-size: cover; */
     }
+
+    .header {
+        background-image: url("../public/Capstone\ home\ page\ gradient\ \ 1psd.png");
+        background-size: cover;
+        height: 10vh;
+        width: 100%;
+    }
+
+    
+
+    .vertical-gradient {
+        background: linear-gradient(to bottom, rgb(4, 4, 26), rgb(4, 44, 77));
+
+    }
+
+    .brandcontainer {
+        display: flex;
+        justify-content: space-between;
+        min-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .linkcontainer {
+        padding-left: 20px;
+    }
+
+    #cart {
+        padding-right: 20PX;;
+    }
+
+    .cartcontainer {
+        padding-right: 20px;
+    }
+    

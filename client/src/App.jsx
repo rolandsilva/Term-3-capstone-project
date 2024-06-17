@@ -14,9 +14,10 @@ import Reviews from "./components/Reviews/Reviews";
 import Faqs from "./components/Faqs/Faqs";
 import * as exampleData from "./exampleData";
 import HomePage from "./Pages/HomePage";
-import Layout from "./components/Layout";
 import RegisterPage from "./Pages/Register/RegisterPage";
 import LoginPage from "./Pages/Login/LoginPage";
+import Layout from "./components/Layout/Layout";
+
 
 function App() {
   return (

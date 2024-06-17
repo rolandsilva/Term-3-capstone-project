@@ -24,14 +24,14 @@ function Header() {
   return (
     <>
       {/* <CartSidebar /> */}
-      <Navbar expand="lg" style={{ backgroundColor: "#1D3868" }}>
+      <Navbar className="header vertical-gradient" expand="lg" style={{ backgroundColor: "#1D3868" }}>
         <Container id="headercontainer">
-          <Navbar.Brand >
+          <Navbar.Brand  className="brandcontainer">
             <Nav.Link  to={"/"}>
               <div id="headerdiv1">Roland's Computers, Devices and Accessories</div>
             </Nav.Link>
             <Nav.Link
-                  className="d-flex align-items-center ms-1"
+                  className="cartcontainer"
                   // onClick={openSidebar}
                   style={{
                     color: "white",
@@ -39,7 +39,7 @@ function Header() {
                     marginRight: "20px",
                   }}
                 >
-                  <span>Cart</span>
+                  <span id="cart">Cart</span>
                   <FontAwesomeIcon
                     className="ms-2 mb-1"
                     icon={faShoppingBag}
@@ -59,7 +59,7 @@ function Header() {
           </Navbar.Brand>
           {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto" style={{display: "flex"}}>
+            <Nav className="ms-auto" style={{display: "flex", minWidth: "100%", justifyContent: "space-between"}}>
               {/* {
                 <ToggleButtonGroup 
                   name="currency"
@@ -74,7 +74,7 @@ function Header() {
                   </ToggleButton>
                 </ToggleButtonGroup>
               } */}
-              <div>
+              <div className="linkcontainer">
                 {/* <Nav.Link
                   // as={Link}
                   className="d-flex align-items-center"
@@ -160,3 +160,10 @@ function Header() {
 }
 
 export default Header;
+
+
+
+
+{/* <div class="vertical-gradient">
+<h1 class="text-center">Vertical Gradient from Blue to White</h1>
+</div> */}
