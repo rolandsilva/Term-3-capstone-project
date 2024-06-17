@@ -10,6 +10,62 @@ import { DB_URL } from "./config/db.config";
   id: 1111, productNbr: "MGX82LL", name: "2024 M4 MacBook Pro Laptop", category: "laptops", price: 4500, features: ["	Portable design", "Lightweight and under half an inch thin", "Get more done faster", "The powerful 8-core CPU and up to 10-core GPU of the Apple M2 chip keep things running smoothly", "Up to 18 hours of battery life — Amazing, all-day battery life so you can leave the power adapter at home", "A brilliant display — The 13.6-inch Liquid Retina display supports 1 billion colors", "Look sharp, sound great — Everything looks and sounds amazing with a 1080p FaceTime HD camera, three mics, and four speakers with 	Spatial Audio"], specifications: ["10 core cpu", "10 core gpu", "16-core Neural Engine", "13/15-inch Liquid Retina display with True Tone", "1080p FaceTime HD camera"," MagSafe 3 charging port", "Two Thunderbolt / USB 4 ports", "Support for up to two external","displays (with laptop lid closed)", "Magic Keyboard with Touch ID", "Force Touch trackpad", "35W Dual USB-C Port Compact PowerAdapter"], availability: 99, image_url: "/mbair.png"
 }
 
+{
+  id: 1112, productNbr: "MGX82LL/A", name: "2024 M4 MacBook Air", category: "laptops", price: 1699, features: ["", "", "Get more done faster", "", "", ""], specifications: ["10 core cpu", "10 core gpu", "16-core Neural Engine", "13/15.3-inch Liquid Retina display with True Tone", "1080p FaceTime HD camera", "MagSafe 3 charging port", "Two Thunderbolt / USB 4 ports", "Support for up to two external displays (with laptop lid closed)", "Magic Keyboard with Touch ID", "Force Touch trackpad", "35W Dual USB-C Port Compact Power Adapter"], availability: 16, image_url: "/mbair.png"
+}
+
+{
+  id: 1111, productNbr: "MNN72LL/A", name: "", category: "laptops", price: , features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 99, image_url: "/mbair.png"
+}
+
+{
+  id: 1111, productNbr: "MQD32LL/A", name: "", category: "laptops", price: , features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 99, image_url: "/mbair.png"
+}
+
+{
+  id: 1111, productNbr: "M1FJ3LL/A", name: "", category: "laptops", price: , features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 99, image_url: "/mbair.png"
+}
+
+{
+  id: 1111, productNbr: " MHXH3LL/A", name: "", category: "laptops", price: , features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 99, image_url: "/mbair.png"
+}
+
+{
+  id: 1111, productNbr: "MWP22AM/A", name: "", category: "laptops", price: , features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 99, image_url: "/mbair.png"
+}
+
+{
+  id: 1111, productNbr: "MK2E3LL/A", name: "", category: "laptops", price: , features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 99, image_url: "/mbair.png"
+}
+
+{
+  id: 1111, productNbr: "MKQX2LL/A", name: "", category: "laptops", price: , features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 99, image_url: "/mbair.png"
+}
+
+{
+  id: 1111, productNbr: "MYD82LL/A", name: "", category: "laptops", price: , features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 99, image_url: "/mbair.png"
+}
+
+{
+  id: 1111, productNbr: "MLWK3LL/A", name: "", category: "laptops", price: , features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 99, image_url: "/mbair.png"
+}
+
+{
+  id: 1111, productNbr: "MXQU2LL/A", name: "", category: "laptops", price: , features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 99, image_url: "/mbair.png"
+}
+
+{
+  id: 1111, productNbr: "MN662LL/A", name: "", category: "laptops", price: , features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 99, image_url: "/mbair.png"
+}
+
+{
+  id: 1111, productNbr: " MK193LL/A", name: "", category: "laptops", price: , features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 99, image_url: "/mbair.png"
+}
+
+{
+  id: 1111, productNbr: "MPXV2LL/A", name: "", category: "laptops", price: , features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 99, image_url: "/mbair.png"
+}
+
 async function insertProducts() {
   try {
     await mongoose.connect("mongodb+srv://rolandsilvajr:khCydihqJWxkgCYV@cluster0.zovhy6d.mongodb.net/capstone?retryWrites=true&w=majority&appName=Cluster0", {
