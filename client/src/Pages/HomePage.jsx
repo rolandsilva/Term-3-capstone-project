@@ -38,10 +38,18 @@ const HomePage = () => {
               <input />
             </div>
             <div className="productimgcontainer">
-              {/* <Link to="/productairpods"> */}
+              <Link to="/productairpods">
+              <figure>
                 <img src="./airpods _1_png.png" id="airpods" />
-              {/* </Link> */}
-              <img src="./airtag_single_png.png" id="airtags" />
+                <figcaption>AirPods</figcaption>
+              </figure>
+              </Link>
+              <Link to="/productaccessories">
+              <figure>
+                <img src="./airtag_single_png.png" id="airtags" />
+                <figcaption>AirTags</figcaption>
+              </figure>
+              </Link>
             </div>
           </div>
         </div>
