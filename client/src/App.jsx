@@ -1,5 +1,9 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import Product from "./components/Product/Product";
@@ -10,7 +14,10 @@ import Reviews from "./components/Reviews/Reviews";
 import Faqs from "./components/Faqs/Faqs";
 import * as exampleData from "./exampleData";
 import HomePage from "./Pages/HomePage";
+import RegisterPage from "./Pages/Register/RegisterPage";
+import LoginPage from "./Pages/Login/LoginPage";
 import Layout from "./components/Layout/Layout";
+
 
 function App() {
   return (
@@ -20,6 +27,8 @@ function App() {
         <Router>
           <Routes>
             <Route exact path="/" element={<HomePage />} />
+            <Route path="/register" element={<RegisterPage />} />
+            <Route path="/login" element={<LoginPage />} />
             {/* <Route exact path="/p/:pid" element={<ProductDetailPage />} />
             <Route exact path="/cart" element={<ShoppingCartPage />} />
             <Route exact path="/checkout" element={<CheckoutPage />} /> */}
