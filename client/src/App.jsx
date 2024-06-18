@@ -18,6 +18,8 @@ import RegisterPage from "./Pages/Register/RegisterPage";
 import LoginPage from "./Pages/Login/LoginPage";
 import Layout from "./components/Layout/Layout";
 import CategoryPage from "./Pages/CategoryPage/CategoryPage";
+import ProductPage from "./Pages/ProductPage";
+import NotFoundPage from "./Pages/NotFoundPage";
 
 
 function App() {
@@ -31,10 +33,11 @@ function App() {
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/categories" element={<CategoryPage />} />
+            <Route path="/product/:id" element={<ProductPage />} />
             {/* <Route exact path="/p/:pid" element={<ProductDetailPage />} />
             <Route exact path="/cart" element={<ShoppingCartPage />} />
             <Route exact path="/checkout" element={<CheckoutPage />} /> */}
-            {/* <Route path="*" element={<NotFoundPage />} /> */}
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </Router>
       </Layout>

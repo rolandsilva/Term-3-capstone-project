@@ -1,0 +1,9 @@
+.productcontainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.producttitles {
+    font-weight: bold;
+    font-size: 20px;
+}

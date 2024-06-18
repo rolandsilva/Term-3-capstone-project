@@ -1,0 +1,1 @@
+export const categoryList = ["laptops", "iphones", "desktops", ] 
