@@ -52,11 +52,11 @@ import { DB_URL } from "./config/db.config";
 }
 
 {
-  id: 1111, productNbr: "MLWK3LL/A", name: "", category: "laptops", price: , features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 99, image_url: "/mbair.png"
+  id: 1122, productNbr: "MLWK3LL/A", name: "2024 Studio Display", category: "displays", price: 1599, features: ["27-inch 5K Retina display draws you in with 14.7 million pixels and one billion colors", "12MP Ultra Wide camera with Center Stage — powered by Apple silicon — allows for more engaging video calls", "Three studio-quality mics and six-speaker sound system with Spatial Audio for more immersive calls, movies, and music", "With ports for connectivity and charging and three stand options, it fits any setup", "Pairs perfectly with any Mac, including the all-new Mac Studio", "Add new matching Magic accessories to complete your studio"], specifications: 	["27-inch 5K Retina display", "14.7 million pixels and one billion colors", "12MP Ultra Wide camera with Center Stage", "Powered by Apple silicon allows for more engaging video calls", "Three studio-quality mics and six-speaker sound system with Spatial Audio for more immersive calls, movies, and music", "With ports for connectivity and charging and three stand options, it fits any setup"] availability: 64, image_url: "/mbair.png"
 }
 
 {
-  id: 1111, productNbr: "MXQU2LL/A", name: "", category: "laptops", price: , features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 99, image_url: "/mbair.png"
+  id: 1123, productNbr: "MXQU2LL/A", name: "2024 Pro Display XDE", category: "displays", price: 4999, features: ["32-inch 6K Retina display provides astoundingly sharp and detailed imagery", "XDR Extreme Dynamic Range (XDR) for next-level brightness, contrast, and color", "1000 nits full-screen sustained brightness and 1600 nits peak brightnessFootnote", "1,000,000:1 contrast ratio and stunningly real XDR imagery"], specifications: ["32-inch 6K Retina display, provides astoundingly sharp and detailed imagery", "XDR Extreme Dynamic Range (XDR) for next-level brightness, contrast, and color", "1000 nits full-screen sustained brightness and 1600 nits peak brightness", "1,000,000:1 contrast ratio and stunningly real XDR imagery"], availability: 99, image_url: "/mbair.png"
 }
 
 {
