@@ -1,0 +1,50 @@
+.categoryheader {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.productsearch,
+.categorytype {
+    display: flex;
+    justify-content: center;
+    background-color: lightblue;
+    text-align: center;
+}
+
+.maincontainer {
+    height: 60%;
+    padding-top: 30px;
+    gap: 10px;
+}
+
+.filtercontainer {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    justify-content: space-between;
+}
+
+.productcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+
+}
+
+.filterby {
+    background-color: lightblue;
+    outline: 1px solid black;
+}
+
+.comparetrade {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    width: 20%;
+}
+
+.chat {
+    background-color: lightblue;
+    outline: 1px solid black;
+}

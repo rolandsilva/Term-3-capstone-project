@@ -17,6 +17,7 @@ import HomePage from "./Pages/HomePage";
 import RegisterPage from "./Pages/Register/RegisterPage";
 import LoginPage from "./Pages/Login/LoginPage";
 import Layout from "./components/Layout/Layout";
+import CategoryPage from "./Pages/CategoryPage/CategoryPage";
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Route exact path="/" element={<HomePage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/categories" element={<CategoryPage />} />
             {/* <Route exact path="/p/:pid" element={<ProductDetailPage />} />
             <Route exact path="/cart" element={<ShoppingCartPage />} />
             <Route exact path="/checkout" element={<CheckoutPage />} /> */}
