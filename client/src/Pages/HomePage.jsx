@@ -1,8 +1,17 @@
 import React from "react";
 import "./Homepage.css";
 import { Link } from "react-router-dom";
-
+// import api from "??"
+import { exampleProductData } from "../exampleData";
 const HomePage = () => {
+
+  //use api call fetch data mocked with mock Data 
+  console.log(exampleProductData)
+  // fetch data from backend. 
+
+  // use backend to fetch data from database. 
+
+  
   return (
     <div className="maincontainer">
       <div className="imagescontainer">
@@ -13,6 +22,11 @@ const HomePage = () => {
               className="featuredimg"
             />
           </div>
+          {exampleProductData.map(product => {
+                return (<Link to={`/products/${product.id}`}>
+                  <img src={product.image_url} id="macbooks" />
+                  <figcaption>{product.name}</figcaption>
+                </Link>)})}
           <div className="searchcontainer">
             <div
               className="searchbar"

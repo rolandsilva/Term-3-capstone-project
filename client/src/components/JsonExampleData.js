@@ -1,6 +1,6 @@
 // order json 
 
-{
+let obj = {
   "id": 2222,
   "orderNumber": 123456,
   "itemNumber": 1111,
