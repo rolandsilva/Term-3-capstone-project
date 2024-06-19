@@ -55,58 +55,58 @@ const HomePage = () => {
               </div>
             </div>
             <div className="productimgcontainer">
-              <Link to="/productairpods">
+              <Link to="/productmacbooks">
                 <figure>
                   <img src="./M3mbpmax.png" id="macbooks" />
                   <figcaption>Apple MacBooks</figcaption>
                 </figure>
               </Link>
-              <Link to="/productaccessories">
+              <Link to="/productipads">
                 <figure>
-                  <img src="./ipad10_1.png" id="ipads" />
+                  <img src="./ipadair.png" id="ipads" />
                   <figcaption>Apple iPads</figcaption>
                 </figure>
               </Link>
-              <Link to="/productaccessories">
+              <Link to="/productipods">
                 <figure>
-                  <img src="./ipad10_1.png" id="ipads" />
-                  <figcaption>Apple iPads</figcaption>
+                  <img src="./airpodsmax.png" id="ipads" />
+                  <figcaption>Apple iPod Pros</figcaption>
                 </figure>
               </Link>
-              <Link to="/productaccessories">
+              <Link to="/productiwatches">
                 <figure>
-                  <img src="./ipad10_1.png" id="ipads" />
-                  <figcaption>Apple iPads</figcaption>
+                  <img src="./iwatchultra.png" id="ipads" />
+                  <figcaption>Apple iWatches</figcaption>
                 </figure>
               </Link>
-              <Link to="/productaccessories">
+              <Link to="/productmacpro">
                 <figure>
                   <img src="./macpro.png" id="specialItem" />
                   <figcaption>Apple Mac Pro</figcaption>
                 </figure>
               </Link>
-              <Link to="/productaccessories">
+              <Link to="/productiphones">
                 <figure>
-                  <img src="./ipad10_1.png" id="ipads" />
-                  <figcaption>Apple iPads</figcaption>
+                  <img src="./iphone152.png" id="ipads" />
+                  <figcaption>Apple iPhone 15</figcaption>
+                </figure>
+              </Link>
+              <Link to="/productimacs">
+                <figure>
+                  <img src="./imac.png" id="ipads" />
+                  <figcaption>Apple iMacs</figcaption>
+                </figure>
+              </Link>
+              <Link to="/productdisplays">
+                <figure>
+                  <img src="./retinadisplay.png" id="ipads" />
+                  <figcaption>Apple Displays</figcaption>
                 </figure>
               </Link>
               <Link to="/productaccessories">
                 <figure>
                   <img src="./ipad10_1.png" id="ipads" />
-                  <figcaption>Apple iPads</figcaption>
-                </figure>
-              </Link>
-              <Link to="/productaccessories">
-                <figure>
-                  <img src="./ipad10_1.png" id="ipads" />
-                  <figcaption>Apple iPads</figcaption>
-                </figure>
-              </Link>
-              <Link to="/productaccessories">
-                <figure>
-                  <img src="./ipad10_1.png" id="ipads" />
-                  <figcaption>Apple iPads</figcaption>
+                  <figcaption>Apple Accessories</figcaption>
                 </figure>
               </Link>
             </div>
