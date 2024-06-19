@@ -1,0 +1,24 @@
+.account-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.account-info {
+  width: 50%;
+}
+
+.info-title {
+  outline: 1px solid black;
+  color: black;
+  background-color: #c1c7dc;
+  font-size: 2em;
+  width: 75%;
+  margin: 1em auto;
+  padding: 5px;
+}
+
+.account-info p {
+  font-size: 1.5em;
+  margin: 0;
+  padding: 5px;
+}
