@@ -98,6 +98,29 @@ export function useProvideAuth() {
     }
   };
 
+  const updatePassword = async (
+    currentPassword,
+    newPassword,
+    confirmPassword
+  ) => {
+    try {
+      const res = await api.put("/auth/update-password", {
+        currentPassword,
+        newPassword,
+        confirmPassword,
+      });
+
+      return res;
+    } catch (error) {
+      console.log(error);
+      if (error.response) {
+        throw new Error(error.response.data.error);
+      } else {
+        throw error;
+      }
+    }
+  };
+
   const logout = () => {
     localStorage.removeItem("rolands-app-customer");
     dispatch({
@@ -126,5 +149,6 @@ export function useProvideAuth() {
     register,
     login,
     logout,
+    updatePassword,
   };
 }

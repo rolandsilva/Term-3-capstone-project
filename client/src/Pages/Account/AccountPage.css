@@ -1,6 +1,6 @@
 .account-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
 }
 
 .account-info {
@@ -21,4 +21,37 @@
   font-size: 1.5em;
   margin: 0;
   padding: 5px;
+}
+
+/* password section */
+
+.account-password-container {
+  display: flex;
+  flex-flow: column wrap;
+  margin-left: 10em;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.account-password-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.account-password-form input {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+  padding: 5px;
+}
+
+.account-password-form label {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+  padding: 5px;
+}
+
+.account-password-container .info-title {
+  width: 40%;
 }

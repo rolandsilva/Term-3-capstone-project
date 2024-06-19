@@ -103,7 +103,7 @@ export async function handleRegister(req, res) {
 
 export async function handleLogin(req, res) {
   const { customerEmail, password } = req.body;
-  console.log(req.body);
+
   if (!customerEmail || !password) {
     return res.status(422).json({ error: "All fields are required" });
   }
@@ -134,5 +134,44 @@ export async function handleLogin(req, res) {
   } catch (error) {
     console.log(error); // todo: in production(deploy), don't console.log errors
     return res.status(500).json({ error: "Error logging in" });
+  }
+}
+
+export async function handleChangePassword(req, res) {
+  const { currentPassword, newPassword, confirmPassword } = req.body;
+
+  if (!currentPassword || !newPassword || !confirmPassword) {
+    return res.status(422).json({ error: "All fields are required" });
+  }
+
+  if (newPassword !== confirmPassword) {
+    return res
+      .status(422)
+      .json({ error: "New password must match." });
+  }
+
+  try {
+    const customer = await Customer.findById(req.customer.id);
+
+    if (!customer) {
+      return res.status(404).json({ error: "customer not found." });
+    }
+
+    const isValidPassword = validatePassword(
+      currentPassword,
+      customer.passwordHash
+    );
+
+    if (!isValidPassword) {
+      return res.status(401).json({ error: "Invalid credentials." });
+    }
+
+    customer.passwordHash = hashPassword(newPassword);
+    await customer.save();
+
+    return res.status(200).json({ message: "Password updated." });
+  } catch (error) {
+    console.log(error); // todo: in production(deploy), don't console.log errors
+    return res.status(500).json({ error: "Error updating password" });
   }
 }
