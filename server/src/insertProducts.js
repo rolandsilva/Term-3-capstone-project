@@ -109,69 +109,69 @@ import { DB_URL } from "./config/db.config";
 },
 
 {
-  id: 1135, productNbr: "MXW72LL/A", name: "Usb C 1 Meter Cable", category: "accesories", price: 69, features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 55, image_url: "/mbair.png"
+  id: 1135, productNbr: "MXW72LL/A", name: "Usb C 1 Meter Cable", category: "accessories", price: 69, features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 55, image_url: "/mbair.png"
 },
 
 {
-  id: 1136, productNbr: "MKH53LL/A", name: "Usb C 2 Meter Cable", category: "accesories", price: 129, features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 44, image_url: "/mbair.png"
+  id: 1136, productNbr: "MKH53LL/A", name: "Usb C 2 Meter Cable", category: "accessories", price: 129, features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 44, image_url: "/mbair.png"
 },
 
 {
-  id: 1137, productNbr: "MNYH2LL/A", name: "Usb C MagSafe Cable", category: "accesories", price: 39, features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 33, image_url: "/mbair.png"
+  id: 1137, productNbr: "MNYH2LL/A", name: "Usb C MagSafe Cable", category: "accessories", price: 39, features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 33, image_url: "/mbair.png"
 },
 
 {
-  id: 1138, productNbr: "MRR42LL/A", name: "Pencil Pro", category: "accesories", price: 129, features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 29, image_url: "/mbair.png"
+  id: 1138, productNbr: "MRR42LL/A", name: "Pencil Pro", category: "accessories", price: 129, features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 29, image_url: "/mbair.png"
 },
 
 {
-  id: 1139, productNbr: "MRR432LL/A", name: "Keyboard", category: "accesories", price: 125, features: ["Magic Keyboard is available with Touch ID, providing fast, easy, and secure authentication for logins and purchases. Magic Keyboard with Touch ID and Numeric Keypad delivers a remarkably comfortable and precise typing experience. It features an extended layout, with document navigation controls for quick scrolling and full-size arrow keys, which are great for gaming. The numeric keypad is also ideal for spreadsheets and finance applications. It’s wireless and features a rechargeable battery that will power your keyboard for about a month or more between charges.¹ It pairs automatically with your Mac, so you can get to work right away. And it includes a woven USB-C to Lightning Cable that lets you pair and charge by connecting to a USB-C port on your Mac"], specifications: [" General", "Multimedia keys", "Connections and Expansion", "Bluetooth", "Lightning port", "Wireless"], availability: 25, image_url: "/mbair.png"
+  id: 1139, productNbr: "MRR432LL/A", name: "Keyboard", category: "accessories", price: 125, features: ["Magic Keyboard is available with Touch ID, providing fast, easy, and secure authentication for logins and purchases. Magic Keyboard with Touch ID and Numeric Keypad delivers a remarkably comfortable and precise typing experience. It features an extended layout, with document navigation controls for quick scrolling and full-size arrow keys, which are great for gaming. The numeric keypad is also ideal for spreadsheets and finance applications. It’s wireless and features a rechargeable battery that will power your keyboard for about a month or more between charges.¹ It pairs automatically with your Mac, so you can get to work right away. And it includes a woven USB-C to Lightning Cable that lets you pair and charge by connecting to a USB-C port on your Mac"], specifications: [" General", "Multimedia keys", "Connections and Expansion", "Bluetooth", "Lightning port", "Wireless"], availability: 25, image_url: "/mbair.png"
 },
 
 {
-  id: 1140, productNbr: "MRY42LL/A", name: "Magic KeyBoard", category: "accesories", price: 299, features: ["Magic Keyboard is an amazing companion for iPad Air 11-inch. It features an incredible typing experience, a trackpad that expands how you can work with iPadOS, a USB‑C connector for pass-through charging, and front and back protection. Magic Keyboard has a floating cantilever design, allowing you to attach iPad Air magnetically and to smoothly adjust it to the perfect viewing angle for you."], specifications: ["Comfortable backlit keys and a scissor mechanism with 1 mm travel for quiet, responsive typing. Designed for Multi‑Touch gestures and the cursor in iPadOS. Smooth angle adjustability delivers the perfect viewing angle. USB-C connector for charging iPad Air, freeing up the connector on the iPad for other accessories. Folds into a case to provide front and back protection for traveling with iPad Air."], availability: 22, image_url: "/mbair.png"
+  id: 1140, productNbr: "MRY42LL/A", name: "Magic KeyBoard", category: "accessories", price: 299, features: ["Magic Keyboard is an amazing companion for iPad Air 11-inch. It features an incredible typing experience, a trackpad that expands how you can work with iPadOS, a USB‑C connector for pass-through charging, and front and back protection. Magic Keyboard has a floating cantilever design, allowing you to attach iPad Air magnetically and to smoothly adjust it to the perfect viewing angle for you."], specifications: ["Comfortable backlit keys and a scissor mechanism with 1 mm travel for quiet, responsive typing. Designed for Multi‑Touch gestures and the cursor in iPadOS. Smooth angle adjustability delivers the perfect viewing angle. USB-C connector for charging iPad Air, freeing up the connector on the iPad for other accessories. Folds into a case to provide front and back protection for traveling with iPad Air."], availability: 22, image_url: "/mbair.png"
 },
 
 {
-  id: 1141, productNbr: "MRY42LL/B", name: "Magic Mouse", category: "accesories", price: 99, features: ["Magic Mouse is wireless and rechargeable, with an optimized foot design that lets it glide smoothly across your desk.The Multi-Touch surface allows you to perform simple gestures such as swiping between web pages and scrolling through documents. The incredibly long-lasting internal battery will power your Magic Mouse for about a month or more between charges.It's ready to go right out of the box and pairs automatically with your Mac, and it includes a woven USB Type-C to Lightning cable that lets you pair and charge by connecting to a USB Type-C port on your Mac"], specifications: [" Color:Silver, Mouse Standard Type, Tracking Method, Touchpad, Connectivity: Wireless, Connectivity:Bluetooth, Rechargeable Battery Mouse, Charging Interface Lightning"], availability: 19, image_url: "/mbair.png"
+  id: 1141, productNbr: "MRY42LL/B", name: "Magic Mouse", category: "accessories", price: 99, features: ["Magic Mouse is wireless and rechargeable, with an optimized foot design that lets it glide smoothly across your desk.The Multi-Touch surface allows you to perform simple gestures such as swiping between web pages and scrolling through documents. The incredibly long-lasting internal battery will power your Magic Mouse for about a month or more between charges.It's ready to go right out of the box and pairs automatically with your Mac, and it includes a woven USB Type-C to Lightning cable that lets you pair and charge by connecting to a USB Type-C port on your Mac"], specifications: [" Color:Silver, Mouse Standard Type, Tracking Method, Touchpad, Connectivity: Wireless, Connectivity:Bluetooth, Rechargeable Battery Mouse, Charging Interface Lightning"], availability: 19, image_url: "/mbair.png"
 },
 
 {
-  id: 1142, productNbr: "MRY42LL/C", name: "Magic TrackPad", category: "accesories", price: 119, features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 9, image_url: "/mbair.png"
+  id: 1142, productNbr: "MRY42LL/C", name: "Magic TrackPad", category: "accessories", price: 119, features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 9, image_url: "/mbair.png"
 },
 
 {
-  id: 1143, productNbr: "MRY42LL/D", name: "iPad Mini Folio", category: "accesories", price: 59, features: ["The Smart Folio for iPad Mini supports a wider range of viewing angles for reading, watching movies, typing, or making FaceTime calls. It automatically wakes your iPad Mini when opened and puts it to sleep when closed. Thin and light, it protects the front and back of iPad Mini."], specifications: ["Color: Black, Blue, Red, Green.Color. Apple iPad Mini 8.3 in. Case Style Folio."], availability: 21, image_url: "/mbair.png"
+  id: 1143, productNbr: "MRY42LL/D", name: "iPad Mini Folio", category: "accessories", price: 59, features: ["The Smart Folio for iPad Mini supports a wider range of viewing angles for reading, watching movies, typing, or making FaceTime calls. It automatically wakes your iPad Mini when opened and puts it to sleep when closed. Thin and light, it protects the front and back of iPad Mini."], specifications: ["Color: Black, Blue, Red, Green.Color. Apple iPad Mini 8.3 in. Case Style Folio."], availability: 21, image_url: "/mbair.png"
 },
 
 {
-  id: 1144, productNbr: "MRY42LL/E", name: "iPad Air Folio", category: "accesories", price: 79, features: ["The Smart Folio for iPad Air supports a wider range of viewing angles for reading, watching movies, typing, or making FaceTime calls. It automatically wakes your iPad Pro when opened and puts it to sleep when closed. Thin and light, it protects the front and back of iPad Air."], specifications: ["Color: Black, Blue, Red, Green.Color. Apple iPad Air 11 in. Case Style Folio."], availability: 39, image_url: "/mbair.png"
+  id: 1144, productNbr: "MRY42LL/E", name: "iPad Air Folio", category: "accessories", price: 79, features: ["The Smart Folio for iPad Air supports a wider range of viewing angles for reading, watching movies, typing, or making FaceTime calls. It automatically wakes your iPad Pro when opened and puts it to sleep when closed. Thin and light, it protects the front and back of iPad Air."], specifications: ["Color: Black, Blue, Red, Green.Color. Apple iPad Air 11 in. Case Style Folio."], availability: 39, image_url: "/mbair.png"
 },
 
 {
-  id: 1144, productNbr: "MRY42LL/E", name: "iPad Pro Folio", category: "accesories", price: 99, features: ["The Smart Folio for iPad Pro (M4) supports a wider range of viewing angles for reading, watching movies, typing, or making FaceTime calls. It automatically wakes your iPad Pro when opened and puts it to sleep when closed. Thin and light, it protects the front and back of iPad Pro."], specifications: ["Color: Black, Blue, Red, Green.Color. Apple iPad Pro 13 in. Case Style Folio."], availability: 49, image_url: "/mbair.png"
+  id: 1144, productNbr: "MRY42LL/E", name: "iPad Pro Folio", category: "accessories", price: 99, features: ["The Smart Folio for iPad Pro (M4) supports a wider range of viewing angles for reading, watching movies, typing, or making FaceTime calls. It automatically wakes your iPad Pro when opened and puts it to sleep when closed. Thin and light, it protects the front and back of iPad Pro."], specifications: ["Color: Black, Blue, Red, Green.Color. Apple iPad Pro 13 in. Case Style Folio."], availability: 49, image_url: "/mbair.png"
 },
 
 {
-  id: 1146, productNbr: "MRY42LL/F", name: "AirTags", category: "accesories", price: 39, features: ["Attach an AirTag to your keys or backpack. If you misplace something, just use the Find My app to locate it. An AirTag can be shared with up to five people, so friends and family can keep track of items everyone uses."], specifications: ["Rated IP67 (maximum depth of 1 meter up to 30 minutes)", "Connectivity: Bluetooth for proximity finding.Apple-designed U1 chip for Ultra Wideband and Precision Finding. NFC tap for Lost Mode. Speaker: Built-in speaker. Battery: User-replaceable CR2032 coin cell battery. Sensor: Accelerometer. Accessibility: The Find My app is compatible with these iPhone accessibility features"], availability: 49, image_url: "/mbair.png"
+  id: 1146, productNbr: "MRY42LL/F", name: "AirTags", category: "accessories", price: 39, features: ["Attach an AirTag to your keys or backpack. If you misplace something, just use the Find My app to locate it. An AirTag can be shared with up to five people, so friends and family can keep track of items everyone uses."], specifications: ["Rated IP67 (maximum depth of 1 meter up to 30 minutes)", "Connectivity: Bluetooth for proximity finding.Apple-designed U1 chip for Ultra Wideband and Precision Finding. NFC tap for Lost Mode. Speaker: Built-in speaker. Battery: User-replaceable CR2032 coin cell battery. Sensor: Accelerometer. Accessibility: The Find My app is compatible with these iPhone accessibility features"], availability: 49, image_url: "/mbair.png"
 },
 
 // {
-//   id: 1140, productNbr: "MRY42LL/G", name: "Magic KeyBoard", category: "accesories", price: , features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 99, image_url: "/mbair.png"
+//   id: 1140, productNbr: "MRY42LL/G", name: "Magic KeyBoard", category: "accessories", price: , features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 99, image_url: "/mbair.png"
 // },
 
 // {
-//   id: 1140, productNbr: "MLWK3LL/H", name: "Magic KeyBoard", category: "accesories", price: , features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 99, image_url: "/mbair.png"
-// },
-
-
-// {
-//   id: 1140, productNbr: "MLWK3LL/I", name: "Magic KeyBoard", category: "accesories", price: , features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 99, image_url: "/mbair.png"
+//   id: 1140, productNbr: "MLWK3LL/H", name: "Magic KeyBoard", category: "accessories", price: , features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 99, image_url: "/mbair.png"
 // },
 
 
 // {
-//   id: 1140, productNbr: "MLWK3LL/J", name: "Magic KeyBoard", category: "accesories", price: , features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 99, image_url: "/mbair.png"
+//   id: 1140, productNbr: "MLWK3LL/I", name: "Magic KeyBoard", category: "accessories", price: , features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 99, image_url: "/mbair.png"
+// },
+
+
+// {
+//   id: 1140, productNbr: "MLWK3LL/J", name: "Magic KeyBoard", category: "accessories", price: , features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 99, image_url: "/mbair.png"
 // },
 ]
 
