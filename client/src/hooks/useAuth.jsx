@@ -7,9 +7,16 @@ import {
 
 import api from "../utils/api.utils";
 
+// check local storage for user. The useEffect is not consistent with the 'useAuth' because it returns the initial state only.
+const isCustomerLoggedIn = () => {
+  return localStorage.getItem("rolands-app-customer");
+};
+
 const initialState = {
-  isAuthenticated: false,
-  user: null,
+  isAuthenticated: !!isCustomerLoggedIn(), // !! converts to boolean
+  user: isCustomerLoggedIn()
+    ? JSON.parse(isCustomerLoggedIn())
+    : null,
 };
 
 const reducer = (state, action) => {
@@ -100,8 +107,7 @@ export function useProvideAuth() {
 
   useEffect(() => {
     const savedCustomer =
-      JSON.parse(localStorage.getItem("rolands-app-customer")) ||
-      false;
+      isCustomerLoggedIn() && JSON.parse(isCustomerLoggedIn());
 
     if (savedCustomer) {
       dispatch({
