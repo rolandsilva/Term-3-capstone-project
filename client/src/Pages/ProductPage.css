@@ -8,3 +8,15 @@
     font-size: 20px;
     margin-left: 20px;
 }
+
+.productNameContainer {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+
+}
+
+.productImageDiv {
+    align-self: flex-end;
+
+}

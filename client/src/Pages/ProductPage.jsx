@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import api from "../utils/api.utils";
-import "./ProductPage.css"
+import "./ProductPage.css";
 
 const ProductPage = () => {
   const { id } = useParams();
@@ -31,13 +31,28 @@ const ProductPage = () => {
   return (
     <div className="productcontainer">
       <h2>Product Page</h2>
-      <div><span className = "producttitles">Product Name: </span>{product.name}</div>
-      <div><span className = "producttitles">Product Category: </span>{product.category}</div>
-      <div><span className = "producttitles">Product Price: </span>{product.price}</div>
-      <div><span className = "producttitles">Product Features: </span>{product.features}</div>
-      <div><span className = "producttitles">Product Specifications: </span>{product.specifications}</div>
-      <div><span className = "producttitles">Product Availability: </span>{product.availability}</div>
-      <div><span className = "producttitles">Product Image: </span>{product.image_url}</div>
+      <div className="productNameContainer">
+        <span className="producttitles">Product Name: </span>
+        {product.name}
+        <span className="producttitles">Product Category: </span>
+        {product.category}
+        <span className="producttitles">Product Price: </span>
+        {product.price}
+      </div>
+      <div className="productImageDiv">
+        <span className="producttitles"></span>
+        <img src={product.image_url} className="imgDiv" />
+      </div>
+      <div className="featuresSpecificationsContainer">
+        <span className="producttitles">Product Features: </span>
+        {product.features}
+        <span className="producttitles">Product Specifications: </span>
+        {product.specifications}
+        <span className="producttitles">Product Availability: </span>
+        {product.availability}
+      </div>
+
+      {/* <div className = "producttitles">{product.name} </div> */}
     </div>
   );
 };

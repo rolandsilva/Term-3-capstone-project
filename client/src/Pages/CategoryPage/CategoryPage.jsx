@@ -38,7 +38,7 @@ const CategoryPage = () => {
           </div>
   
         </div>
-        <div className="productcontainer">
+        <div className="categoryproductcontainer">
           <Link to="/productairpods">
             <figure>
               <img src="./M3mbpmax.png" id="macbooks" />

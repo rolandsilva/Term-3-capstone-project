@@ -22,17 +22,17 @@ const HomePage = () => {
               className="featuredimg"
             />
           </div>
-          {exampleProductData.map(product => {
+          {/* {exampleProductData.map(product => {
                 return (<Link to={`/products/${product.id}`}>
                   <img src={product.image_url} id="macbooks" />
                   <figcaption>{product.name}</figcaption>
-                </Link>)})}
+                </Link>)})} */}
           <div className="searchcontainer">
             <div
               className="searchbar"
               style={{
                 display: "flex",
-                backgroundColor: "lightblue",
+                backgroundColor: "#c1c8dc",
                 border: "1px solid black",
                 padding: "4px",
                 marginLeft: "19px",
@@ -57,25 +57,25 @@ const HomePage = () => {
             <div className="productimgcontainer">
               <Link to="/productmacbooks">
                 <figure>
-                  <img src="./M3mbpmax.png" id="macbooks" />
+                  <img src="./M3mbpmax.png" />
                   <figcaption>Apple MacBooks</figcaption>
                 </figure>
               </Link>
               <Link to="/productipads">
                 <figure>
-                  <img src="./ipadair.png" id="ipads" />
+                  <img src="./ipadair.png" />
                   <figcaption>Apple iPads</figcaption>
                 </figure>
               </Link>
               <Link to="/productipods">
                 <figure>
-                  <img src="./airpodsmax.png" id="ipads" />
+                  <img src="./airpodsmax.png" />
                   <figcaption>Apple iPod Pros</figcaption>
                 </figure>
               </Link>
               <Link to="/productiwatches">
                 <figure>
-                  <img src="./iwatchultra.png" id="ipads" />
+                  <img src="./iwatchultra.png" />
                   <figcaption>Apple iWatches</figcaption>
                 </figure>
               </Link>
@@ -93,19 +93,19 @@ const HomePage = () => {
               </Link>
               <Link to="/productimacs">
                 <figure>
-                  <img src="./imac.png" id="ipads" />
+                  <img src="./imac.png" />
                   <figcaption>Apple iMacs</figcaption>
                 </figure>
               </Link>
               <Link to="/productdisplays">
                 <figure>
-                  <img src="./retinadisplay.png" id="ipads" />
+                  <img src="./retinadisplay.png" />
                   <figcaption>Apple Displays</figcaption>
                 </figure>
               </Link>
               <Link to="/productaccessories">
                 <figure>
-                  <img src="./ipad10_1.png" id="ipads" />
+                  <img src="./accessories_120dpi.png" />
                   <figcaption>Apple Accessories</figcaption>
                 </figure>
               </Link>
