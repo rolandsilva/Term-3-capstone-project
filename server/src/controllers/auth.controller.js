@@ -137,6 +137,8 @@ export async function handleLogin(req, res) {
   }
 }
 
+// In this handler, I decided to use the decoded token to get the customer id. That is
+// in the middleware 'requireAuth'. It decodes the token and then puts 'customer' on the 'req' aka 'request' object. That way, we can access the id and not send the id as a param. - Tim Q.
 export async function handleChangePassword(req, res) {
   const { currentPassword, newPassword, confirmPassword } = req.body;
 
