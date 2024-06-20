@@ -43,6 +43,12 @@ const AccountPage = () => {
   const handleChangePassword = async (e) => {
     e.preventDefault();
 
+    setPasswordFormData((prev) => ({
+      ...prev,
+      loading: true,
+      passwordError: null,
+    }));
+
     const { currentPassword, password, confirmPassword } =
       passwordFormData;
 
@@ -65,6 +71,11 @@ const AccountPage = () => {
       ) {
         navigate("/login");
       }
+    } finally {
+      setPasswordFormData((prev) => ({
+        ...prev,
+        loading: false,
+      }));
     }
   };
 
@@ -131,7 +142,11 @@ const AccountPage = () => {
             onChange={handleInputChange}
             required
           />
-          <button type="submit">Change Password</button>
+          <button type="submit" disabled={passwordFormData.loading}>
+            {passwordFormData.loading
+              ? "Loading..."
+              : "Change Password"}
+          </button>
         </form>
       </section>
     </>
