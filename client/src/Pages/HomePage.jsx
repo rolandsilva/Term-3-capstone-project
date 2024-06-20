@@ -4,14 +4,12 @@ import { Link } from "react-router-dom";
 // import api from "??"
 import { exampleProductData } from "../exampleData";
 const HomePage = () => {
+  //use api call fetch data mocked with mock Data
+  console.log(exampleProductData);
+  // fetch data from backend.
 
-  //use api call fetch data mocked with mock Data 
-  console.log(exampleProductData)
-  // fetch data from backend. 
+  // use backend to fetch data from database.
 
-  // use backend to fetch data from database. 
-
-  
   return (
     <div className="maincontainer">
       <div className="imagescontainer">
@@ -132,13 +130,12 @@ const HomePage = () => {
           <p className="M3MBPname">M4 iPad Pro</p>
         </div>
         <div className="contactInfo">
-        <h3>Call 800-123-4567</h3>
-        <p className="questions">
-        24/7 For any questions
-        </p>
-        <Link to=""><h2>click here to go to our FAQ Page</h2></Link>
+          <h3>Call 800-123-4567</h3>
+          <p className="questions">24/7 For any questions</p>
+          <Link to="">
+            <h2>click here to go to our FAQ Page</h2>
+          </Link>
         </div>
-
       </div>
     </div>
   );

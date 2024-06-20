@@ -50,11 +50,8 @@ const products = [
 
   // {
   //   id: 1122, productNbr: "MLWK3LL/A", name: "2024 Studio Display", category: "displays", price: 1599, features: ["27-inch 5K Retina display draws you in with 14.7 million pixels and one billion colors", "12MP Ultra Wide camera with Center Stage — powered by Apple silicon — allows for more engaging video calls", "Three studio-quality mics and six-speaker sound system with Spatial Audio for more immersive calls, movies, and music", "With ports for connectivity and charging and three stand options, it fits any setup", "Pairs perfectly with any Mac, including the all-new Mac Studio", "Add new matching Magic accessories to complete your studio"], specifications: 	["27-inch 5K Retina display", "14.7 million pixels and one billion colors", "12MP Ultra Wide camera with Center Stage", "Powered by Apple silicon allows for more engaging video calls", "Three studio-quality mics and six-speaker sound system with Spatial Audio for more immersive calls, movies, and music", "With ports for connectivity and charging and three stand options, it fits any setup"], availability: 64, image_url: "/retinadisplay.png"
-  // },
 
-  // {
   //   id: 1123, productNbr: "MXQU2LL/A", name: "2024 Pro Display XDE", category: "displays", price: 4999, features: ["32-inch 6K Retina display provides astoundingly sharp and detailed imagery", "XDR Extreme Dynamic Range (XDR) for next-level brightness, contrast, and color", "1000 nits full-screen sustained brightness and 1600 nits peak brightnessFootnote", "1,000,000:1 contrast ratio and stunningly real XDR imagery"], specifications: ["32-inch 6K Retina display, provides astoundingly sharp and detailed imagery", "XDR Extreme Dynamic Range (XDR) for next-level brightness, contrast, and color", "1000 nits full-screen sustained brightness and 1600 nits peak brightness", "1,000,000:1 contrast ratio and stunningly real XDR imagery"], availability: 99, image_url: "/studiodisplayxde.png"
-  // },
 
   {
     id: 1124,
@@ -76,7 +73,7 @@ const products = [
       "camera: 12MP Wide camera, ƒ/1.8 aperture",
     ],
     availability: 11,
-    image_url: "/mbair.png",
+    image_url: "/ipadmini2.png",
   },
 
   {
@@ -98,7 +95,7 @@ const products = [
       "connections: wifi, cellular",
     ],
     availability: 89,
-    image_url: "/mbair.png",
+    image_url: "/ipad10_2.png",
   },
 
   {
@@ -140,7 +137,7 @@ const products = [
       "connections: wifi, cellular",
     ],
     availability: 68,
-    image_url: "/mbair.png",
+    image_url: "/ipadProM4.png",
   },
 
   {
@@ -168,7 +165,7 @@ const products = [
       "connections: wifi, cellular",
     ],
     availability: 58,
-    image_url: "/mbair.png",
+    image_url: "/iWatchSeries9.png",
   },
 
   {
@@ -196,7 +193,7 @@ const products = [
       "connections: wifi, cellular",
     ],
     availability: 48,
-    image_url: "/mbair.png",
+    image_url: "/iwatchse.png",
   },
 
   {
@@ -226,7 +223,7 @@ const products = [
       "connections: wifi, cellular",
     ],
     availability: 38,
-    image_url: "/mbair.png",
+    image_url: "/iwatchultra.png",
   },
 
   {
@@ -250,7 +247,7 @@ const products = [
       "Battery: 5 hours",
     ],
     availability: 28,
-    image_url: "/mbair.png",
+    image_url: "/airpods _1.png",
   },
 
   {
@@ -274,7 +271,7 @@ const products = [
       "Battery: 5 hours",
     ],
     availability: 18,
-    image_url: "/mbair.png",
+    image_url: "/airpods _1.png",
   },
 
   {
@@ -299,7 +296,7 @@ const products = [
       "Battery: 6 hours",
     ],
     availability: 79,
-    image_url: "/mbair.png",
+    image_url: "/airpods _1.png",
   },
 
   {
@@ -315,7 +312,7 @@ const products = [
       "Color: Silver, Space Gray, Sky Blue, Pink,Green. Apple-designed dynamic driver. Active Noise Cancellation. Transparency mode. Personalized Spatial Audio with dynamic head tracking Adaptive EQ. Battery: Up to 20 hours of listening time on a single charge with Active Noise Cancellation or Transparency mode enabled. Storage in the Smart Case preserves battery charge in ultra-low-power state. Charging via Lightning connector",
     ],
     availability: 79,
-    image_url: "/mbair.png",
+    image_url: "/airpodsmax.png",
   },
 
   {
@@ -324,10 +321,14 @@ const products = [
     name: "Usb C 1 Meter Cable",
     category: "accessories",
     price: 69,
-    features: ["", "", "Get more done faster", "", "", ""],
-    specifications: ["", "", ""],
+    features: [
+      "This cable is particularly suitable for users who need a reliable and durable option for charging and data transfer across various Apple devices. Note that the USB-C power adapters are sold separately.",
+    ],
+    specifications: [
+      "Connectors: USB-C on both ends, Length: 1 meter (3 Feet). Charging Capability: Supports charging up to 60 watts. Data Transfer: Supports USB 2.0 data transfer rates.Design: Woven design for durability and tangle resistance.Compatibility: Ideal for use with a variety of Apple devices, including the latest iPhone models (like the iPhone 15 series), iPad models (including iPad Pro, iPad Air, and iPad mini), and MacBook models (including the latest MacBook Air and MacBook Pro models).Fast Charging: When paired with a compatible USB-C power adapter, it supports fast-charging capabilities.",
+    ],
     availability: 55,
-    image_url: "/mbair.png",
+    image_url: "/usbC1Mcable.png",
   },
 
   {
@@ -336,10 +337,14 @@ const products = [
     name: "Usb C 2 Meter Cable",
     category: "accessories",
     price: 129,
-    features: ["", "", "Get more done faster", "", "", ""],
-    specifications: ["", "", ""],
+    features: [
+      "This cable is particularly suitable for users who need a reliable and durable option for charging and data transfer across various Apple devices. Note that the USB-C power adapters are sold separately.",
+    ],
+    specifications: [
+      "Connectors: USB-C on both ends, Length: 2 meter (6 feet). Charging Capability: Supports charging up to 60 watts. Data Transfer: Supports USB 2.0 data transfer rates.Design: Woven design for durability and tangle resistance.Compatibility: Ideal for use with a variety of Apple devices, including the latest iPhone models (like the iPhone 15 series), iPad models (including iPad Pro, iPad Air, and iPad mini), and MacBook models (including the latest MacBook Air and MacBook Pro models).Fast Charging: When paired with a compatible USB-C power adapter, it supports fast-charging capabilities.",
+    ],
     availability: 44,
-    image_url: "/mbair.png",
+    image_url: "/usbC2Mcable.png",
   },
 
   {
@@ -348,10 +353,14 @@ const products = [
     name: "Usb C MagSafe Cable",
     category: "accessories",
     price: 39,
-    features: ["", "", "Get more done faster", "", "", ""],
-    specifications: ["", "", ""],
+    features: [
+      "Charging: When paired with a compatible USB-C power adapter, the cable supports fast charging for your devices. Suitable for syncing and transferring data between USB-C enabled devices.",
+    ],
+    specifications: [
+      "Connectors: USB-C on both ends. Length: 2 meters (approximately 6.5 feet. Charging Capability: Supports charging up to 240 watts. Data Transfer: Supports USB 2.0 data transfer rates. Design: Woven design for enhanced durability and tangle resistance. Compatibility: Ideal for use with a variety of Apple devices, including:iPhone Models: iPhone 15 Pro, iPhone 15 Pro Max, iPhone 15, iPhone 15 Plus. iPad Models: Various iPad Pro, iPad Air, and iPad mini models: Mac Models: Latest MacBook Air, MacBook Pro, Mac mini, iMac, and Mac Pro models. Other Devices: Apple Vision Pro, AirPods Pro with MagSafe Charging Case.",
+    ],
     availability: 33,
-    image_url: "/mbair.png",
+    image_url: "/usbCMagsafe.png",
   },
 
   {
@@ -360,10 +369,14 @@ const products = [
     name: "Pencil Pro",
     category: "accessories",
     price: 129,
-    features: ["", "", "Get more done faster", "", "", ""],
-    specifications: ["", "", ""],
+    features: [
+      "Precision and Responsiveness: High precision and ultra-low latency for a natural drawing and writing experience. Pressure and Tilt Sensitivity: Supports pressure and tilt sensitivity for varying line weight and shading. Wireless Charging: Magnetic attachment and wireless charging when connected to compatible iPad models. Double-Tap Feature: Customizable double-tap feature to switch between tools or activate specific functions. Seamless Pairing: Automatically pairs and charges when attached to the side of the iPad. Palm Rejection: Rest your hand on the screen while using Apple Pencil without interfering with your work.",
+    ],
+    specifications: [
+      "Length: 166 mm (6.53 inches), Diameter: 8.9 mm (0.35 inches), Weight: 20.7 grams (0.73 ounces), Connectivity: Bluetooth, Charging Method: Wireless charging via magnetic attachment, Compatibility: Works with various iPad models including iPad Pro, iPad Air, and iPad mini (specific models vary), Color: White",
+    ],
     availability: 29,
-    image_url: "/mbair.png",
+    image_url: "/pencilPro.png",
   },
 
   {
@@ -384,7 +397,7 @@ const products = [
       "Wireless",
     ],
     availability: 25,
-    image_url: "/mbair.png",
+    image_url: "/keyboard.png",
   },
 
   {
@@ -400,7 +413,7 @@ const products = [
       "Comfortable backlit keys and a scissor mechanism with 1 mm travel for quiet, responsive typing. Designed for Multi‑Touch gestures and the cursor in iPadOS. Smooth angle adjustability delivers the perfect viewing angle. USB-C connector for charging iPad Air, freeing up the connector on the iPad for other accessories. Folds into a case to provide front and back protection for traveling with iPad Air.",
     ],
     availability: 22,
-    image_url: "/mbair.png",
+    image_url: "/magicKeyboard.png",
   },
 
   {
@@ -416,7 +429,7 @@ const products = [
       " Color:Silver, Mouse Standard Type, Tracking Method, Touchpad, Connectivity: Wireless, Connectivity:Bluetooth, Rechargeable Battery Mouse, Charging Interface Lightning",
     ],
     availability: 19,
-    image_url: "/mbair.png",
+    image_url: "/magicMouse.png",
   },
 
   {
@@ -425,10 +438,14 @@ const products = [
     name: "Magic TrackPad",
     category: "accessories",
     price: 119,
-    features: ["", "", "Get more done faster", "", "", ""],
-    specifications: ["", "", ""],
+    features: [
+      "Multi-Touch Surface: Supports a full range of Multi-Touch gestures, including swipe, scroll, and pinch. Force Touch Technology: Pressure-sensitive surface allows for deeper interaction with content. Seamless Integration: Pairs automatically with Mac for a consistent and responsive experience. Rechargeable Battery: Built-in rechargeable battery with long battery life; charges via USB-C to Lightning cable. Ergonomic Design: Low profile and edge-to-edge glass surface for comfortable and precise control. Bluetooth Connectivity: Wireless connection to your Mac via Bluetooth.",
+    ],
+    specifications: [
+      "Height: 0.19–0.43 inch (0.49–1.09 cm), Width: 6.3 inches (16.0 cm), Depth: 4.52 inches (11.49 cm), Weight: 0.51 pounds (0.231 kg), Battery: Built-in rechargeable lithium-ion battery, Charging: USB-C to Lightning cable, Connectivity: Bluetooth, Lightning port, and wireless,	Mac with macOS 10.11 or later, iPad with iPadOS 13.4 or later, Color: Available in silver and space gray",
+    ],
     availability: 9,
-    image_url: "/mbair.png",
+    image_url: "/trackPad2.png",
   },
 
   {
@@ -444,7 +461,7 @@ const products = [
       "Color: Black, Blue, Red, Green.Color. Apple iPad Mini 8.3 in. Case Style Folio.",
     ],
     availability: 21,
-    image_url: "/mbair.png",
+    image_url: "/ipadMiniFolio.png",
   },
 
   {
@@ -460,7 +477,7 @@ const products = [
       "Color: Black, Blue, Red, Green.Color. Apple iPad Air 11 in. Case Style Folio.",
     ],
     availability: 39,
-    image_url: "/mbair.png",
+    image_url: "/ipadAirFolio.png",
   },
 
   {
@@ -476,7 +493,7 @@ const products = [
       "Color: Black, Blue, Red, Green.Color. Apple iPad Pro 13 in. Case Style Folio.",
     ],
     availability: 49,
-    image_url: "/mbair.png",
+    image_url: "/ipadProFoilo.png",
   },
 
   {
@@ -493,10 +510,9 @@ const products = [
       "Connectivity: Bluetooth for proximity finding.Apple-designed U1 chip for Ultra Wideband and Precision Finding. NFC tap for Lost Mode. Speaker: Built-in speaker. Battery: User-replaceable CR2032 coin cell battery. Sensor: Accelerometer. Accessibility: The Find My app is compatible with these iPhone accessibility features",
     ],
     availability: 49,
-    image_url: "/mbair.png",
+    image_url: "/airtag_single.png",
   },
 ];
-
 
 async function insertProducts() {
   try {
@@ -530,7 +546,6 @@ insertProducts();
 // {
 //   id: 1140, productNbr: "MLWK3LL/H", name: "Magic KeyBoard", category: "accessories", price: , features: ["", "", "Get more done faster", "", "", ""], specifications: ["", "", "", ], availability: 99, image_url: "/mbair.png"
 // },
-
 
 // SeedDatabase from kenzie cart products
 // import { connect, disconnect } from "mongoose";
