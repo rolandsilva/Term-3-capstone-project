@@ -11,10 +11,15 @@
   outline: 1px solid black;
   color: black;
   background-color: #c1c7dc;
-  font-size: 2em;
+  font-size: 24px;
   width: 75%;
   margin: 1em auto;
   padding: 5px;
+}
+
+.info-title.saved {
+  font-size: 24px;
+  width: 100%;
 }
 
 .account-info p {
@@ -53,5 +58,19 @@
 }
 
 .account-password-container .info-title {
-  width: 40%;
+  max-width: 40%;
+}
+
+@media (max-width: 768px) {
+  .account-container {
+    justify-content: space-evenly;
+  }
+
+  .account-password-container {
+    justify-content: center;
+  }
+
+  .account-password-container .info-title {
+    width: 60%;
+  }
 }
