@@ -105,7 +105,7 @@ const AccountPage = () => {
           <p>Phone Number: {customerPhone}</p>
         </section>
         <section>
-          <div className="info-title">Saved Items</div>
+          <div className="info-title saved">Saved Items</div>
           <p>Coming soon...</p>
         </section>
       </div>
@@ -120,6 +120,7 @@ const AccountPage = () => {
             type="password"
             id="currentPassword"
             name="currentPassword"
+            autoComplete="current-password"
             value={passwordFormData.currentPassword}
             onChange={handleInputChange}
             required
@@ -129,6 +130,7 @@ const AccountPage = () => {
             type="password"
             id="password"
             name="password"
+            autoComplete="new-password"
             value={passwordFormData.password}
             onChange={handleInputChange}
             required
@@ -138,6 +140,7 @@ const AccountPage = () => {
             type="password"
             id="confirmPassword"
             name="confirmPassword"
+            autoComplete="new-password"
             value={passwordFormData.confirmPassword}
             onChange={handleInputChange}
             required
