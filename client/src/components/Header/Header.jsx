@@ -84,25 +84,25 @@ function Header() {
                   Home Page
                 </Nav.Link> */}
                 <Nav.Link
-                  // as={Link}
+                  as={Link}
                   className="d-flex align-items-center"
-                  to={`/`}
+                  to={"/categories/macbooks"}
                   style={{ color: "white", marginRight: "20px" }}
                 >
                   MacBooks {">"}
                 </Nav.Link>
                 <Nav.Link
-                  // as={Link}
+                  as={Link}
                   className="d-flex align-items-center"
-                  to={`/`}
+                  to={"/categories/ipads"}
                   style={{ color: "white", marginRight: "20px" }}
                 >
                   iPads {">"}
                 </Nav.Link>
                 <Nav.Link
-                  // as={Link}
+                  as={Link}
                   className="d-flex align-items-center"
-                  to={`/`}
+                  to={"/categories/airpods"}
                   style={{ color: "white", marginRight: "20px" }}
                 >
                   AirPods {">"}
@@ -116,41 +116,41 @@ function Header() {
                   iWatches {">"}
                 </Nav.Link>
                 <Nav.Link
-                  // as={Link}
+                  as={Link}
                   className="d-flex align-items-center"
-                  to={`/`}
+                  to={"/categories/macs"}
                   style={{ color: "white", marginRight: "20px" }}
                 >
                   Macs {">"}
                 </Nav.Link>
                 <Nav.Link
-                  // as={Link}
+                  as={Link}
                   className="d-flex align-items-center"
-                  to={`/`}
+                  to={"/categories/iphones"}
                   style={{ color: "white", marginRight: "20px" }}
                 >
                   iPhones {">"}
                 </Nav.Link>
                 <Nav.Link
-                  // as={Link}
+                  as={Link}
                   className="d-flex align-items-center"
-                  to={`/`}
+                  to={"/categories/imacs"}
                   style={{ color: "white", marginRight: "20px" }}
                 >
                   iMacs {">"}
                 </Nav.Link>
                 <Nav.Link
-                  // as={Link}
+                  as={Link}
                   className="d-flex align-items-center"
-                  to={`/`}
+                  to={"/categories/displays"}
                   style={{ color: "white", marginRight: "20px" }}
                 >
                   Displays {">"}
                 </Nav.Link>
                 <Nav.Link
-                  // as={Link}
+                  as={Link}
                   className="d-flex align-items-center"
-                  to={`/`}
+                  to={"/categories/accessories"}
                   style={{ color: "white", marginRight: "20px" }}
                 >
                   Accessories {">"}
@@ -160,17 +160,17 @@ function Header() {
               </div>
               <div>
               <Nav.Link
-                  // as={Link}
+                  as={Link}
                   className="d-flex align-items-center"
-                  to={`/`}
+                  to={"/login"}
                   style={{ color: "white", marginRight: "20px" }}
                 >
                   Login
                 </Nav.Link>
                 <Nav.Link
-                  // as={Link}
+                  as={Link}
                   className="d-flex align-items-center"
-                  to={`/`}
+                  to={"/register"}
                   style={{ color: "white", marginRight: "20px" }}
                 >
                   Register
