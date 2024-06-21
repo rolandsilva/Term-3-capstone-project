@@ -42,8 +42,10 @@ const ProductPage = () => {
 
   return (
     <div className="productcontainer">
+      <div className="h2AddToCartBtnContainer">
       <h2>Product Page</h2>
-
+      <button type="button" id="cartButton" onclick="alert('Button clicked!')">Add to Cart</button>
+      </div>
       <div className="productNameImageContainer">
         <div className="productNameContainer">
           <div className="producttitles">

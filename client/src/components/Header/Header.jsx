@@ -108,9 +108,9 @@ function Header() {
                   AirPods {">"}
                 </Nav.Link>
                 <Nav.Link
-                  // as={Link}
+                  as={Link}
                   className="d-flex align-items-center"
-                  to={`/`}
+                  to="/categories/iwatches"
                   style={{ color: "white", marginRight: "20px" }}
                 >
                   iWatches {">"}

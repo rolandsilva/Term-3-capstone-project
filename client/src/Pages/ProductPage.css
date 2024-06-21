@@ -12,6 +12,13 @@
     align-items: center;
 }
 
+.h2AddToCartBtnContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
 .productcontainer h2 {
     font-weight: bold;
     color: blue;
@@ -19,6 +26,14 @@
     font-size: 40px;
     outline: 1px solid black;
     width: 400px;
+}
+
+#cartButton {
+    background-color: #c1c8dc;
+    font-weight: bold;
+    border-radius: 0;
+    outline: 1px solid black;
+
 }
 
 .producttitles {

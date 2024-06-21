@@ -1,11 +1,7 @@
 import { useState } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import Product from "./components/Product/Product";
 import Order from "./components/Order/Order";
 import Customer from "./components/Customer/Customer";
@@ -21,13 +17,13 @@ import CategoryPage from "./Pages/CategoryPage/CategoryPage";
 import ProductPage from "./Pages/ProductPage";
 import NotFoundPage from "./Pages/NotFoundPage";
 
-
 function App() {
   return (
     <>
       {/* <ErrorBoundary> */}
-      <Layout>
-        <Router>
+
+      <Router>
+        <Layout>
           <Routes>
             <Route exact path="/" element={<HomePage />} />
             <Route path="/register" element={<RegisterPage />} />
@@ -39,8 +35,9 @@ function App() {
             <Route exact path="/checkout" element={<CheckoutPage />} /> */}
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
-        </Router>
-      </Layout>
+        </Layout>
+      </Router>
+
       {/* </ErrorBoundary> */}
     </>
   );

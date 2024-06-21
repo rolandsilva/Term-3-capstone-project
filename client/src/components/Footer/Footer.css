@@ -20,6 +20,7 @@
     margin: 0;
     padding: 0;
     min-width: 20%;
+    color: #9eaaca;
     /* background-color: lightblue; */
 }
 
@@ -74,9 +75,12 @@
     display: flex;
     align-items: center;
     margin-right: 20px;
+    color: #9eaaca;
 }
 
-.footer-contact a::before {
-    content: url('path/to/your/contact-icon.png'); /* Replace with your contact icon path */
+/* .footer-contact a::before {
+    content: url('path/to/your/contact-icon.png');
     margin-right: 5px;
-}
+} */
+
+ /* Replace with your contact icon path */
