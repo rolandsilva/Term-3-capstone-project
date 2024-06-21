@@ -1,0 +1,76 @@
+.account-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.account-info {
+  width: 50%;
+}
+
+.info-title {
+  outline: 1px solid black;
+  color: black;
+  background-color: #c1c7dc;
+  font-size: 24px;
+  width: 75%;
+  margin: 1em auto;
+  padding: 5px;
+}
+
+.info-title.saved {
+  font-size: 24px;
+  width: 100%;
+}
+
+.account-info p {
+  font-size: 1.5em;
+  margin: 0;
+  padding: 5px;
+}
+
+/* password section */
+
+.account-password-container {
+  display: flex;
+  flex-flow: column wrap;
+  margin-left: 10em;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.account-password-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.account-password-form input {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+  padding: 5px;
+}
+
+.account-password-form label {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+  padding: 5px;
+}
+
+.account-password-container .info-title {
+  max-width: 40%;
+}
+
+@media (max-width: 768px) {
+  .account-container {
+    justify-content: space-evenly;
+  }
+
+  .account-password-container {
+    justify-content: center;
+  }
+
+  .account-password-container .info-title {
+    width: 60%;
+  }
+}

@@ -7,9 +7,16 @@ import {
 
 import api from "../utils/api.utils";
 
+// check local storage for user. The useEffect is not consistent with the 'useAuth' because it returns the initial state only.
+const isCustomerLoggedIn = () => {
+  return localStorage.getItem("rolands-app-customer");
+};
+
 const initialState = {
-  isAuthenticated: false,
-  user: null,
+  isAuthenticated: !!isCustomerLoggedIn(), // !! converts to boolean
+  user: isCustomerLoggedIn()
+    ? JSON.parse(isCustomerLoggedIn())
+    : null,
 };
 
 const reducer = (state, action) => {
@@ -91,6 +98,29 @@ export function useProvideAuth() {
     }
   };
 
+  const updatePassword = async (
+    currentPassword,
+    newPassword,
+    confirmPassword
+  ) => {
+    try {
+      const res = await api.put("/auth/update-password", {
+        currentPassword,
+        newPassword,
+        confirmPassword,
+      });
+
+      return res;
+    } catch (error) {
+      console.log(error);
+      if (error.response) {
+        throw new Error(error.response.data.error);
+      } else {
+        throw error;
+      }
+    }
+  };
+
   const logout = () => {
     localStorage.removeItem("rolands-app-customer");
     dispatch({
@@ -100,8 +130,7 @@ export function useProvideAuth() {
 
   useEffect(() => {
     const savedCustomer =
-      JSON.parse(localStorage.getItem("rolands-app-customer")) ||
-      false;
+      isCustomerLoggedIn() && JSON.parse(isCustomerLoggedIn());
 
     if (savedCustomer) {
       dispatch({
@@ -120,5 +149,6 @@ export function useProvideAuth() {
     register,
     login,
     logout,
+    updatePassword,
   };
 }
