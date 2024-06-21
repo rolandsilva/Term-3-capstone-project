@@ -53,55 +53,55 @@ const HomePage = () => {
               </div>
             </div>
             <div className="productimgcontainer">
-              <Link to="/productmacbooks">
+              <Link to="/categories/macbooks">
                 <figure>
                   <img src="./M3mbpmax.png" />
                   <figcaption>Apple MacBooks</figcaption>
                 </figure>
               </Link>
-              <Link to="/productipads">
+              <Link to="/categories/ipads">
                 <figure>
                   <img src="./ipadair.png" />
                   <figcaption>Apple iPads</figcaption>
                 </figure>
               </Link>
-              <Link to="/productipods">
+              <Link to="/categories/airpods">
                 <figure>
                   <img src="./airpodsmax.png" />
-                  <figcaption>Apple iPod Pros</figcaption>
+                  <figcaption>Apple Air Pod</figcaption>
                 </figure>
               </Link>
-              <Link to="/productiwatches">
+              <Link to="/categories/iwatches">
                 <figure>
                   <img src="./iwatchultra.png" />
                   <figcaption>Apple iWatches</figcaption>
                 </figure>
               </Link>
-              <Link to="/productmacpro">
+              <Link to="/categories/macs">
                 <figure>
                   <img src="./macpro.png" id="specialItem" />
-                  <figcaption>Apple Mac Pro</figcaption>
+                  <figcaption>Apple Macs</figcaption>
                 </figure>
               </Link>
-              <Link to="/productiphones">
+              <Link to="/categories/iphones">
                 <figure>
                   <img src="./iphone152.png" id="ipads" />
                   <figcaption>Apple iPhone 15</figcaption>
                 </figure>
               </Link>
-              <Link to="/productimacs">
+              <Link to="/categories/imacs">
                 <figure>
                   <img src="./imac.png" />
                   <figcaption>Apple iMacs</figcaption>
                 </figure>
               </Link>
-              <Link to="/productdisplays">
+              <Link to="/categories/displays">
                 <figure>
                   <img src="./retinadisplay.png" />
                   <figcaption>Apple Displays</figcaption>
                 </figure>
               </Link>
-              <Link to="/productaccessories">
+              <Link to="/categories/accessories">
                 <figure>
                   <img src="./accessories_120dpi.png" />
                   <figcaption>Apple Accessories</figcaption>
@@ -120,14 +120,14 @@ const HomePage = () => {
             alt="M3 MacBook Pro"
             className="M3MBPimage"
           />
-          <p className="M3MBPname">M3 MacBook Pro</p>
+          <p className="itemName">M3 MacBook Pro</p>
           <img
-            src="/ipadprom4.png"
+            src="/ipadProM4.png"
             id="m4ipadpro"
             alt="M4 iPad Pro"
             className="M3MBPimage"
           />
-          <p className="M3MBPname">M4 iPad Pro</p>
+          <p className="itemName">M4 iPad Pro</p>
         </div>
         <div className="contactInfo">
           <h3>Call 800-123-4567</h3>

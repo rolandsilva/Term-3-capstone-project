@@ -89,7 +89,7 @@ function Header() {
                   to={`/`}
                   style={{ color: "white", marginRight: "20px" }}
                 >
-                  DeskTops {">"}
+                  MacBooks {">"}
                 </Nav.Link>
                 <Nav.Link
                   // as={Link}
@@ -97,7 +97,7 @@ function Header() {
                   to={`/`}
                   style={{ color: "white", marginRight: "20px" }}
                 >
-                  LapTops {">"}
+                  iPads {">"}
                 </Nav.Link>
                 <Nav.Link
                   // as={Link}
@@ -105,7 +105,7 @@ function Header() {
                   to={`/`}
                   style={{ color: "white", marginRight: "20px" }}
                 >
-                  Phones {">"}
+                  AirPods {">"}
                 </Nav.Link>
                 <Nav.Link
                   // as={Link}
@@ -113,7 +113,7 @@ function Header() {
                   to={`/`}
                   style={{ color: "white", marginRight: "20px" }}
                 >
-                  Tablets {">"}
+                  iWatches {">"}
                 </Nav.Link>
                 <Nav.Link
                   // as={Link}
@@ -121,7 +121,31 @@ function Header() {
                   to={`/`}
                   style={{ color: "white", marginRight: "20px" }}
                 >
-                  Monitors {">"}
+                  Macs {">"}
+                </Nav.Link>
+                <Nav.Link
+                  // as={Link}
+                  className="d-flex align-items-center"
+                  to={`/`}
+                  style={{ color: "white", marginRight: "20px" }}
+                >
+                  iPhones {">"}
+                </Nav.Link>
+                <Nav.Link
+                  // as={Link}
+                  className="d-flex align-items-center"
+                  to={`/`}
+                  style={{ color: "white", marginRight: "20px" }}
+                >
+                  iMacs {">"}
+                </Nav.Link>
+                <Nav.Link
+                  // as={Link}
+                  className="d-flex align-items-center"
+                  to={`/`}
+                  style={{ color: "white", marginRight: "20px" }}
+                >
+                  Displays {">"}
                 </Nav.Link>
                 <Nav.Link
                   // as={Link}
@@ -131,6 +155,7 @@ function Header() {
                 >
                   Accessories {">"}
                 </Nav.Link>
+
    
               </div>
               <div>
