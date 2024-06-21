@@ -20,7 +20,7 @@ const AccountPage = () => {
 
   const auth = useAuth();
   const navigate = useNavigate();
-
+  console.log(auth.state)
   const { updatePassword } = useProvideAuth();
 
   const {

@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useAuth, useProvideAuth } from "../../hooks/useAuth";
+// import { logout } from "../../hooks/useAuth"
 import {
   Navbar,
   Nav,
@@ -21,31 +23,41 @@ function Header() {
 
   // const handleCurrencyChange = (e) => toggleCurrency();
 
+  const auth = useAuth();
+  console.log(auth);
+  const isLoggedIn = auth.state.isAuthenticated;
+  const { logout } = useProvideAuth();
   return (
     <>
       {/* <CartSidebar /> */}
-      <Navbar className="header vertical-gradient" expand="lg" style={{ backgroundColor: "#688ac6" }}>
+      <Navbar
+        className="header vertical-gradient"
+        expand="lg"
+        style={{ backgroundColor: "#688ac6" }}
+      >
         <Container id="headercontainer">
-          <Navbar.Brand  className="brandcontainer">
-            <Nav.Link  to={"/"}>
-              <div id="headerdiv1">Roland's Computers, Devices and Accessories</div>
+          <Navbar.Brand className="brandcontainer">
+            <Nav.Link to={"/"}>
+              <div id="headerdiv1">
+                Roland's Computers, Devices and Accessories
+              </div>
             </Nav.Link>
             <Nav.Link
-                  className="cartcontainer"
-                  // onClick={openSidebar}
-                  style={{
-                    color: "white",
-                    cursor: "pointer",
-                    marginRight: "20px",
-                  }}
-                >
-                  <span id="cart">Cart</span>
-                  <FontAwesomeIcon
-                    className="ms-2 mb-1"
-                    icon={faShoppingBag}
-                    style={{ color: "white" }}
-                  />
-                  {/* {state.itemCount > 0 && (
+              className="cartcontainer"
+              // onClick={openSidebar}
+              style={{
+                color: "white",
+                cursor: "pointer",
+                marginRight: "20px",
+              }}
+            >
+              <span id="cart">Cart</span>
+              <FontAwesomeIcon
+                className="ms-2 mb-1"
+                icon={faShoppingBag}
+                style={{ color: "white" }}
+              />
+              {/* {state.itemCount > 0 && (
                   <Badge
                     pill
                     style={{ color: "black" }}
@@ -55,11 +67,18 @@ function Header() {
                     <p className="mb-0">{state.itemCount}</p>
                   </Badge>
                 )} */}
-                </Nav.Link>
+            </Nav.Link>
           </Navbar.Brand>
           {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto" style={{display: "flex", minWidth: "100%", justifyContent: "space-between"}}>
+            <Nav
+              className="ms-auto"
+              style={{
+                display: "flex",
+                minWidth: "100%",
+                justifyContent: "space-between",
+              }}
+            >
               {/* {
                 <ToggleButtonGroup 
                   name="currency"
@@ -155,26 +174,50 @@ function Header() {
                 >
                   Accessories {">"}
                 </Nav.Link>
-
-   
               </div>
               <div>
-              <Nav.Link
-                  as={Link}
-                  className="d-flex align-items-center"
-                  to={"/login"}
-                  style={{ color: "white", marginRight: "20px" }}
-                >
-                  Login
-                </Nav.Link>
-                <Nav.Link
-                  as={Link}
-                  className="d-flex align-items-center"
-                  to={"/register"}
-                  style={{ color: "white", marginRight: "20px" }}
-                >
-                  Register
-                </Nav.Link>
+                {" "}
+                {isLoggedIn ? (
+                  <>
+                    <Nav.Link
+                      as={Link}
+                      className="d-flex align-items-center"
+                      to={"/"}
+                      style={{ color: "white", marginRight: "20px" }}
+                    onClick={logout}
+                    >
+                      LogOut
+                    </Nav.Link>
+                    <Nav.Link
+                      as={Link}
+                      className="d-flex align-items-center"
+                      to={"/account"}
+                      style={{ color: "white", marginRight: "20px" }}
+                    >
+                      Account
+                    </Nav.Link>
+                  </>
+                ) : (
+                  <>
+                    {" "}
+                    <Nav.Link
+                      as={Link}
+                      className="d-flex align-items-center"
+                      to={"/login"}
+                      style={{ color: "white", marginRight: "20px" }}
+                    >
+                      Login
+                    </Nav.Link>
+                    <Nav.Link
+                      as={Link}
+                      className="d-flex align-items-center"
+                      to={"/register"}
+                      style={{ color: "white", marginRight: "20px" }}
+                    >
+                      Register
+                    </Nav.Link>
+                  </>
+                )}
               </div>
             </Nav>
           </Navbar.Collapse>
@@ -186,9 +229,8 @@ function Header() {
 
 export default Header;
 
-
-
-
-{/* <div class="vertical-gradient">
+{
+  /* <div class="vertical-gradient">
 <h1 class="text-center">Vertical Gradient from Blue to White</h1>
-</div> */}
+</div> */
+}

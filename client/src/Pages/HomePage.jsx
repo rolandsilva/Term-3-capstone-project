@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { exampleProductData } from "../exampleData";
 const HomePage = () => {
   //use api call fetch data mocked with mock Data
-  console.log(exampleProductData);
+  // console.log(exampleProductData);
   // fetch data from backend.
 
   // use backend to fetch data from database.

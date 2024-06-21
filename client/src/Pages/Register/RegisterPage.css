@@ -20,6 +20,17 @@
   padding: 10px;
   border-radius: 4px;
   border: 1px solid #ccc;
+  outline: 1px solid #ccc;
+  /* border: 1px solid black; */
+  margin-top: 5px;
+}
+
+#register-form input:focus-visible {
+  background-color: #e2eefa;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid black;
+  outline: none;
   margin-top: 5px;
 }
 
