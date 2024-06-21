@@ -41,6 +41,8 @@ const CategoryPage = () => {
     return <div>No category found</div>;
   }
 
+  const {categoryName} = category; // Destructure category to get categoryName
+
   return (
     <div>
       <div className="categoryheader">
@@ -54,24 +56,34 @@ const CategoryPage = () => {
           >
             Search by Product{" "}
           </label>
-          <input id="searchInput"         className="form-control"
-        style={{
-          fontSize: '25px',
-          height: 'auto', // Adjust height to auto
-          padding: '5px', // Adjust padding as needed
-          margin: "10px",
-          // margin: "10px 0",
-        }}/>
-        </div>
-        <div className="categorytype">
-          <h3           style={{
+          <input
+            id="searchInput"
+            className="form-control"
+            style={{
               fontSize: "25px",
-              fontWeight: "bold",
+              height: "auto", // Adjust height to auto
+              padding: "5px", // Adjust padding as needed
               margin: "10px",
-            }}>
-            Category: <span>iPhones</span>
-          </h3>
-          {/* add span with name of category) */}
+              // margin: "10px 0",
+            }}
+          />
+        </div>
+        <div className="categorycontainer">
+            <h3 className="categorytitle"
+              style={{
+                fontSize: "25px",
+                fontWeight: "bold",
+                margin: "10px",
+              }}
+            >
+              Category:
+            </h3>
+            <div className="categorytype">
+              {/* <span>{categoryName}</span> */}
+              <span>iPads</span>
+            </div>
+          {/* </div> */}
+
         </div>
       </div>
       <div className="maincontainer">
@@ -91,58 +103,33 @@ const CategoryPage = () => {
             <h3>Be sure to sign up for Daily Specials and Flash Sales</h3>
           </div>
           <div className="chat">
-            <h3>Any Questions ?</h3>
+            <p>Any Questions ?</p>
             <Link to="/chat">Click here to chat</Link>
           </div>
         </div>
         <div className="categoryproductcontainer">
-          {category && category.map((productItem) => ( 
-                    <Link to={`/product/${productItem.id}`}>
-                    <figure>
-                      <img src={productItem.image_url} id="iPhone15" />
-                      <figcaption>{productItem.name}</figcaption>
-                    </figure>
-                  </Link>
-          ))}
-          {/* <Link to="/productiPhones">
-            <figure>
-              <img src="./iphones15.png" id="iPhone15" />
-              <figcaption>iPhone 15</figcaption>
-            </figure>
-          </Link> */}
-
-
-
-          {/* <Link to="/productiPhones">
-            <figure>
-              <img src="./iphones15.png" id="iPhone15" />
-              <figcaption>iPhone 15</figcaption>
-            </figure>
-          </Link>
-          <Link to="/productiphones">
-            <figure>
-              <img src="./iphone15plus.png" id="iPhone15plus" />
-              <figcaption>iPhone 15 Plus</figcaption>
-            </figure>
-          </Link>
-          <Link to="/productiphones">
-            <figure>
-              <img src="./iphone15pro.png" id="ipads" />
-              <figcaption>iPhone 15 Pro</figcaption>
-            </figure>
-          </Link>
-          <Link to="/productiphones">
-            <figure>
-              <img src="./iphone15promax2.png" id="ipads" />
-              <figcaption>iPhone Pro Max</figcaption>
-            </figure>
-          </Link> */}
-   
-          
+          {category &&
+            category.map((productItem) => (
+              <Link to={`/product/${productItem.id}`}>
+                <figure>
+                  <img src={productItem.image_url} id="iPhone15" />
+                  <figcaption>{productItem.name}</figcaption>
+                </figure>
+              </Link>
+            ))}
         </div>
         <div className="comparetrade">
           <h2> compare</h2>
-          <h2> trade</h2>
+          {/* <h2> trade</h2> */}
+          {/* <div className="categoryproductcontainer"> */}
+            <a href="#compare" className="comparebutton">
+            {/* className="btn btn-primary"> */}
+              <img src="/bw_devices.png" alt="Compare" className="img-fluid" />
+            </a>
+            <a href="#trade" className="tradebutton">
+              <img src="/tradeindevice.png" alt="Trade" className="img-fluid" />
+            </a>
+          {/* </div> */}
         </div>
       </div>
     </div>
