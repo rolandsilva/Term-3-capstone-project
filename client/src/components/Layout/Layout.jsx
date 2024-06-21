@@ -1,7 +1,9 @@
 import React from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
-import Header from "../Header";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+// import Footer from "../components/Footer";
 
 function Layout({ children }) {
   return (
@@ -9,7 +11,7 @@ function Layout({ children }) {
       <Header />
       <ToastContainer />
       <main className="main">{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

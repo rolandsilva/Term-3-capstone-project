@@ -14,3 +14,17 @@ export async function  handleGetProductById(req, res) {
         return res.status(500).json({error: "Error retrieving product"});
     }
   }
+
+  export async function  handleGetProductsByCategories(req, res) {
+    // const name = req.params.name;
+    // const product = await Products.find({id: id});
+    try {
+        const name = req.params.name;
+        const category = await Products.find({category: name});
+        console.log(category);
+        res.send(category);
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({error: "Error retrieving product"});
+    }
+  }

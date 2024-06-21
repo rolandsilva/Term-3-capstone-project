@@ -6,6 +6,7 @@ import {
   handleGetProductById,
   handleGetProducts,
   // handleLikeProduct,
+  handleGetProductsByCategories,
 } from "../controllers/products.controller";
 
 const productsRoutes = Router();
@@ -15,5 +16,7 @@ const productsRoutes = Router();
 productsRoutes.route("/:id").get(handleGetProductById);
 
 // productsRoutes.route("/like/:productId").all(requireAuth, handleLikeProduct);
+
+productsRoutes.route("/categories/:name").get(handleGetProductsByCategories);
 
 export default productsRoutes;

@@ -4,14 +4,12 @@ import { Link } from "react-router-dom";
 // import api from "??"
 import { exampleProductData } from "../exampleData";
 const HomePage = () => {
+  //use api call fetch data mocked with mock Data
+  console.log(exampleProductData);
+  // fetch data from backend.
 
-  //use api call fetch data mocked with mock Data 
-  console.log(exampleProductData)
-  // fetch data from backend. 
+  // use backend to fetch data from database.
 
-  // use backend to fetch data from database. 
-
-  
   return (
     <div className="maincontainer">
       <div className="imagescontainer">
@@ -22,17 +20,17 @@ const HomePage = () => {
               className="featuredimg"
             />
           </div>
-          {exampleProductData.map(product => {
+          {/* {exampleProductData.map(product => {
                 return (<Link to={`/products/${product.id}`}>
                   <img src={product.image_url} id="macbooks" />
                   <figcaption>{product.name}</figcaption>
-                </Link>)})}
+                </Link>)})} */}
           <div className="searchcontainer">
             <div
               className="searchbar"
               style={{
                 display: "flex",
-                backgroundColor: "lightblue",
+                backgroundColor: "#c1c8dc",
                 border: "1px solid black",
                 padding: "4px",
                 marginLeft: "19px",
@@ -55,58 +53,58 @@ const HomePage = () => {
               </div>
             </div>
             <div className="productimgcontainer">
-              <Link to="/productairpods">
+              <Link to="/categories/macbooks">
                 <figure>
-                  <img src="./M3mbpmax.png" id="macbooks" />
+                  <img src="./M3mbpmax.png" />
                   <figcaption>Apple MacBooks</figcaption>
                 </figure>
               </Link>
-              <Link to="/productaccessories">
+              <Link to="/categories/ipads">
                 <figure>
-                  <img src="./ipad10_1.png" id="ipads" />
+                  <img src="./ipadair.png" />
                   <figcaption>Apple iPads</figcaption>
                 </figure>
               </Link>
-              <Link to="/productaccessories">
+              <Link to="/categories/airpods">
                 <figure>
-                  <img src="./ipad10_1.png" id="ipads" />
-                  <figcaption>Apple iPads</figcaption>
+                  <img src="./airpodsmax.png" />
+                  <figcaption>Apple Air Pod</figcaption>
                 </figure>
               </Link>
-              <Link to="/productaccessories">
+              <Link to="/categories/iwatches">
                 <figure>
-                  <img src="./ipad10_1.png" id="ipads" />
-                  <figcaption>Apple iPads</figcaption>
+                  <img src="./iwatchultra.png" />
+                  <figcaption>Apple iWatches</figcaption>
                 </figure>
               </Link>
-              <Link to="/productaccessories">
+              <Link to="/categories/macs">
                 <figure>
                   <img src="./macpro.png" id="specialItem" />
-                  <figcaption>Apple Mac Pro</figcaption>
+                  <figcaption>Apple Macs</figcaption>
                 </figure>
               </Link>
-              <Link to="/productaccessories">
+              <Link to="/categories/iphones">
                 <figure>
-                  <img src="./ipad10_1.png" id="ipads" />
-                  <figcaption>Apple iPads</figcaption>
+                  <img src="./iphone152.png" id="ipads" />
+                  <figcaption>Apple iPhone 15</figcaption>
                 </figure>
               </Link>
-              <Link to="/productaccessories">
+              <Link to="/categories/imacs">
                 <figure>
-                  <img src="./ipad10_1.png" id="ipads" />
-                  <figcaption>Apple iPads</figcaption>
+                  <img src="./imac.png" />
+                  <figcaption>Apple iMacs</figcaption>
                 </figure>
               </Link>
-              <Link to="/productaccessories">
+              <Link to="/categories/displays">
                 <figure>
-                  <img src="./ipad10_1.png" id="ipads" />
-                  <figcaption>Apple iPads</figcaption>
+                  <img src="./retinadisplay.png" />
+                  <figcaption>Apple Displays</figcaption>
                 </figure>
               </Link>
-              <Link to="/productaccessories">
+              <Link to="/categories/accessories">
                 <figure>
-                  <img src="./ipad10_1.png" id="ipads" />
-                  <figcaption>Apple iPads</figcaption>
+                  <img src="./accessories_120dpi.png" />
+                  <figcaption>Apple Accessories</figcaption>
                 </figure>
               </Link>
             </div>
@@ -122,23 +120,22 @@ const HomePage = () => {
             alt="M3 MacBook Pro"
             className="M3MBPimage"
           />
-          <p className="M3MBPname">M3 MacBook Pro</p>
+          <p className="itemName">M3 MacBook Pro</p>
           <img
-            src="/ipadprom4.png"
+            src="/ipadProM4.png"
             id="m4ipadpro"
             alt="M4 iPad Pro"
             className="M3MBPimage"
           />
-          <p className="M3MBPname">M4 iPad Pro</p>
+          <p className="itemName">M4 iPad Pro</p>
         </div>
         <div className="contactInfo">
-        <h3>Call 800-123-4567</h3>
-        <p className="questions">
-        24/7 For any questions
-        </p>
-        <Link to=""><h2>click here to go to our FAQ Page</h2></Link>
+          <h3>Call 800-123-4567</h3>
+          <p className="questions">24/7 For any questions</p>
+          <Link to="">
+            <h2>click here to go to our FAQ Page</h2>
+          </Link>
         </div>
-
       </div>
     </div>
   );

@@ -1,0 +1,86 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-address {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 100%;
+    margin-bottom: 10px;
+}
+
+.addressContainer {
+    margin: 0;
+    padding: 0;
+    min-width: 20%;
+    color: #9eaaca;
+    /* background-color: lightblue; */
+}
+
+.footer-social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* margin-bottom: 20px; */
+    align-items: center;
+    min-width: 40%;
+    font-size: 18px;
+    /* background-color: lightpink; */
+}
+
+.footer-social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 5px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-right: 1px solid #fff;
+}
+
+.footer-links a:last-child {
+    border-right: none;
+}
+
+.footer-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: lightgreen; */
+}
+
+.footer-contact a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    color: #9eaaca;
+}
+
+/* .footer-contact a::before {
+    content: url('path/to/your/contact-icon.png');
+    margin-right: 5px;
+} */
+
+ /* Replace with your contact icon path */

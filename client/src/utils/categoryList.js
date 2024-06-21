@@ -1,1 +1,1 @@
-export const categoryList = ["laptops", "iphones", "desktops", ] 
+export const categoryList = ["airpods", "accessories", "desktops",  "displays", "ipads","iphones", "iwatches", "laptops"] 

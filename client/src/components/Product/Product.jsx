@@ -12,7 +12,7 @@ function Product({ product }) {
 
   return product.map((productItem) => (
     <div className="productContainer" key={productItem.id}>
-      <h2> Product Information</h2>
+      <h2>Product Information</h2>
       <p>Product Name: {productItem.name}</p>
       <p>Category: {productItem.category}</p>
       <p>Price: {productItem.price}</p>

@@ -1,20 +1,54 @@
 .categoryheader {
     display: flex;
     justify-content: space-around;
-
+    align-items: center;
+    min-height: 4%;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;;
+    /* justify-content: center; */
 }
 
 .productsearch,
 .categorytype {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    background-color: lightblue;
+    align-items: center;
+    background-color: #c1c8dc;
     text-align: center;
+    margin: 5px 0;
+    height: 50px;
 }
 
+.productsearch label {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.productsearch input {
+    font-size: 25px;
+    padding: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f1f1f1; /* Set background color */
+}
+
+/* .productsearch input {
+    font-size: 25px;
+    height: auto;
+    padding: 10px; 
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}  */
+
 .maincontainer {
+    display: flex;
     height: 60%;
-    padding-top: 30px;
+    padding-top: 10px;
     gap: 10px;
 }
 
@@ -23,17 +57,69 @@
     flex-direction: column;
     width: 20%;
     justify-content: space-between;
+    text-align: center;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
-.productcontainer {
-    display: flex;
-    flex-wrap: wrap;
-    width: 60%;
+/* .filterText {
+    align-items: left;
+    padding-left: 20px;
+} */
 
+.filterBy {
+    padding-left: 30px;
+}
+
+.filterByCategory {
+    margin-top: 10px;
+}
+
+/* .filerByLineSpace {
+    margin-top: 40px;
+} */
+
+.divider {
+    border: 1px solid #c1c8dc;
+    /* Adjust the color and thickness as needed */
+    width: 80%;
+    /* Ensure the line spans the full width */
+    margin: 20px;
+    /* Adjust spacing around the line */
+}
+
+.categoryproductcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 100%;
+    outline: 1px solid black;
+    gap: 10px;
+    margin-bottom: 10px;
+
+}
+
+.categoryproductcontainer a {
+    display: block;
+    max-width: 300px;
+    width: 30%;
+}
+
+.categoryproductcontainer figure {
+    margin: 0;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.categoryproductcontainer img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .filterby {
-    background-color: lightblue;
+    background-color: #c1c8dc;
     outline: 1px solid black;
 }
 
@@ -41,10 +127,13 @@
     display: flex;
     flex-direction: column;
     background-color: lightgray;
-    width: 20%;
+    width: 30%;
+    margin-bottom: 10px;
 }
 
 .chat {
-    background-color: lightblue;
+    background-color: #c1c8dc;
     outline: 1px solid black;
+    text-align: center;
+    margin-top: 20px;
 }
