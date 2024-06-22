@@ -5,12 +5,12 @@
     min-height: 4%;
     font-size: 20px;
     margin-bottom: 5px;
-    margin-top: 5px;;
+    margin-top: 5px;
+    ;
     /* justify-content: center; */
 }
 
-.productsearch,
-.categorytype {
+.productsearch {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -29,15 +29,19 @@
 
 .productsearch input {
     font-size: 25px;
-    padding: 10px; 
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #f1f1f1; /* Set background color */
+    background-color: #f1f1f1;
+    /* Set background color */
 }
 
-.categorycontainer, .categorytitle {
+.categorycontainer {
     display: flex;
-background-color: #c1c8dc;
+    background-color: #c1c8dc;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
 .categorytype {
@@ -47,6 +51,11 @@ background-color: #c1c8dc;
     background-color: #c1c8dc;
     /* background-color: red; */
     width: 125px;
+    justify-content: center;
+    align-items: center;
+    background-color: #c1c8dc;
+    text-align: center;
+
 }
 
 /* .productsearch input {
@@ -114,7 +123,8 @@ background-color: #c1c8dc;
     display: block;
     max-width: 200px;
     width: 30%;
-    max-height: 100px;;
+    max-height: 100px;
+    ;
 }
 
 .categoryproductcontainer figure {
@@ -155,11 +165,11 @@ background-color: #c1c8dc;
 }
 
 .comparetrade img {
-    max-width: 100%; /
+    max-width: 100%;
     height: auto;
     max-height: 200px;
     margin-bottom: 10px;
-  }
+}
 
 
 .chat {

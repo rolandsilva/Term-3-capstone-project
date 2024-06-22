@@ -1,0 +1,56 @@
+// @import "custom";
+// @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400&display=swap");
+
+// // Bootstrap 4 includes around two dozen CSS custom properties (variables).
+// // These provide easy access to commonly used values like our theme colors,
+// // breakpoints, and primary font
+// // https://getbootstrap.com/docs/4.4/getting-started/theming/#variable-defaults
+
+// a {
+//   color: var(--info);
+//   font-weight: 800;
+//   text-decoration: none;
+// }
+// a:hover {
+//   color: #fdc54c;
+// }
+
+// textarea {
+//   resize: none;
+// }
+
+// ol,
+// ul {
+//   list-style: none;
+// }
+
+// .form-check-input:checked[type="checkbox"],
+// .custom-control-input:checked[type="checkbox"] {
+//   background-color: #fdc54c !important;
+//   border-color: #fdc54c;
+// }
+
+// .main {
+//   overflow-y: scroll;
+//   scrollbar-width: none; /* Firefox */
+//   -ms-overflow-style: none; /* Internet Explorer 10+ */
+// }
+
+// .main::-webkit-scrollbar {
+//   width: 0;
+//   height: 0;
+// }
+
+// .nav-link {
+//   color: white;
+// }
+
+// .btn-outline-primary {
+//   color: var(--info);
+//   border-color: var(--info);
+// }
+
+// .btn-primary {
+//   background-color: var(--info);
+//   color: white;
+// }

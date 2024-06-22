@@ -13,12 +13,14 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingBag } from "@fortawesome/free-solid-svg-icons/faShoppingBag";
 import "./Header.css";
-// import { useUI, useProvideCart, useCurrency } from "../hooks";
-// import CartSidebar from "./CartSidebar";
+// import { useUI, useProvideCart } from "../../hooks";
+import useUI from "../../hooks/useUI";
+import useProvideCart from "../../hooks/useCart";
+import CartSidebar from "../CartSideBar";
 
 function Header() {
-  // const { openSidebar } = useUI();
-  // const { state } = useProvideCart();
+  const { openSidebar } = useUI();
+  const { state } = useProvideCart();
   // const { toggleCurrency, symbol } = useCurrency();
 
   // const handleCurrencyChange = (e) => toggleCurrency();
@@ -37,7 +39,7 @@ function Header() {
       >
         <Container id="headercontainer">
           <Navbar.Brand className="brandcontainer">
-            <Nav.Link to={"/"}>
+            <Nav.Link as={Link} to={"/"}>
               <div id="headerdiv1">
                 Roland's Computers, Devices and Accessories
               </div>

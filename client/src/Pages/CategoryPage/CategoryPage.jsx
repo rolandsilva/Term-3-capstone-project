@@ -41,8 +41,6 @@ const CategoryPage = () => {
     return <div>No category found</div>;
   }
 
-  const {categoryName} = category; // Destructure category to get categoryName
-
   return (
     <div>
       <div className="categoryheader">
@@ -79,8 +77,8 @@ const CategoryPage = () => {
               Category:
             </h3>
             <div className="categorytype">
-              {/* <span>{categoryName}</span> */}
-              <span>iPads</span>
+              <span>{name}</span>
+              {/* <span>iPads</span> */}
             </div>
           {/* </div> */}
 
