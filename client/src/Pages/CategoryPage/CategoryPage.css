@@ -48,12 +48,12 @@
     display: flex;
     justify-content: space-around;
     color: black;
-    background-color: #c1c8dc;
-    /* background-color: red; */
+
     width: 125px;
     justify-content: center;
     align-items: center;
-    background-color: #c1c8dc;
+    background-color: lightgray;
+        /* background-color: red; */
     text-align: center;
 
 }
