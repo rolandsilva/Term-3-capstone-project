@@ -3,6 +3,7 @@ import { useAuth } from "../../hooks/useAuth";
 import { useProvideAuth } from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+
 import "./AccountPage.css";
 
 const initialPasswordFormData = {
@@ -20,23 +21,24 @@ const AccountPage = () => {
 
   const auth = useAuth();
   const navigate = useNavigate();
-  console.log(auth.state)
+
   const { updatePassword } = useProvideAuth();
 
+  // object destructuring user from auth.state from our
+  // useAuth hook that is inside our useProvideAuth hook
+  //in the hooks/useAuth.js file
   const {
     user: {
-      customer: {
-        _id,
-        customerFirstName,
-        customerLastName,
-        customerAddress1,
-        customerAddress2,
-        customerCity,
-        customerState,
-        customerZip,
-        customerEmail,
-        customerPhone,
-      },
+      _id,
+      customerFirstName,
+      customerLastName,
+      customerAddress1,
+      customerAddress2,
+      customerCity,
+      customerState,
+      customerZip,
+      customerEmail,
+      customerPhone,
     },
   } = auth.state;
 
