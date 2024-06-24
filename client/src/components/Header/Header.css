@@ -1,3 +1,10 @@
+#headercontainer.container {
+    display: flex;
+    flex-direction: column;;
+    max-height: 150px;
+}
+
+
 #headercontainer span.navbar-brand {
     display: flex;
     justify-content: space-between; 
@@ -36,6 +43,7 @@
     }
 
     .linkcontainer {
+        display: flex;
         padding-left: 20px;
     }
 
@@ -44,6 +52,7 @@
     }
 
     .cartcontainer {
+
         padding-right: 20px;
     }
     

@@ -31,7 +31,7 @@ function Header() {
   const { logout } = useProvideAuth();
   return (
     <>
-      {/* <CartSidebar /> */}
+      <CartSidebar />
       <Navbar
         className="header vertical-gradient"
         expand="lg"
@@ -46,7 +46,7 @@ function Header() {
             </Nav.Link>
             <Nav.Link
               className="cartcontainer"
-              // onClick={openSidebar}
+              onClick={openSidebar}
               style={{
                 color: "white",
                 cursor: "pointer",
@@ -59,7 +59,7 @@ function Header() {
                 icon={faShoppingBag}
                 style={{ color: "white" }}
               />
-              {/* {state.itemCount > 0 && (
+              {state.itemCount > 0 && (
                   <Badge
                     pill
                     style={{ color: "black" }}
@@ -68,7 +68,7 @@ function Header() {
                   >
                     <p className="mb-0">{state.itemCount}</p>
                   </Badge>
-                )} */}
+                )}
             </Nav.Link>
           </Navbar.Brand>
           {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
@@ -177,7 +177,7 @@ function Header() {
                   Accessories {">"}
                 </Nav.Link>
               </div>
-              <div>
+              <div className="cartdiv">
                 {" "}
                 {isLoggedIn ? (
                   <>
@@ -221,6 +221,7 @@ function Header() {
                   </>
                 )}
               </div>
+              
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -21,8 +21,9 @@ function CartItem({ item }) {
             <Col xs="9">
               <div className="d-flex gap-2 align-items-center">
                 <Image
-                  className="item-image mr-2"
-                  src={`/${item.productImage}`}
+                id="cartitemimage"
+                  className="item-image mr-2 w-50 h-25"
+                  src={`${item.image_url}`}
                 />
                 <Link
                   to={`/p/${item._id}`}

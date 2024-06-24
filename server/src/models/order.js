@@ -11,18 +11,25 @@ const ordersSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    itemNumber: {
-      type: Number,
-      required: true,
-    },
-    itemQuantity: {
-      type: Number,
-      required: true,
-    },
-    specifications: {
-      type: String,
-      required: true,
-    },
+
+    nbrOfOrderItems: [
+      {
+        itemNumber: {
+          type: Number,
+          required: true,
+        },
+
+        itemQuantity: {
+          type: Number,
+          required: true,
+        },
+      },
+    ],
+
+    // specifications: {
+    //   type: String,
+    //   required: true,
+    // },
     shippingTime: {
       type: Number,
       required: true,
