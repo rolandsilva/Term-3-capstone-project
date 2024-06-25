@@ -41,12 +41,12 @@ const customerSchema = new mongoose.Schema({
     required: true,
   },
 
-  billingAddress: 
+  shippingAddress: 
     {
       type: ObjectId,
-      ref: "BillingAddress",
+      ref: "ShippingAddress",
     },
-    
+
   orders: [
     {
       type: ObjectId,

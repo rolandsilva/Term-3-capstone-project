@@ -177,7 +177,7 @@ function Header() {
                   Accessories {">"}
                 </Nav.Link>
               </div>
-              <div className="cartdiv">
+              <div className="cartdiv" style={{display: "flex", marginLeft: "10px"}}>
                 {" "}
                 {isLoggedIn ? (
                   <>

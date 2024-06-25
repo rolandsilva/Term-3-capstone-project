@@ -39,7 +39,11 @@ function App() {
             </Route>
             {/* <Route exact path="/p/:pid" element={<ProductDetailPage />} />
             <Route exact path="/cart" element={<ShoppingCartPage />} /> */}
-            <Route exact path="/checkout" element={<CheckoutPage />} />
+            <Route path="/checkout" element={<ProtectedRoute />}>
+              {" "}
+              <Route exact path="/checkout" element={<CheckoutPage />} />
+            </Route>
+
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </Layout>

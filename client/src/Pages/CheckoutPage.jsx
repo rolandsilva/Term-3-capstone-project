@@ -57,7 +57,7 @@ function CheckoutPage() {
 
   return (
     <>
-      <Container
+      {/* <Container
         className="text-info"
         style={{
           backgroundImage: "url('/hero_image.png')",
@@ -65,9 +65,9 @@ function CheckoutPage() {
           height: "350px",
           marginTop: "45px",
         }}
-      >
-        <h1 style={{ marginTop: "100px" }}>Thank you!</h1>
-      </Container>
+      > */}
+        <h2 style={{ marginTop: "20px" }}>Order Confirmation Page</h2>
+      {/* </Container> */}
       <ErrorBoundary>
         {data.errorMessage && <p className="form-error">{data.errorMessage}</p>}
         {state.itemCount && !data.isConfirmed ? (
