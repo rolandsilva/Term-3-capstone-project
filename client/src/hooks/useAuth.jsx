@@ -8,15 +8,14 @@ import {
 import api from "../utils/api.utils";
 
 // check local storage for user. The useEffect is not consistent with the 'useAuth' because it returns the initial state only.
-const isCustomerLoggedIn = () => {
-  return localStorage.getItem("rolands-app-customer");
+const getStoredUser = () => {
+  const user = localStorage.getItem("rolands-app-customer");
+  return user ? JSON.parse(user) : null;
 };
 
 const initialState = {
-  isAuthenticated: !!isCustomerLoggedIn(), // !! converts to boolean
-  user: isCustomerLoggedIn()
-    ? JSON.parse(isCustomerLoggedIn())
-    : null,
+  isAuthenticated: !!getStoredUser(), // !! converts to boolean
+  user: getStoredUser()?.user || null,
 };
 
 const reducer = (state, action) => {
@@ -25,13 +24,15 @@ const reducer = (state, action) => {
       return {
         ...state,
         isAuthenticated: true,
-        user: action.payload,
+        user: action.payload.user,
+        token: action.payload.token,
       };
     case "LOGOUT":
       return {
         ...state,
         isAuthenticated: false,
         user: null,
+        token: null,
       };
     default:
       return state;
@@ -78,14 +79,19 @@ export function useProvideAuth() {
         password,
       });
 
+      const { token, customer } = res.data;
+
       localStorage.setItem(
         "rolands-app-customer",
-        JSON.stringify(res.data)
+        JSON.stringify({
+          token: token,
+          user: customer,
+        })
       );
 
       dispatch({
         type: "LOGIN",
-        payload: res.data.customer,
+        payload: { token, user: customer },
       });
       return res; // return the response
     } catch (error) {
@@ -129,13 +135,15 @@ export function useProvideAuth() {
   };
 
   useEffect(() => {
-    const savedCustomer =
-      isCustomerLoggedIn() && JSON.parse(isCustomerLoggedIn());
+    const savedCustomer = getStoredUser();
 
     if (savedCustomer) {
       dispatch({
         type: "LOGIN",
-        payload: savedCustomer,
+        payload: {
+          token: savedCustomer.token,
+          user: savedCustomer.user,
+        },
       });
     } else {
       dispatch({
