@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import useProvideCart from "../../hooks/useCart";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
-// import "./ItemCounter.scss";
+import "./ItemCounter.scss";
 
 function ItemCounter({ item }) {
   const { addItem, removeItem, updateItem } = useProvideCart();

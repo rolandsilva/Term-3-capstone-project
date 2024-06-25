@@ -46,20 +46,20 @@ function CartItem({ item }) {
             </Col>
           </Row>
           <Row className="mb-2 align-items-center">
-            <Col xs="9">
+            <Col xs="8">
               <p className="item-label">price</p>
             </Col>
-            <Col xs="3" className="d-flex justify-content-end">
-              {/* <p className="price item-value">{` ${"$"} ${getPrice(
+            <Col xs="4" className="d-flex justify-content-end">
+              <p className="price item-value">{` ${"$"} ${
                 item.price
-              )}`}</p> */}
+              }`}</p>
             </Col>
           </Row>
           <Row className="mb-2 align-items-center">
-            <Col xs="6">
+            <Col xs="8">
               <p className="item-label">quantity</p>
             </Col>
-            <Col xs="6" className="d-flex justify-content-end">
+            <Col xs="4" className="d-flex justify-content-end">
               <ItemCounter item={item} />
             </Col>
           </Row>

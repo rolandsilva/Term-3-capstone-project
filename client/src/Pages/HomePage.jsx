@@ -1,9 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Homepage.css";
 import { Link } from "react-router-dom";
-// import api from "??"
+import api from "../utils/api.utils";
 import { exampleProductData } from "../exampleData";
 const HomePage = () => {
+  const [products, setProducts] = useState(0);
+  const [loading, setLoading] = useState(0);
+  const [error, setError] = useState(0);
+
+  useEffect(() => {
+    const getProducts = async () => {
+      setLoading(true);
+      try {
+        const products = await api.get(`/products/`);
+        console.log(products);
+        setProducts(products.data);
+        setLoading(false);
+      } catch (err) {
+        console.error(err.message);
+        setLoading(false);
+        setError(true);
+      }
+    };
+    getProducts();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
   //use api call fetch data mocked with mock Data
   // console.log(exampleProductData);
   // fetch data from backend.

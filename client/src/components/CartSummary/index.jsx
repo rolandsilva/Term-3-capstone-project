@@ -34,7 +34,7 @@ function CartSummary({ cartTotal }) {
   return (
     <div className="cart-summary">
       <Container>
-        <div className="col-md-6 mb-3">
+        {/* <div className="col-md-6 mb-3">
           <label htmlFor="couponCode">Coupon Code </label>
           <input
             type="text"
@@ -63,7 +63,7 @@ function CartSummary({ cartTotal }) {
             Applied Coupon: {coupon}
           </Col>
 }
-        </div>
+        </div> */}
 
 
         <Row className="mb-2 summary-item">
@@ -79,9 +79,9 @@ function CartSummary({ cartTotal }) {
             <p className="summary-label">Total</p>
           </Col>
           <Col xs="3" className="text-right">
-            {/* <p className="summary-value">
-              {"$"} {getPrice(cartTotal)}
-            </p> */}
+            <p className="summary-value">
+              {"$"} {(cartTotal)}
+            </p>
           </Col>
         </Row>
       </Container>

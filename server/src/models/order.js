@@ -12,7 +12,7 @@ const ordersSchema = new mongoose.Schema(
       required: true,
     },
 
-    nbrOfOrderItems: [
+    orderContents: [
       {
         itemNumber: {
           type: Number,
@@ -25,11 +25,14 @@ const ordersSchema = new mongoose.Schema(
         },
       },
     ],
-
-    // specifications: {
-    //   type: String,
-    //   required: true,
-    // },
+    couponRate: {
+      type: Number,
+      required: true,
+    },
+    orderTotal: {
+      type: Number,
+      required: true,
+    },
     shippingTime: {
       type: Number,
       required: true,

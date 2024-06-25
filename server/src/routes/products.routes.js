@@ -11,7 +11,7 @@ import {
 
 const productsRoutes = Router();
 
-// productsRoutes.route("/").get(handleGetProducts).post(handleCreateProduct);
+productsRoutes.route("/").get(handleGetProducts)//.post(handleCreateProduct);
 
 productsRoutes.route("/:id").get(handleGetProductById);
 

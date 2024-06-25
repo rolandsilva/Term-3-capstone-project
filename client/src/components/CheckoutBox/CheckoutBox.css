@@ -1,0 +1,11 @@
+.easy-checkout {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.checkout-actions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}

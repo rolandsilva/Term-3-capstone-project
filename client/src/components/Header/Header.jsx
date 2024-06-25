@@ -200,7 +200,7 @@ function Header() {
                     </Nav.Link>
                   </>
                 ) : (
-                  <>
+                  <div style={{display: "flex"}}>
                     {" "}
                     <Nav.Link
                       as={Link}
@@ -218,7 +218,7 @@ function Header() {
                     >
                       Register
                     </Nav.Link>
-                  </>
+                  </div>
                 )}
               </div>
               

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { PaymentInputsWrapper, usePaymentInputs } from "react-payment-inputs";
 import images from "react-payment-inputs/images";
+// import "./CheckoutForm.scss";
 import "./CheckoutForm.scss";
 import { Button, Col, Form } from "react-bootstrap";
 

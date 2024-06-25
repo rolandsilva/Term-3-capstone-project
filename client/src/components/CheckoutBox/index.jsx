@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-// import "./CheckoutBox.scss";
+import "./CheckoutBox.css";
 
 function CheckoutBox({ handleShopping, handleCheckout }) {
   return (

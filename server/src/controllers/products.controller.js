@@ -1,7 +1,18 @@
 // import Product from "../../../client/src/components/Product/Product";
 import { Products } from "../models";
 
-export async function  handleGetProductById(req, res) {
+export async function  handleGetProducts(req, res) {
+    try {
+        const product = await Products.find();
+        console.log(product);
+        res.send(product);
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({error: "Error retrieving product"});
+    }
+  }
+
+  export async function  handleGetProductById(req, res) {
     const id = req.params.id;
     // const product = await Products.find({id: id});
     try {
