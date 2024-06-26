@@ -2,6 +2,14 @@ import mongoose from "mongoose";
 const { ObjectId } = mongoose.Schema.Types;
 
 const shippingAddressSchema = new mongoose.Schema({
+  shippingFirstName: {
+    type: String,
+    required: true,
+  },
+  shippingLastName: {
+    type: String,
+    required: true,
+    },
   shippingContactPhoneNumber: {
     type: String,
     required: true,

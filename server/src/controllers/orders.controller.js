@@ -1,4 +1,4 @@
-import { Order } from "../models";
+import { Order, ShippingAddress } from "../models";
 
 export async function handleGetOrders(req, res) {
   const orders = await Order.find();
