@@ -17,6 +17,8 @@ import CategoryPage from "./Pages/CategoryPage/CategoryPage";
 import ProductPage from "./Pages/ProductPage";
 import AccountPage from "./Pages/Account/AccountPage";
 import CheckoutPage from "./Pages/CheckoutPage";
+import ContactUsPage from "./Pages/ContactUSPage";
+import FAQPage from "./Pages/FAQPage";
 import NotFoundPage from "./Pages/NotFoundPage";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 
@@ -33,10 +35,12 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/categories/:name" element={<CategoryPage />} />
             <Route path="/product/:id" element={<ProductPage />} />
+            <Route path="/contact-us" element={<ContactUsPage />} />
             {/* Protected Routes */}
             <Route path="/account" element={<ProtectedRoute />}>
               <Route path="/account" element={<AccountPage />} />
             </Route>
+            <Route path="/faq" element={<FAQPage />} />
             {/* <Route exact path="/p/:pid" element={<ProductDetailPage />} />
             <Route exact path="/cart" element={<ShoppingCartPage />} /> */}
             <Route path="/checkout" element={<ProtectedRoute />}>

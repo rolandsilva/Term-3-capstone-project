@@ -156,7 +156,7 @@ const HomePage = () => {
         <div className="contactInfo">
           <h3>Call 800-123-4567</h3>
           <p className="questions">24/7 For any questions</p>
-          <Link to="">
+          <Link to="/FAQ">
             <h2>click here to go to our FAQ Page</h2>
           </Link>
         </div>

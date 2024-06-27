@@ -146,6 +146,8 @@ function CheckoutForm({ placeOrder }) {
           </div>
         </div>
       </section>
+
+      
       <section className="creditcardsection">
         <h4
           // style={{

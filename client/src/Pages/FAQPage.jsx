@@ -1,6 +1,7 @@
 import React from 'react';
+import "./FAQPage.css";
 
-const FaqPage = () => {
+const FAQPage = () => {
   const faqs = [
     { question: "What are the different types of Apple computers?", answer: "Apple offers MacBook, MacBook Air, MacBook Pro, iMac, Mac Pro, and Mac Mini." },
     { question: "How do I update my Mac?", answer: "You can update your Mac by going to System Preferences > Software Update." },
@@ -31,4 +32,4 @@ const FaqPage = () => {
   );
 };
 
-export default FaqPage;
+export default FAQPage;

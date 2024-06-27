@@ -1,5 +1,14 @@
 import React from "react";
 import "./Footer.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faInstagram,
+  faYoutube,
+  faTwitter,
+  faFacebookF,
+  faTwitch,
+} from "@fortawesome/free-brands-svg-icons";
+import ContactUsPage from "../../Pages/ContactUSPage";
 
 const Footer = () => {
   return (
@@ -12,29 +21,63 @@ const Footer = () => {
         </div>
 
         <div className="footer-social-media">
-          {/* <a href="#">
-            <i className="fab fa-instagram"></i>
-          </a> */}
-          <p>Instagram </p>
-          <a href="#">
-            <i className="fab fa-youtube"></i>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faInstagram} style={{ color: "#E4405F" }} />{" "}
+            Instagram
           </a>
-          <p> YouTube </p>
-          <a href="#">
-            <i className="fab fa-twitter"></i>
+          {/* <p>Instagram </p> */}
+
+          <a
+            href="https://www.youtube.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faYoutube} style={{ color: "#FF0000" }} />{" "}
+            YouTube
           </a>
-          <p> Twitter </p>
-          <a href="#">
-            <i className="fab fa-facebook-f"></i>
+          {/* <p> YouTube </p> */}
+
+          <a
+            href="https://www.twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faTwitter} style={{ color: "#1DA1F2" }} />{" "}
+            Twitter
           </a>
-          <p> FaceBook </p>
-          <a href="#">
-            <i className="fab fa-twitch"></i>
+          {/* <p> Twitter </p> */}
+
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faFacebookF} style={{ color: "#3b5998" }} />{" "}
+            FaceBook
           </a>
-          <p> Twitch </p>
+          {/* <p> FaceBook </p> */}
+
+          <a
+            href="https://www.twitch.tv"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faTwitch} style={{ color: "#9146FF" }} />{" "}
+            Twitch
+          </a>
+          {/* <p> Twitch </p> */}
         </div>
-        <div className="footer-contact">
+
+        {/* <div className="footer-contact">
           <a href="#">Contact Us</a>
+        </div> */}
+
+        <div className="footer-contact">
+          <a href="/contact-us">Contact Us</a>
         </div>
       </div>
 
@@ -52,3 +95,15 @@ const Footer = () => {
 };
 
 export default Footer;
+
+{
+  /* <a href="#">
+            <i className="fab fa-instagram"></i>
+          </a> */
+}
+
+{
+  /* <a href="#">
+            <i className="fab fa-youtube"></i>
+          </a> */
+}
