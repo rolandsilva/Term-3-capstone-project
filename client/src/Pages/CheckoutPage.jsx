@@ -3,7 +3,6 @@ import { Container } from "react-bootstrap";
 import { toast } from "react-toastify";
 import useProvideCart from "../hooks/useCart"
 // import { createOrder } from "../utils/axiosService";
-// import { CheckoutForm, ErrorBoundary } from "../components";
 import CheckoutForm from "../components/CheckoutForm/index"
 import ErrorBoundary  from "../components/ErrorBoundary";
 import { Link } from "react-router-dom";

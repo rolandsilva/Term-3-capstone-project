@@ -124,7 +124,9 @@ function CheckoutForm({ placeOrder }) {
                 className="custom-control-input"
                 id="same-address"
                 onChange={() => {
-                  setHasShippingAddressDifferent(hasShippingAddressDifferent ? false : true)
+                  setHasShippingAddressDifferent(
+                    hasShippingAddressDifferent ? false : true
+                  );
                 }}
               />
               <label
@@ -134,23 +136,104 @@ function CheckoutForm({ placeOrder }) {
                 Shipping address is not the same as my billing address
               </label>
             </div>
-            {hasShippingAddressDifferent && <ShippingAddress handleInputChange={handleInputChange} data={data} handlePlaceOrder={handlePlaceOrder} />}
+            {hasShippingAddressDifferent && (
+              <ShippingAddress
+                handleInputChange={handleInputChange}
+                data={data}
+                handlePlaceOrder={handlePlaceOrder}
+              />
+            )}
           </div>
         </div>
       </section>
+      <section className="creditcardsection">
+        <h4
+          // style={{
+          //   backgroundColor: "#c1c8dc",
+          //   color: "black",
+          //   border: "2px solid black",
+          //   padding: "10px", // Adjust the padding as needed
+          //   display: "inline-block", // Keeps the box tight around the text and allows it to be on its own line
+          //   whiteSpace: "nowrap", // Prevents text wrapping within the box
+          //   marginBottom: "20px", // Adds space below the box
+          // }}
+        >
+          Payment Method
+        </h4>
+        <PaymentInputsWrapper {...wrapperProps}>
+          <div className="row">
+            <div className="col-md-6 mb-3">
+              <label htmlFor="nameOnCard">Name on card</label>
+              <input
+                type="text"
+                className="form-control"
+                id="nameOnCard"
+                placeholder=""
+                required
+                value={data.nameOnCard}
+                onChange={handleInputChange}
+              />
+              <div className="invalid-feedback">Name on card is required.</div>
+            </div>
+            <div className="col-md-6 mb-3">
+              <label htmlFor="cardNumber">Card number</label>
+              <input
+                {...getCardNumberProps({
+                  onChange: (e) =>
+                    setData({ ...data, cardNumber: e.target.value }),
+                })}
+                className="form-control"
+                id="cardNumber"
+                placeholder="1234 5678 9012 3456"
+                required
+              />
+              <div className="invalid-feedback">Card number is required.</div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-4 mb-3">
+              <label htmlFor="cardExpir">Expiration date</label>
+              <input
+                {...getExpiryDateProps({
+                  onChange: (e) =>
+                    setData({ ...data, cardExpir: e.target.value }),
+                })}
+                className="form-control"
+                id="cardExpir"
+                placeholder="MM/YY"
+                required
+              />
+              <div className="invalid-feedback">Expiration date required.</div>
+            </div>
+            <div className="col-md-4 mb-3">
+              <label htmlFor="cardPin">CVC</label>
+              <input
+                {...getCVCProps({
+                  onChange: (e) =>
+                    setData({ ...data, cardPin: e.target.value }),
+                })}
+                className="form-control"
+                id="cardPin"
+                placeholder="123"
+                required
+              />
+              <div className="invalid-feedback">CVC required.</div>
+            </div>
+            <div className="col-md-4 mb-3">
+              <svg {...getCardImageProps({ images })} />
+            </div>
+          </div>
+        </PaymentInputsWrapper>
+      </section>
+{/* ******* confirm and complete button section */}
       <section className="confirmbuttonsection">
         <hr className="col-md-12 mb-4" />
-        <div className="row">
-          <Col
-            xs={6}
-            as={Button}
-            variant="info"
-            size="lg"
-            className="btn-block m-2"
-            type="submit"
-          >
-            Confirm and Submit Order
-          </Col>
+        <div className="row justify-content-center">
+          <div className="col-auto">
+            <Button variant="info" size="lg" className="m-2" type="submit">
+              Confirm and Submit Order
+            </Button>
+          </div>
         </div>
       </section>
       {/* </form> */}

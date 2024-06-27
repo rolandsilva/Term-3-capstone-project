@@ -52,3 +52,25 @@
   overflow-x: hidden;
   overflow-y: auto;
 }
+
+.shippingsection {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-inputs-wrapper {
+  border: 2px solid black; /* Add border to see the container */
+  padding: 20px; /* Add padding to the container */
+  overflow: auto; /* Ensure container can grow */
+}
+
+.payment-inputs-wrapper .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.payment-inputs-wrapper .col-md-6,
+.payment-inputs-wrapper .col-md-4 {
+  padding-left: 0;
+  padding-right: 0;
+}
