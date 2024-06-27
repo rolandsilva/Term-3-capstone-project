@@ -23,6 +23,7 @@
 
 .accountsession {
   width: 50%;
+  outline: 2px solid black;
 }
 
 .info-title {
@@ -49,13 +50,19 @@
 .ordersection {
   width: 40%;
   height: 800px;
+  padding: 10px;
   overflow-x: hidden;
   overflow-y: auto;
+  outline: 2px solid black;
 }
 
 .shippingsection {
   display: flex;
   flex-direction: column;
+}
+
+.shippingsection div {
+padding: 10px;
 }
 
 .payment-inputs-wrapper {
@@ -73,4 +80,51 @@
 .payment-inputs-wrapper .col-md-4 {
   padding-left: 0;
   padding-right: 0;
+}
+
+.creditcardsection {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  // background-color: #c1c8dc;
+  color: black;
+  border: 2px solid black;
+  padding: 10px;
+  display: inline-block;
+  white-space: nowrap;
+  margin-left: 55%;
+  // width: 80%;
+  // margin-bottom: 20px;
+}
+
+.creditcardsection h4 {
+  background-color: #c1c8dc;
+  color: black;
+  border: 2px solid black;
+  padding: 10px;
+  display: inline-block;
+  white-space: nowrap;
+  // margin-bottom: 20px;
+}
+
+.creditcardsection div {
+  // display: flex;
+  // flex-direction: row;
+  padding: 10px;
+}
+
+.creditcardsection input {
+  background-color: #c1c8dc;
+  padding: 10px;
+  outline: black solid 2px;
+}
+
+.nameediv {
+  margin-top: 20px;
+}
+
+.cardimagediv svg {
+  margin-right: 90%;
+  width: 60px;
+  height: 60px;
 }

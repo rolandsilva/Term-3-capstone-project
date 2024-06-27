@@ -7,6 +7,7 @@ import CheckoutForm from "../components/CheckoutForm/index"
 import ErrorBoundary  from "../components/ErrorBoundary";
 import { Link } from "react-router-dom";
 import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner";
+import api from "../utils/api.utils";
 
 const initialState = {
   isSubmitting: false,
@@ -16,10 +17,12 @@ const initialState = {
 
 function CheckoutPage() {
   const [data, setData] = useState(initialState);
-  const { state, resetCart, calculateCartTotal } = useProvideCart();
+  const { state, resetCart, calculateCartTotal, createOrder } = useProvideCart();
   const [orderId, setOrderId] = useState("")
 
+
   const placeOrder = async (orderFormData) => {
+    console.log(orderFormData)
     let orderData = {
       customerDetails: orderFormData,
       items: state.cart,
@@ -32,7 +35,9 @@ function CheckoutPage() {
       errorMessage: null,
     });
     try {
-      const orderConfirmation = await createOrder(orderData);
+      const orderConfirmation = await api.post("/orders", orderData);
+      console.log("order response", orderConfirmation)
+      // const orderConfirmation = await createOrder(orderData);
       toast(`Order Placed Successfully, ${orderConfirmation.data.orderId})`);
       setOrderId(orderConfirmation.data.orderId)
       resetCart();

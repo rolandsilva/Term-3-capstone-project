@@ -5,17 +5,17 @@ const ordersSchema = new mongoose.Schema(
   {
     id: {
       type: Number,
-      required: true,
+      // required: true,
     },
     orderNumber: {
       type: Number,
-      required: true,
+      // required: true,
     },
 
     orderContents: [
       {
-        itemNumber: {
-          type: Number,
+        productNbr: {
+          type: String,
           required: true,
         },
 
