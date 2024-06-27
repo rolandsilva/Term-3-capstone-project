@@ -82,14 +82,15 @@ const Footer = () => {
       </div>
 
       <div className="footer-links">
-        <a href="#">Copyright © 2024 RSPWebDev</a>
-        <a href="#">About Us</a>
-        <a href="#">Business</a>
-        <a href="#">Government</a>
-        <a href="#">Education</a>
-        <a href="#">Military/Veterans</a>
-        <a href="#">Tech Support</a>
+        <a href="/FAQ">Copyright © 2024 RSPWebDev</a>
+        <a href="/about-us">About Us</a>
+        <a href="/business">Business</a>
+        <a href="/government">Government</a>
+        <a href="/education">Education</a>
+        <a href="/military-veterans">Military/Veterans</a>
+        <a href="/tech-support">Tech Support</a>
       </div>
+
     </footer>
   );
 };
