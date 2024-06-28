@@ -11,7 +11,7 @@ function generateToken(customer) {
       email: customer.customerEmail,
     },
     process.env.JWT_SECRET,
-    { expiresIn: "1h" }
+    { expiresIn: "30d" }
   );
 }
 

@@ -1,25 +1,23 @@
 .account-container {
   display: flex;
-  justify-content: space-around;
+  margin-top: 10px;
+  /* justify-content: space-around; */
 }
 
 .account-info {
-  width: 50%;
+  width: 40%;
+  outline: 2px solid black;
+  /* height: 80%; */
 }
 
 .info-title {
-  outline: 1px solid black;
+  /* outline: 1px solid black; */
   color: black;
   background-color: #c1c7dc;
   font-size: 24px;
   width: 75%;
   margin: 1em auto;
   padding: 5px;
-}
-
-.info-title.saved {
-  font-size: 24px;
-  width: 100%;
 }
 
 .account-info p {
@@ -33,32 +31,75 @@
 .account-password-container {
   display: flex;
   flex-flow: column wrap;
-  margin-left: 10em;
+  margin-left: 3.2em;
+  margin-top: 10px;
+  margin-bottom: 10px;;
   justify-content: flex-start;
   align-content: flex-start;
+  width: 92.5%;
+  height: 450px;
+  outline: 2px solid black;
 }
 
 .account-password-form {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: 300px;
+  /* margin: 0 auto; */
+  margin: 5px;
 }
 
 .account-password-form input {
   font-size: 1.5em;
-  margin: 0.5em 0;
+  margin: 0.20em 0;
+  width: 30%;
   padding: 5px;
+  height: 40px;
 }
 
 .account-password-form label {
-  font-size: 1.5em;
-  margin: 0.5em 0;
+  font-size: 1.2rem;
+  margin: 0.20em 0;
   padding: 5px;
+  height: 35px;
 }
 
 .account-password-container .info-title {
   max-width: 40%;
+}
+
+.ordersplacedsection {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 45%;
+  outline: 2px solid black;
+  height: 650px;
+  padding: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+}
+
+.ordersplacedtitle {
+  outline: 3px solid black;
+  color: black;
+  background-color: #c1c7dc;
+  font-size: 24px;
+  width: 75%;
+  height: 60px;
+  margin: 1em auto;
+  padding: 5px;
+}
+
+.passwordbutton {
+background-color: #dcdfe8;
+outline: 2px solid black;
+margin: 5px;
 }
 
 @media (max-width: 768px) {

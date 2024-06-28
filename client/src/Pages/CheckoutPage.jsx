@@ -20,6 +20,7 @@ function CheckoutPage() {
   const { state, resetCart, calculateCartTotal, createOrder } =
     useProvideCart();
   const [orderSummary, setOrderSummary] = useState(null);
+  const [orderTotal, setOrderTotal] = useState(null);
 
   const placeOrder = async (orderFormData) => {
     console.log(orderFormData);
@@ -38,12 +39,12 @@ function CheckoutPage() {
       const orderConfirmation = await api.post("/orders", orderData);
       console.log("order response", orderConfirmation);
       // const orderConfirmation = await createOrder(orderData);
-      toast(
-        `Order Placed Successfully, ${orderConfirmation.data.orderId})`
-      );
+      toast(`Order Placed Successfully, ${orderConfirmation.data.orderId})`);
 
       // TODO: Check response and make sure the data is correct for order summary.
-      setOrderSummary(orderConfirmation.data.orderData.orderContents);
+      setOrderSummary(orderConfirmation.data.orderId);
+      setOrderTotal(orderConfirmation.data.orderData.orderTotal);
+      console.log(orderConfirmation.data);
       resetCart();
       setData({
         isSubmitting: false,
@@ -77,9 +78,7 @@ function CheckoutPage() {
       <h2 style={{ marginTop: "20px" }}>Order Confirmation Page</h2>
       {/* </Container> */}
       <ErrorBoundary>
-        {data.errorMessage && (
-          <p className="form-error">{data.errorMessage}</p>
-        )}
+        {data.errorMessage && <p className="form-error">{data.errorMessage}</p>}
         {state.itemCount && !data.isConfirmed ? (
           <CheckoutForm placeOrder={placeOrder} />
         ) : (
@@ -93,25 +92,13 @@ function CheckoutPage() {
                     marginTop: "20px",
                   }}
                 >
-                  {`Your order is confirmed! 
-                  ${
-                    orderSummary && (
-                      <div>
-                        Your Order Number is:
-                        {JSON.stringify(orderSummary)}
-                        <br />
-                        Your Order Total is: $
-                        {orderSummary.orderTotal}
-                      </div>
-                    )
-                  }`}
+                  <div>Your Order Number is: {orderSummary}</div>
+                  <div>Your Shipping Total is: $ {orderTotal}</div>
                 </p>
               )}
 
               <div className="col-sm-12 d-flex justify-content-center">
-                <p>
-                  You'll receive confirmation in your email shortly.
-                </p>
+                <p>You'll receive confirmation in your email shortly.</p>
               </div>
               <div className="col-sm-12 d-flex justify-content-center">
                 <Link to="/">Continue shopping!</Link>

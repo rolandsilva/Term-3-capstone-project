@@ -50,7 +50,7 @@ const customerSchema = new mongoose.Schema({
   orders: [
     {
       type: ObjectId,
-      ref: "Order",
+      ref: "Orders",
     },
   ],
 });

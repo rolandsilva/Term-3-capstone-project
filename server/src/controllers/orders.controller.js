@@ -6,6 +6,12 @@ export async function handleGetOrders(req, res) {
   res.send(orders);
 }
 
+export async function handleGetOrdersByCustomerId(req, res) {
+  const orders = await Customer.findById(req.customer.id).populate("orders");
+  console.log(orders)
+  res.send(orders);
+}
+
 export async function handleCreateOrder(req, res, next) {
   const {
     orderNumber,

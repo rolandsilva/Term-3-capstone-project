@@ -5,14 +5,15 @@ import {
   handleCreateOrder,
   handleDeleteOrder,
   handleGetOrders,
+  handleGetOrdersByCustomerId,
 } from "../controllers/orders.controller";
 
 const ordersRoutes = Router();
 
 ordersRoutes
   .route("/")
-  .get(handleGetOrders)
+  // .get(handleGetOrders)
   .post(requireAuth, handleCreateOrder)
-  .delete(requireAuth, handleDeleteOrder);
-
+  .delete(requireAuth, handleDeleteOrder)
+  .get(requireAuth, handleGetOrdersByCustomerId)
 export default ordersRoutes;

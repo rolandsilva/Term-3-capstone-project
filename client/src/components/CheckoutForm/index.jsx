@@ -3,10 +3,7 @@ import { useAuth } from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import useProvideCart from "../../hooks/useCart";
 import CartList from "../CartList";
-import {
-  PaymentInputsWrapper,
-  usePaymentInputs,
-} from "react-payment-inputs";
+import { PaymentInputsWrapper, usePaymentInputs } from "react-payment-inputs";
 import images from "react-payment-inputs/images";
 // import "./CheckoutForm.scss";
 import "./CheckoutForm.scss";
@@ -30,10 +27,9 @@ const initialState = {
 
 function CheckoutForm({ placeOrder }) {
   const [data, setData] = useState(initialState);
-  const [
-    hasShippingAddressDifferent,
-    setHasShippingAddressDifferent,
-  ] = useState(false);
+  const [hasShippingAddressDifferent, setHasShippingAddressDifferent] =
+    useState(false);
+  const [showImage, setShowImage] = useState(true);
 
   const { state } = useProvideCart();
 
@@ -138,11 +134,9 @@ function CheckoutForm({ placeOrder }) {
                 );
               }}
             />
-            <label
-              className="custom-control-label ms-3"
-              htmlFor="same-address"
-            >
-              Shipping address is not the same as my billing address
+            <label className="custom-control-label ms-3" htmlFor="same-address">
+              Click here if the Shipping address is not the same as my billing
+              address
             </label>
           </div>
           {/* {hasShippingAddressDifferent && (
@@ -158,7 +152,28 @@ function CheckoutForm({ placeOrder }) {
 
       <section className="shipaddresscreditcardcontainer">
         <section className="shippingsection">
+          {/* {!hasShippingAddressDifferent && (
+            <ShippingAddress
+              handleInputChange={handleInputChange}
+              data={data}
+              handlePlaceOrder={handlePlaceOrder}
+            />
+          )} */}
           {!hasShippingAddressDifferent && (
+            <>
+              {showImage ? (
+                <div className="shippingcontainerimage">Please check out our weekly specials and items just in!</div>
+                // <img src="/circuitboardtrans.png" alt="Descriptive Alt Text" />
+              ) : (
+                <ShippingAddress
+                  handleInputChange={handleInputChange}
+                  data={data}
+                  handlePlaceOrder={handlePlaceOrder}
+                />
+              )}
+            </>
+          )}
+          {hasShippingAddressDifferent && (
             <ShippingAddress
               handleInputChange={handleInputChange}
               data={data}
@@ -183,9 +198,7 @@ function CheckoutForm({ placeOrder }) {
               value={data.nameOnCard}
               onChange={handleInputChange}
             />
-            <div className="invalid-feedback">
-              Name on card is required.
-            </div>
+            <div className="invalid-feedback">Name on card is required.</div>
           </div>
           <div className="cardnumberdiv">
             <label htmlFor="cardNumber">Card number</label>
@@ -199,9 +212,7 @@ function CheckoutForm({ placeOrder }) {
               placeholder="1234 5678 9012 3456"
               required
             />
-            <div className="invalid-feedback">
-              Card number is required.
-            </div>
+            <div className="invalid-feedback">Card number is required.</div>
           </div>
           {/* </div> */}
           {/* <div className=""> */}
@@ -217,16 +228,13 @@ function CheckoutForm({ placeOrder }) {
               placeholder="MM/YY"
               required
             />
-            <div className="invalid-feedback">
-              Expiration date required.
-            </div>
+            <div className="invalid-feedback">Expiration date required.</div>
           </div>
           <div className="cvcdiv">
             <label htmlFor="cardPin">CVC</label>
             <input
               {...getCVCProps({
-                onChange: (e) =>
-                  setData({ ...data, cardPin: e.target.value }),
+                onChange: (e) => setData({ ...data, cardPin: e.target.value }),
               })}
               className="form-control"
               id="cardPin"
