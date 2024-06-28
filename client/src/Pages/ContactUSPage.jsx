@@ -7,7 +7,7 @@ const ContactUsPage = () => {
       <section className="contact-section">
         <div className="info-title">Contact Us</div>
         <div className="contact-info">
-          <h2>General Contact</h2>
+          <h3>General Contact</h3>
           <h4>Roland's Computers, Devices ans Accessories </h4>
           <h4>(RCDA LTD)</h4>
           <p>Address: 123 Massachusetts Ave, Boston, MA, 01234 USA</p>
@@ -17,7 +17,7 @@ const ContactUsPage = () => {
           <hr />
         </div>
         <div className="contact-info">
-          <h2>Tech Support</h2>
+          <h3>Tech Support</h3>
           <p>Phone: (800) 555-5678</p>
           <p>Email: techsupport@rcda.com</p>
           <p>Hours: Mon-Fri, 9am - 5pm</p>
@@ -26,7 +26,7 @@ const ContactUsPage = () => {
         <hr />
 
         <div className="contact-info">
-          <h2>Sales</h2>
+          <h3>Sales</h3>
           <p>Phone: (800) 555-9012</p>
           <p>Email: sales@rcda.com</p>
           <p>Hours: Mon-Fri, 9am - 6pm</p>
