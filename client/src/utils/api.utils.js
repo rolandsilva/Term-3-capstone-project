@@ -36,7 +36,7 @@ export const setAuthToken = (token) => {
   }
 };
 
-api.interceptors.request.use(
+api.interceptors.response.use(
   (response) => {
     return response;
   },
@@ -45,6 +45,11 @@ api.interceptors.request.use(
       // Todo display user friendly message for unauthorized.
       console.log(error);
     } else if (error.response.status === 403) {
+      // Can be an expired JWT token.
+      console.log(
+        "From api.utils.js... Try logging in again.",
+        error.response.data
+      );
       // Todo display user friendly message for forbidden.
       console.log(error);
     }
