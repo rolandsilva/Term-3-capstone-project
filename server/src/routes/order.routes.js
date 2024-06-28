@@ -12,7 +12,7 @@ const ordersRoutes = Router();
 ordersRoutes
   .route("/")
   .get(handleGetOrders)
-  .post(handleCreateOrder)
+  .post(requireAuth, handleCreateOrder)
   .delete(requireAuth, handleDeleteOrder);
 
 export default ordersRoutes;
