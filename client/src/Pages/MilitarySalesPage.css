@@ -1,0 +1,55 @@
+.military-sales {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2em;
+    color: #333;
+  }
+  
+  .subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    color: #666;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .card p, .card ul {
+    font-size: 1em;
+    color: #555;
+  }
+  
+  .card ul {
+    padding-left: 20px;
+  }
+  
+  .card ul li {
+    margin-bottom: 5px;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .card-container .card {
+    flex: 1;
+  }

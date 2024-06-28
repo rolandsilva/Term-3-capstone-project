@@ -161,7 +161,7 @@ function CheckoutForm({ placeOrder }) {
             type="text"
             className="form-control"
             id="nameOnCard"
-            placeholder=""
+            placeholder="John Smith"
             required
             value={data.nameOnCard}
             onChange={handleInputChange}

@@ -27,8 +27,8 @@
 }
 
 .accountsession p {
-font-size: 28px;
-margin-top: 28px;
+  font-size: 28px;
+  margin-top: 28px;
 }
 
 .info-title {
@@ -63,11 +63,18 @@ margin-top: 28px;
 
 .shippingsection {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  // flex-direction: column;
+  margin-top: 20px;;
+  width: 40%;
+  // height: 50%;
+  height: auto;
+  outline: 2px solid black;
 }
 
 .shippingsection div {
-padding: 10px;
+  font-size: 25px;
+  padding: 10px;
 }
 
 .payment-inputs-wrapper {
@@ -89,15 +96,18 @@ padding: 10px;
 
 .creditcardsection {
   display: flex;
+  flex-direction: column;
+  // flex-direction: column;
   justify-content: center;
+  margin-top: 20px;
   width: 40%;
-  // background-color: #c1c8dc;
-  color: black;
   border: 2px solid black;
   padding: 10px;
+  // background-color: #c1c8dc;
+  // color: black;
   display: inline-block;
   white-space: nowrap;
-  margin-left: 55%;
+  // margin-left: 55%;
   // width: 80%;
   // margin-bottom: 20px;
 }
@@ -107,19 +117,19 @@ padding: 10px;
   color: black;
   border: 2px solid black;
   padding: 10px;
-  display: inline-block;
-  white-space: nowrap;
+  // display: inline-block;
+  // white-space: nowrap;
   // margin-bottom: 20px;
 }
 
 .creditcardsection div {
+  padding: 10px;
   // display: flex;
   // flex-direction: row;
-  padding: 10px;
 }
 
 .creditcardsection input {
-  background-color: #c1c8dc;
+  // background-color: #c1c8dc;
   padding: 10px;
   outline: black solid 2px;
 }
