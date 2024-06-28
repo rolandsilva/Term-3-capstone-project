@@ -92,7 +92,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-links">
-        <a href="/FAQ">Copyright © 2024 RSPWebDev</a>
+        <a href="/" >Copyright © 2024 RSPWebDev</a>
         <a href="/about-us">About Us</a>
         <a href="/business">Business</a>
         <a href="/government">Government</a>
