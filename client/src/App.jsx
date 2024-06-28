@@ -22,6 +22,12 @@ import FAQPage from "./Pages/FAQPage";
 import NotFoundPage from "./Pages/NotFoundPage";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import BottomLinkPage from "./Pages/BottomLinkPage";
+import AboutUsPage from "./Pages/AboutUsPage";
+import BusinessSalesPage from "./Pages/BusinessSalesPage";
+import GovernmentSalesPage from "./Pages/GovernmentSalesPage";
+import EducationalSalesPage from "./Pages/EducationSalesPage";
+import MilitarySalesPage from "./Pages/MilitarySalesPage";
+import TechSupportPage from "./Pages/TechSupportPage";
 
 function App() {
   return (
@@ -36,12 +42,12 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/categories/:name" element={<CategoryPage />} />
             <Route path="/product/:id" element={<ProductPage />} />
-            <Route path="/about-us" element={<BottomLinkPage />} />
-            <Route path="/business" element={<BottomLinkPage />} />
-            <Route path="/government" element={<BottomLinkPage />} />
-            <Route path="/education" element={<BottomLinkPage />} />
-            <Route path="/military-veterans" element={<BottomLinkPage />} />
-            <Route path="/tech-support" element={<BottomLinkPage />} />
+            <Route path="/business" element={<BusinessSalesPage />} />
+            <Route path="/government" element={<GovernmentSalesPage />} />
+            <Route path="/education" element={<EducationalSalesPage />} />
+            <Route path="/military-veterans" element={<MilitarySalesPage />} />
+            <Route path="/tech-support" element={<TechSupportPage />} />
+            <Route path="/about-us" element={<AboutUsPage />} />
             <Route path="/contact-us" element={<ContactUsPage />} />
             {/* Protected Routes */}
             <Route path="/account" element={<ProtectedRoute />}>

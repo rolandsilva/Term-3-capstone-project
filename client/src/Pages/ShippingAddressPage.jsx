@@ -109,8 +109,7 @@ const ShippingAddress = ({
         <div className="row">
           <div className="col-md-4 mb-3">
             <label htmlFor="Phone">
-              Shipping Phone{" "}
-              <span className="text-muted">(optional)</span>
+              Shipping Phone <span className="text-muted"></span>
             </label>
             <input
               type="phone"

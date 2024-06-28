@@ -77,7 +77,7 @@ function CheckoutForm({ placeOrder }) {
   return (
     <>
       <div className="account-container">
-        <section className="accountsession">
+        <section className="accountsection">
           <div className="info-title">User Account Information</div>
           <p>Account Number: {_id}</p>
           <p>First Name: {customerFirstName}</p>
@@ -122,112 +122,125 @@ function CheckoutForm({ placeOrder }) {
           </Row>
         </section>
       </div>
+
       {/* this is the shippigaddress checkbox */}
-      <section className="shippingsection">
+      <section className="shippingcheckboxsection">
         <div className="row">
-          <div className="col-md-12 mb-3">
-            <div className="custom-control custom-checkbox">
-              <input
-                type="checkbox"
-                className="custom-control-input"
-                id="same-address"
-                onChange={() => {
-                  setHasShippingAddressDifferent(
-                    hasShippingAddressDifferent ? false : true
-                  );
-                }}
-              />
-              <label
-                className="custom-control-label ms-3"
-                htmlFor="same-address"
-              >
-                Shipping address is not the same as my billing address
-              </label>
-            </div>
-            {hasShippingAddressDifferent && (
+          {/* <div className="col-md-12 mb-3"> */}
+          <div className="custom-control custom-checkbox">
+            <input
+              type="checkbox"
+              className="custom-control-input"
+              id="same-address"
+              onChange={() => {
+                setHasShippingAddressDifferent(
+                  hasShippingAddressDifferent ? false : true
+                );
+              }}
+            />
+            <label
+              className="custom-control-label ms-3"
+              htmlFor="same-address"
+            >
+              Shipping address is not the same as my billing address
+            </label>
+          </div>
+          {/* {hasShippingAddressDifferent && (
               <ShippingAddress
                 handleInputChange={handleInputChange}
                 data={data}
                 handlePlaceOrder={handlePlaceOrder}
               />
-            )}
-          </div>
+            )} */}
+          {/* </div> */}
         </div>
       </section>
 
-      <section className="creditcardsection">
-        <h4>Payment Method</h4>
-        {/* <PaymentInputsWrapper {...wrapperProps}> */}
-        {/* <div className=""> */}
-        <div className="namediv">
-          {/* <div className="col-md-6 mb-3"> */}
-          <label htmlFor="nameOnCard">Name on card</label>
-          <input
-            type="text"
-            className="form-control"
-            id="nameOnCard"
-            placeholder=""
-            required
-            value={data.nameOnCard}
-            onChange={handleInputChange}
-          />
-          <div className="invalid-feedback">
-            Name on card is required.
+      <section className="shipaddresscreditcardcontainer">
+        <section className="shippingsection">
+          {!hasShippingAddressDifferent && (
+            <ShippingAddress
+              handleInputChange={handleInputChange}
+              data={data}
+              handlePlaceOrder={handlePlaceOrder}
+            />
+          )}
+        </section>
+
+        <section className="creditcardsection">
+          <h4>Payment Method</h4>
+          {/* <PaymentInputsWrapper {...wrapperProps}> */}
+          {/* <div className=""> */}
+          <div className="namediv">
+            {/* <div className="col-md-6 mb-3"> */}
+            <label htmlFor="nameOnCard">Name on card</label>
+            <input
+              type="text"
+              className="form-control"
+              id="nameOnCard"
+              placeholder="John Smith"
+              required
+              value={data.nameOnCard}
+              onChange={handleInputChange}
+            />
+            <div className="invalid-feedback">
+              Name on card is required.
+            </div>
           </div>
-        </div>
-        <div className="cardnumberdiv">
-          <label htmlFor="cardNumber">Card number</label>
-          <input
-            {...getCardNumberProps({
-              onChange: (e) =>
-                setData({ ...data, cardNumber: e.target.value }),
-            })}
-            className="form-control"
-            id="cardNumber"
-            placeholder="1234 5678 9012 3456"
-            required
-          />
-          <div className="invalid-feedback">
-            Card number is required.
+          <div className="cardnumberdiv">
+            <label htmlFor="cardNumber">Card number</label>
+            <input
+              {...getCardNumberProps({
+                onChange: (e) =>
+                  setData({ ...data, cardNumber: e.target.value }),
+              })}
+              className="form-control"
+              id="cardNumber"
+              placeholder="1234 5678 9012 3456"
+              required
+            />
+            <div className="invalid-feedback">
+              Card number is required.
+            </div>
           </div>
-        </div>
-        {/* </div> */}
-        {/* <div className=""> */}
-        <div className="expdatediv">
-          <label htmlFor="cardExpir">Expiration date</label>
-          <input
-            {...getExpiryDateProps({
-              onChange: (e) =>
-                setData({ ...data, cardExpir: e.target.value }),
-            })}
-            className="form-control"
-            id="cardExpir"
-            placeholder="MM/YY"
-            required
-          />
-          <div className="invalid-feedback">
-            Expiration date required.
+          {/* </div> */}
+          {/* <div className=""> */}
+          <div className="expdatediv">
+            <label htmlFor="cardExpir">Expiration date</label>
+            <input
+              {...getExpiryDateProps({
+                onChange: (e) =>
+                  setData({ ...data, cardExpir: e.target.value }),
+              })}
+              className="form-control"
+              id="cardExpir"
+              placeholder="MM/YY"
+              required
+            />
+            <div className="invalid-feedback">
+              Expiration date required.
+            </div>
           </div>
-        </div>
-        <div className="cvcdiv">
-          <label htmlFor="cardPin">CVC</label>
-          <input
-            {...getCVCProps({
-              onChange: (e) =>
-                setData({ ...data, cardPin: e.target.value }),
-            })}
-            className="form-control"
-            id="cardPin"
-            placeholder="123"
-            required
-          />
-          <div className="invalid-feedback">CVC required.</div>
-        </div>
-        <div className="cardimagediv">
-          <svg {...getCardImageProps({ images })} />
-        </div>
-        {/* </div> */}
-        {/* </PaymentInputsWrapper> */}
+          <div className="cvcdiv">
+            <label htmlFor="cardPin">CVC</label>
+            <input
+              {...getCVCProps({
+                onChange: (e) =>
+                  setData({ ...data, cardPin: e.target.value }),
+              })}
+              className="form-control"
+              id="cardPin"
+              placeholder="123"
+              required
+            />
+            <div className="invalid-feedback">CVC required.</div>
+          </div>
+          <div className="cardimagediv">
+            <svg {...getCardImageProps({ images })} />
+          </div>
+          {/* </div> */}
+          {/* </PaymentInputsWrapper> */}
+        </section>
       </section>
       {/* ******* confirm and complete button section */}
       <section className="confirmbuttonsection">

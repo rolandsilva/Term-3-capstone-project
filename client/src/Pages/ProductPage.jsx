@@ -69,6 +69,10 @@ const ProductPage = () => {
             <span className="productDescription">{product.category}</span>
           </div>
           <div className="producttitles">
+            Product Product Number:{" "}
+            <span className="productDescription">{product.productNbr}</span>
+          </div>
+          <div className="producttitles">
             Product Price: $
             <span className="productDescription">${product.price}</span>
           </div>
