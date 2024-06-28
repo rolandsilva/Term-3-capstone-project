@@ -24,6 +24,15 @@
     /* background-color: lightblue; */
 }
 
+.address-link {
+    color: #9eaaca;
+    text-decoration: none;
+  }
+  
+  .address-link:hover {
+    text-decoration: underline;
+  }
+  
 .footer-social-media {
     display: flex;
     flex-direction: row;

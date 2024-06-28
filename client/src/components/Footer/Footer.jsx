@@ -14,11 +14,21 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-address">
-        <div className="addressContainer">
+        <a
+          href="https://www.google.com/maps/place/123+Massachusetts+Ave,+Boston,+MA+01234"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="address-link"
+        >
           123 Massachusetts Avenue
           <br />
           Boston, MA 01234
-        </div>
+        </a>
+        {/* <div className="addressContainer">
+          123 Massachusetts Avenue
+          <br />
+          Boston, MA 01234
+        </div> */}
 
         <div className="footer-social-media">
           <a
@@ -90,7 +100,6 @@ const Footer = () => {
         <a href="/military-veterans">Military/Veterans</a>
         <a href="/tech-support">Tech Support</a>
       </div>
-
     </footer>
   );
 };
