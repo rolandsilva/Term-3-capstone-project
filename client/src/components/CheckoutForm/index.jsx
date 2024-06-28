@@ -3,7 +3,10 @@ import { useAuth } from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import useProvideCart from "../../hooks/useCart";
 import CartList from "../CartList";
-import { PaymentInputsWrapper, usePaymentInputs } from "react-payment-inputs";
+import {
+  PaymentInputsWrapper,
+  usePaymentInputs,
+} from "react-payment-inputs";
 import images from "react-payment-inputs/images";
 // import "./CheckoutForm.scss";
 import "./CheckoutForm.scss";
@@ -27,8 +30,10 @@ const initialState = {
 
 function CheckoutForm({ placeOrder }) {
   const [data, setData] = useState(initialState);
-  const [hasShippingAddressDifferent, setHasShippingAddressDifferent] =
-    useState(false);
+  const [
+    hasShippingAddressDifferent,
+    setHasShippingAddressDifferent,
+  ] = useState(false);
 
   const { state } = useProvideCart();
 
@@ -59,14 +64,14 @@ function CheckoutForm({ placeOrder }) {
   } = usePaymentInputs();
 
   const handleInputChange = (e) =>
-    setData({ ...data, [e.target.id]: e.target.value });
+    setData({ ...data, [e.target.name]: e.target.value });
   console.log(data);
 
   const handlePlaceOrder = async (e) => {
     e.preventDefault();
     e.stopPropagation();
     await placeOrder(data);
-    console.log(data)
+    console.log(data);
   };
 
   return (
@@ -166,20 +171,25 @@ function CheckoutForm({ placeOrder }) {
             value={data.nameOnCard}
             onChange={handleInputChange}
           />
-          <div className="invalid-feedback">Name on card is required.</div>
+          <div className="invalid-feedback">
+            Name on card is required.
+          </div>
         </div>
         <div className="cardnumberdiv">
           <label htmlFor="cardNumber">Card number</label>
           <input
             {...getCardNumberProps({
-              onChange: (e) => setData({ ...data, cardNumber: e.target.value }),
+              onChange: (e) =>
+                setData({ ...data, cardNumber: e.target.value }),
             })}
             className="form-control"
             id="cardNumber"
             placeholder="1234 5678 9012 3456"
             required
           />
-          <div className="invalid-feedback">Card number is required.</div>
+          <div className="invalid-feedback">
+            Card number is required.
+          </div>
         </div>
         {/* </div> */}
         {/* <div className=""> */}
@@ -187,20 +197,24 @@ function CheckoutForm({ placeOrder }) {
           <label htmlFor="cardExpir">Expiration date</label>
           <input
             {...getExpiryDateProps({
-              onChange: (e) => setData({ ...data, cardExpir: e.target.value }),
+              onChange: (e) =>
+                setData({ ...data, cardExpir: e.target.value }),
             })}
             className="form-control"
             id="cardExpir"
             placeholder="MM/YY"
             required
           />
-          <div className="invalid-feedback">Expiration date required.</div>
+          <div className="invalid-feedback">
+            Expiration date required.
+          </div>
         </div>
         <div className="cvcdiv">
           <label htmlFor="cardPin">CVC</label>
           <input
             {...getCVCProps({
-              onChange: (e) => setData({ ...data, cardPin: e.target.value }),
+              onChange: (e) =>
+                setData({ ...data, cardPin: e.target.value }),
             })}
             className="form-control"
             id="cardPin"
@@ -220,7 +234,13 @@ function CheckoutForm({ placeOrder }) {
         <hr className="col-md-12 mb-4" />
         <div className="row justify-content-center">
           <div className="col-auto">
-            <Button variant="info" size="lg" className="m-2" type="submit" onClick={handlePlaceOrder}>
+            <Button
+              variant="info"
+              size="lg"
+              className="m-2"
+              type="submit"
+              onClick={handlePlaceOrder}
+            >
               Confirm and Submit Order
             </Button>
             {/* <Button variant="info" size="lg" className="m-2" type="submit" >
