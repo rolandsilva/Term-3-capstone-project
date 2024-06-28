@@ -21,13 +21,13 @@
   justify-content: space-around;
 }
 
-.accountsession {
+.accountsection {
   width: 50%;
   outline: 2px solid black;
 }
 
-.accountsession p {
-  font-size: 28px;
+.accountsection p {
+  font-size: 24px;
   margin-top: 28px;
 }
 
@@ -37,7 +37,8 @@
   background-color: #c1c7dc;
   font-size: 24px;
   width: 75%;
-  margin: 1em auto;
+  // margin: 1em auto;
+  // margin: 10px;
   padding: 5px;
 }
 
@@ -68,36 +69,57 @@
   margin-top: 20px;;
   width: 40%;
   // height: 50%;
-  height: auto;
+  // height: auto;
   outline: 2px solid black;
 }
 
+.custom-control-label ms-3 {
+  font-size: 20px;
+}
+
+.shipaddresscreditcardcontainer {
+  display: flex;
+  gap: 69px;
+}
+
+.shippingsection {
+  display: flex;
+  justify-content: center;
+  margin-left: 2.5%;
+  width: 50%;
+}
+
 .shippingsection div {
-  font-size: 25px;
-  padding: 10px;
+  font-size: 20px;
+  padding: 5px;
 }
 
-.payment-inputs-wrapper {
-  border: 2px solid black; /* Add border to see the container */
-  padding: 20px; /* Add padding to the container */
-  overflow: auto; /* Ensure container can grow */
+// .shippingsection .row {
+// margin-left: 5px;
+// }
+
+.shippingaddresscontainer {
+  margin-top: 10px;
+  // outline: 2px solid black;
 }
 
-.payment-inputs-wrapper .row {
-  margin-left: 0;
-  margin-right: 0;
+.shippingcheckboxsection {
+  margin-top: 10px;
 }
 
-.payment-inputs-wrapper .col-md-6,
-.payment-inputs-wrapper .col-md-4 {
-  padding-left: 0;
-  padding-right: 0;
+.shippingaddresscontainer label {
+font-size: 20px;;
+  // outline: 2px solid black;
+}
+.shippingaddresscontainer input {
+  height: 40px;
+  // outline: 2px solid black;
 }
 
 .creditcardsection {
   display: flex;
+  // flex-direction: row;
   flex-direction: column;
-  // flex-direction: column;
   justify-content: center;
   margin-top: 20px;
   width: 40%;
@@ -105,8 +127,8 @@
   padding: 10px;
   // background-color: #c1c8dc;
   // color: black;
-  display: inline-block;
-  white-space: nowrap;
+  // display: inline-block;
+  // white-space: nowrap;
   // margin-left: 55%;
   // width: 80%;
   // margin-bottom: 20px;
@@ -142,4 +164,21 @@
   margin-right: 90%;
   width: 60px;
   height: 60px;
+}
+
+.payment-inputs-wrapper {
+  border: 2px solid black; /* Add border to see the container */
+  padding: 20px; /* Add padding to the container */
+  overflow: auto; /* Ensure container can grow */
+}
+
+.payment-inputs-wrapper .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.payment-inputs-wrapper .col-md-6,
+.payment-inputs-wrapper .col-md-4 {
+  padding-left: 0;
+  padding-right: 0;
 }
