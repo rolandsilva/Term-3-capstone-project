@@ -1,5 +1,5 @@
 import { Error } from "mongoose";
-import { Order, ShippingAddress } from "../models";
+import { Order, ShippingAddress, Customer } from "../models";
 
 export async function handleGetOrders(req, res) {
   const orders = await Order.find();
@@ -7,15 +7,25 @@ export async function handleGetOrders(req, res) {
 }
 
 export async function handleCreateOrder(req, res, next) {
-  const { orderNumber, items, couponRate, orderTotal } = req.body;
+  const {
+    orderNumber,
+    customerDetails,
+    items,
+    couponRate,
+    orderTotal,
+  } = req.body;
   // const { orderNumber, items, couponRate, orderTotal } = req.body;
   // const { orderNumber, orderContents, couponRate, orderTotal } = req.body;
-  console.log("req.body console", req.body)
-  // const itemIdList = items.map((i) => i._id);
+  console.log("req.body", req.body);
+  // I create a new array with the productNbr and itemQuantity as the model expects in the orderContents field.
+  const itemsWithProductNumberAndQuantity = items.map((item) => ({
+    productNbr: item.productNbr,
+    itemQuantity: item.quantity,
+  }));
+
   const orderData = {
     // orderNumber: ` ${orderNumber}`,
-    orderContents: items,
-    // orderContents: orderContents,
+    orderContents: itemsWithProductNumberAndQuantity,
     couponRate: couponRate,
     orderTotal: orderTotal,
     shippingTime: 7,
@@ -24,11 +34,54 @@ export async function handleCreateOrder(req, res, next) {
   try {
     const createOrder = new Order(orderData);
     await createOrder.save();
-    console.log(createOrder);
+
+    // Find the customer by the customer id and push the order to the customer's orders array for reference.
+
+    const customer = await Customer.findById(req.customer.id);
+    customer.orders.push(createOrder);
+
+    // If the customerDetails is provided. Save it to the customer's shipping address. Save the _id from the shipping address to the customer's shippingAddress field.
+
+    if (
+      customerDetails.shippingFirstName &&
+      customerDetails.shippingLastName
+    ) {
+      // destruture the shipping information from the customerDetails object that is from the req.body.
+      const {
+        shippingFirstName,
+        shippingLastName,
+        shippingContactPhoneNumber,
+        shippingAddress1,
+        shippingAddress2,
+        shippingCity,
+        state,
+        shippingZipCode,
+      } = customerDetails;
+
+      // Create a new shipping address with the shipping information.
+      const shippingAddress = new ShippingAddress({
+        shippingFirstName,
+        shippingLastName,
+        shippingContactPhoneNumber,
+        shippingAddress1,
+        shippingAddress2: shippingAddress2 ? shippingAddress2 : "",
+        shippingCity,
+        shippingState: state, // changed from shippingState to state
+        shippingZipCode,
+      });
+
+      // Save the shipping address.
+      await shippingAddress.save();
+      // Save the shipping address _id to the customer's shippingAddress field.
+      customer.shippingAddress = shippingAddress._id;
+    }
+
+    await customer.save();
+
     const orderId = createOrder._id;
     res.json({ orderData: orderData, orderId: orderId });
   } catch (error) {
-    console.log(error)
+    console.log(error);
     next(new Error("Error Placing Order"));
   }
 }
