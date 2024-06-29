@@ -207,20 +207,22 @@ const AccountOrdersPage = () => {
             <div className="section-contents">
               <p>Order Number: 1234</p>
               <p>---------------</p>
-              <p>Product Image url</p>
-              <p>Product Name: iWatch Ultra 2</p>
-              <p>Product Category: iWatches</p>
+              {/* <p>Product Image url</p> */}
+              <img src="./M3mbpmax.png" />
+              {/* <img src={product.image_url} className="imgDiv" alt={product.name} /> */}
+              <p>Product Name: M3 MacBook Max</p>
+              <p>Product Category: MacBooks</p>
               <p>Item quantity: 2</p>
               <p>---------------</p>
-              <p>Product Image url</p>
+              <img src="./iwatchultra.png" />
               <p>Product Name: iWatch Ultra 2</p>
               <p>Product Category: iWatches</p>
-              <p>Item quantity: 2</p>
+              <p>Item quantity: 1</p>
               <p>---------------</p>
-              <p>Product Image url</p>
-              <p>Product Name: iWatch Ultra 2</p>
-              <p>Product Category: iWatches</p>
-              <p>Item quantity: 2</p>
+              <img src="./ipadProM4.png" />
+              <p>Product Name: M4 iPad Pro 13in</p>
+              <p>Product Category: iPads</p>
+              <p>Item quantity: 4</p>
               <p>---------------</p>
               <p>Order Total: $ 13,999</p>
             </div>

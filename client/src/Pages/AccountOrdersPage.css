@@ -86,9 +86,16 @@
   margin-right: 5px;
   overflow-x: hidden;
   overflow-y: auto;
-
 }
 
+.orders-placed-section img {
+  width: 100%;
+  height: auto;
+  max-width: 200px; /* Ensures all images have the same max width */
+  max-height: 150px; /* Ensures all images have the same max height */
+  object-fit: cover; /* Ensures the images maintain aspect ratio and are cropped if necessary*/
+  display: block; 
+} 
 /* .orders-placed-title {
     outline: 3px solid black;
     color: black;
