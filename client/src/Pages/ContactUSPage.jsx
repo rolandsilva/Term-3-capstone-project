@@ -12,8 +12,8 @@ const ContactUsPage = () => {
           <h4>(RCDA LTD)</h4>
           <p>Address: 123 Massachusetts Ave, Boston, MA, 01234 USA</p>
           <p>Phone: (800) 555-1234</p>
-          <p>Email: contact@rcda.com</p>
-
+          {/* <p>Email: contact@rcda.com</p> */}
+          <a className="button primary" href="mailto:business@rcda.com">Email Us</a>
           <hr />
         </div>
         <div className="contact-info">

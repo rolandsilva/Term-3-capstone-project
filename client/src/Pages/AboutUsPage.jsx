@@ -64,7 +64,7 @@ const AboutUsPage = () => {
             <Card.Body>
               <Card.Title>Our Values</Card.Title>
               <Card.Text>
-                Integrity, customer focus, innovation, and teamwork are at the core of everything we do.
+                Integrity, customer focus, innovation, and teamwork are at the core of everything we do. It is a family run business and we are proud of what we do!
               </Card.Text>
             </Card.Body>
           </Card>
