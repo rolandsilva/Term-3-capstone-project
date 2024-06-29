@@ -28,6 +28,7 @@ import GovernmentSalesPage from "./Pages/GovernmentSalesPage";
 import EducationalSalesPage from "./Pages/EducationSalesPage";
 import MilitarySalesPage from "./Pages/MilitarySalesPage";
 import TechSupportPage from "./Pages/TechSupportPage";
+import AccountOrdersPage from "./Pages/AccountOrdersPage";
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
             <Route path="/tech-support" element={<TechSupportPage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
             <Route path="/contact-us" element={<ContactUsPage />} />
+            <Route path="/account-orders" element={<AccountOrdersPage />} />
             {/* Protected Routes */}
             <Route path="/account" element={<ProtectedRoute />}>
               <Route path="/account" element={<AccountPage />} />
