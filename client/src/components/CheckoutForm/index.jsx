@@ -162,8 +162,45 @@ function CheckoutForm({ placeOrder }) {
           {!hasShippingAddressDifferent && (
             <>
               {showImage ? (
-                <div className="shippingcontainerimage">Please check out our weekly specials and items just in!</div>
-                // <img src="/circuitboardtrans.png" alt="Descriptive Alt Text" />
+                <div className="shippingcontainerimagesection">
+                  <div className="shippingcontainerimageContent">
+                    <div className="shippingcontainerimage">
+                      {/* <img
+                      src="/circuitboardtrans.png"
+                      alt="Descriptive Alt Text"
+                    /> */}
+                      {/* <p>
+                      Please check out our weekly specials and items just in!
+                    </p> */}
+                      <p>
+                        We are preparing your order for shipment. Once your
+                        package has been dispatched, you will receive a shipping
+                        confirmation email with a tracking number. You can use
+                        this number to track the progress of your shipment
+                        through our carrier’s website.
+                      </p>
+                      <p>
+                        If you selected expedited shipping, please note that the
+                        delivery time may be shorter. For standard shipping,
+                        please allow 3-5 business days from the date of shipment
+                        for your order to arrive. International orders may take
+                        longer due to customs processing times.
+                      </p>
+                      <p>
+                        Order Tracking: To check the status of your order at any
+                        time, visit our Order Tracking page and enter your order
+                        number and email address. For any questions or concerns,
+                        please contact our customer service team at
+                        support@computershop.com or call 1-800-123-4567.
+                      </p>
+                      <p>
+                        Thank you for shopping with us! We hope you enjoy your
+                        new purchase.
+                      </p>
+                    </div>
+                  </div>
+                  {/* // <img src="/circuitboardtrans.png" alt="Descriptive Alt Text" /> */}
+                </div>
               ) : (
                 <ShippingAddress
                   handleInputChange={handleInputChange}
@@ -172,6 +209,18 @@ function CheckoutForm({ placeOrder }) {
                 />
               )}
             </>
+            // <>
+            //   {showImage ? (
+            //     <div className="shippingcontainerimage">Please check out our weekly specials and items just in!</div>
+            //     // <img src="/circuitboardtrans.png" alt="Descriptive Alt Text" />
+            //   ) : (
+            //     <ShippingAddress
+            //       handleInputChange={handleInputChange}
+            //       data={data}
+            //       handlePlaceOrder={handlePlaceOrder}
+            //     />
+            //   )}
+            // </>
           )}
           {hasShippingAddressDifferent && (
             <ShippingAddress

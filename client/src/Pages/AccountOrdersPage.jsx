@@ -206,6 +206,7 @@ const AccountOrdersPage = () => {
           <div className="orderinfo">
             <div className="section-contents">
               <p>Order Number: 1234</p>
+              <p>Order Date: 01/02/24</p>
               <p>---------------</p>
               {/* <p>Product Image url</p> */}
               <img src="./M3mbpmax.png" />
