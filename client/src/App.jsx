@@ -5,10 +5,9 @@ import Header from "./components/Header/Header";
 import Product from "./components/Product/Product";
 import Order from "./components/Order/Order";
 import Customer from "./components/Customer/Customer";
-import StockAlerts from "./components/StockAlerts/StockAlerts";
-import Reviews from "./components/Reviews/Reviews";
-import Faqs from "./components/Faqs/Faqs";
-import * as exampleData from "./exampleData";
+// import StockAlerts from "./components/StockAlerts/StockAlerts";
+// import Reviews from "./components/Reviews/Reviews";
+// import * as exampleData from "./exampleData";
 import HomePage from "./Pages/HomePage";
 import RegisterPage from "./Pages/Register/RegisterPage";
 import LoginPage from "./Pages/Login/LoginPage";
@@ -21,7 +20,6 @@ import ContactUsPage from "./Pages/ContactUSPage";
 import FAQPage from "./Pages/FAQPage";
 import NotFoundPage from "./Pages/NotFoundPage";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
-import BottomLinkPage from "./Pages/BottomLinkPage";
 import AboutUsPage from "./Pages/AboutUsPage";
 import BusinessSalesPage from "./Pages/BusinessSalesPage";
 import GovernmentSalesPage from "./Pages/GovernmentSalesPage";
@@ -29,6 +27,8 @@ import EducationalSalesPage from "./Pages/EducationSalesPage";
 import MilitarySalesPage from "./Pages/MilitarySalesPage";
 import TechSupportPage from "./Pages/TechSupportPage";
 import AccountOrdersPage from "./Pages/AccountOrdersPage";
+import TradeInPage from "./Pages/TradeInPage";
+import CompareProductsPage from "./Pages/CompareProductsPage";
 
 function App() {
   return (
@@ -50,6 +50,8 @@ function App() {
             <Route path="/tech-support" element={<TechSupportPage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
             <Route path="/contact-us" element={<ContactUsPage />} />
+            <Route path="/trade-in-info" element={<TradeInPage />} />
+            <Route path="/compare-products-info" element={<CompareProductsPage />} />
             <Route path="/account-orders" element={<AccountOrdersPage />} />
             {/* Protected Routes */}
             <Route path="/account" element={<ProtectedRoute />}>

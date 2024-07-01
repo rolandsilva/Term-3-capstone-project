@@ -67,21 +67,21 @@ const CategoryPage = () => {
           />
         </div>
         <div className="categorycontainer">
-            <h3 className="categorytitle"
-              style={{
-                fontSize: "25px",
-                fontWeight: "bold",
-                margin: "10px",
-              }}
-            >
-              Category:
-            </h3>
-            <div className="categorytype">
-              <span>{name}</span>
-              {/* <span>iPads</span> */}
-            </div>
+          <h3
+            className="categorytitle"
+            style={{
+              fontSize: "25px",
+              fontWeight: "bold",
+              margin: "10px",
+            }}
+          >
+            Category:
+          </h3>
+          <div className="categorytype">
+            <span>{name}</span>
+            {/* <span>iPads</span> */}
+          </div>
           {/* </div> */}
-
         </div>
       </div>
       <div className="maincontainer">
@@ -118,15 +118,19 @@ const CategoryPage = () => {
         </div>
         <div className="comparetrade">
           <h2> compare</h2>
-          {/* <h2> trade</h2> */}
           {/* <div className="categoryproductcontainer"> */}
-            <a href="#compare" className="comparebutton">
-            {/* className="btn btn-primary"> */}
+          {/* <a href="#compare" className="comparebutton">
               <img src="/bw_devices.png" alt="Compare" className="img-fluid" />
-            </a>
-            <a href="#trade" className="tradebutton">
+            </a> */}
+          <Link to="/compare-products-info" className="comparebutton">
+            <img src="/bw_devices.png" alt="Compare" className="img-fluid" />
+          </Link>
+          {/* <a href="#trade" className="tradebutton">
               <img src="/tradeindevice.png" alt="Trade" className="img-fluid" />
-            </a>
+            </a> */}
+          <Link to="/trade-in-info" className="tradebutton">
+            <img src="/tradeindevice.png" alt="Trade" className="img-fluid" />
+          </Link>
           {/* </div> */}
         </div>
       </div>

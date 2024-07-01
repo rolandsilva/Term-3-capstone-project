@@ -66,7 +66,7 @@
   display: flex;
   flex-direction: row;
   // flex-direction: column;
-  margin-top: 20px;;
+  margin-top: 20px;
   width: 40%;
   // height: 50%;
   // height: auto;
@@ -75,11 +75,6 @@
 
 .custom-control-label ms-3 {
   font-size: 20px;
-}
-
-.shippingcontainerimageContent {
-display: flex;
-flex-direction: column;
 }
 
 .shipaddresscreditcardcontainer {
@@ -96,12 +91,9 @@ flex-direction: column;
 
 .shippingsection div {
   font-size: 20px;
-  padding: 5px;
+  width: 90%;
+  // padding: 5px;
 }
-
-// .shippingsection .row {
-// margin-left: 5px;
-// }
 
 .shippingaddresscontainer {
   margin-top: 10px;
@@ -112,8 +104,33 @@ flex-direction: column;
   margin-top: 10px;
 }
 
+// .shippingaddresscontainer form {
+// align-items: center;
+// }
+
+.shippingcontainerimageContent {
+  padding: 0px 30px 0px 30px;
+  // padding: 0px;
+}
+
+.shippingcontainerimageContent p {
+  font-size: 20px;
+}
+
+.shippingaddresscontainer h4 {
+  background-color: #c1c8dc;
+  color: black;
+  border: 2px solid black;
+  padding: 10px;
+  outline: 2px solid black;
+  margin-top: 10px;
+  // display: inline-block;
+  // white-space: nowrap;
+  // margin-bottom: 20px;
+}
+
 .shippingaddresscontainer label {
-font-size: 20px;;
+  font-size: 20px;
   // outline: 2px solid black;
 }
 .shippingaddresscontainer input {
@@ -126,27 +143,28 @@ font-size: 20px;;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100%; 
+  // padding: 0px;
+  height: 100%;
   width: 100%;
+  // max-width: 90%;
   font-size: 60px;
   display: flex; /* Use flexbox to center the text */
+  flex-direction: column;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   text-align: center; /* Ensure the text is centered */
   color: black; /* Optional: change text color if needed for visibility */
-  }
-
-
+}
 
 .creditcardsection {
   display: flex;
   // flex-direction: row;
   flex-direction: column;
-  justify-content: center;
+  // justify-content: center;
   margin-top: 20px;
   width: 40%;
   border: 2px solid black;
-  padding: 10px;
+  padding: 20px;
   // background-color: #c1c8dc;
   // color: black;
   // display: inline-block;
@@ -161,6 +179,7 @@ font-size: 20px;;
   color: black;
   border: 2px solid black;
   padding: 10px;
+  outline: 2px solid black;
   // display: inline-block;
   // white-space: nowrap;
   // margin-bottom: 20px;

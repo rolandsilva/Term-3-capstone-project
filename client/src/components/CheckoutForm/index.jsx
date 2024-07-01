@@ -163,8 +163,8 @@ function CheckoutForm({ placeOrder }) {
             <>
               {showImage ? (
                 <div className="shippingcontainerimagesection">
-                  <div className="shippingcontainerimageContent">
-                    <div className="shippingcontainerimage">
+                  <div className="shippingcontainerimage">
+                    <div className="shippingcontainerimageContent">
                       {/* <img
                       src="/circuitboardtrans.png"
                       alt="Descriptive Alt Text"
