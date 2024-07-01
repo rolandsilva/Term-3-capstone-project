@@ -1,12 +1,12 @@
 import React from "react";
 
 import { useState, useEffect } from "react";
+import { useLocation, useParams } from "react-router-dom";
 // import { useAuth } from "../../hooks/useAuth";
 // import { useProvideAuth } from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 // import { toast } from "react-toastify";
-// import api from "../../utils/api.utils";
-
+import api from "../utils/api.utils";
 import "./AccountOrdersPage.css";
 
 const initialPasswordFormData = {
@@ -23,8 +23,14 @@ const AccountOrdersPage = () => {
   );
 
   const [orders, setOrders] = useState(0);
+  const [orderHistory, setOrderHistory] = useState(0);
   const [loading, setLoading] = useState(0);
   const [error, setError] = useState(0);
+
+  const location = useLocation();
+  const { order } = location.state || {}; // Destructure the state to get the product data
+  const { _id } = useParams();
+  console.log(location)
 
   // const auth = useAuth();
   const navigate = useNavigate();
@@ -108,6 +114,15 @@ const AccountOrdersPage = () => {
     getOrders();
   }, []);
 
+  useEffect(() => {
+    const singleOrder = order && orders.filter((item) => {
+      return item._id === _id
+    })
+    console.log(order)
+    console.log(singleOrder)
+    setOrderHistory(singleOrder);
+  }, [order, _id]);
+
   // const renderOrdersArray = (items) => {
   //   console.log("items: ", items)
   //   const orderItemsList = items.map((i) => (
@@ -181,18 +196,43 @@ const AccountOrdersPage = () => {
         </section> */}
 
         <section className="middle-info-section">
-        <div className="middle-info-section-image">
-          {/* <div className="info-title">middle</div> */}
-          <div className="middle-info-content">
-            <p className="middle-info-contents-title">
-              Warranties and Registering
-            </p>
-            <p>Computer warranties offer a safeguard for consumers, providing coverage for hardware malfunctions and defects that might arise after purchase. Typically, these warranties span one to three years, depending on the manufacturer and model. Understanding the specifics of your warranty can save you time and money when dealing with repairs.</p>
-            <p>Registering your computer product is crucial to ensure you receive all the benefits of your warranty. This process often involves providing your purchase details and product serial number. Registration can also expedite customer service interactions, making it easier to address any issues that arise.</p>
-            <p>Beyond warranties, registering your product can provide additional perks. Manufacturers may offer extended warranty options, updates on software, or notifications about recalls and upgrades. Staying informed through registration helps maintain your device’s performance and security.</p>
-            <p>Neglecting to register your product could result in missing out on critical support and services. In some cases, unregistered products may not be eligible for warranty claims. Taking a few minutes to register can provide long-term peace of mind and ensure you make the most of your investment.</p>
-          </div>
-    
+          <div className="middle-info-section-image">
+            {/* <div className="info-title">middle</div> */}
+            <div className="middle-info-content">
+              <p className="middle-info-contents-title">
+                Warranties and Registering
+              </p>
+              <p>
+                Computer warranties offer a safeguard for consumers, providing
+                coverage for hardware malfunctions and defects that might arise
+                after purchase. Typically, these warranties span one to three
+                years, depending on the manufacturer and model. Understanding
+                the specifics of your warranty can save you time and money when
+                dealing with repairs.
+              </p>
+              <p>
+                Registering your computer product is crucial to ensure you
+                receive all the benefits of your warranty. This process often
+                involves providing your purchase details and product serial
+                number. Registration can also expedite customer service
+                interactions, making it easier to address any issues that arise.
+              </p>
+              <p>
+                Beyond warranties, registering your product can provide
+                additional perks. Manufacturers may offer extended warranty
+                options, updates on software, or notifications about recalls and
+                upgrades. Staying informed through registration helps maintain
+                your device’s performance and security.
+              </p>
+              <p>
+                Neglecting to register your product could result in missing out
+                on critical support and services. In some cases, unregistered
+                products may not be eligible for warranty claims. Taking a few
+                minutes to register can provide long-term peace of mind and
+                ensure you make the most of your investment.
+              </p>
+            </div>
+
             <div className="orderinfo">
               {/* {orders && renderOrdersArray(orders)} */}
             </div>
@@ -205,22 +245,23 @@ const AccountOrdersPage = () => {
           {/* <div className="ordersplacedtitle">Order Details</div> */}
           <div className="orderinfo">
             <div className="section-contents">
+              <p>Order Number: {_id }</p>
               <p>Order Number: 1234</p>
               <p>Order Date: 01/02/24</p>
               <p>---------------</p>
               {/* <p>Product Image url</p> */}
-              <img src="./M3mbpmax.png" />
+              <img src="/M3mbpmax.png" />
               {/* <img src={product.image_url} className="imgDiv" alt={product.name} /> */}
               <p>Product Name: M3 MacBook Max</p>
               <p>Product Category: MacBooks</p>
               <p>Item quantity: 2</p>
               <p>---------------</p>
-              <img src="./iwatchultra.png" />
+              <img src="/iwatchultra.png" />
               <p>Product Name: iWatch Ultra 2</p>
               <p>Product Category: iWatches</p>
               <p>Item quantity: 1</p>
               <p>---------------</p>
-              <img src="./ipadProM4.png" />
+              <img src="/ipadProM4.png" />
               <p>Product Name: M4 iPad Pro 13in</p>
               <p>Product Category: iPads</p>
               <p>Item quantity: 4</p>

@@ -1,0 +1,20 @@
+/* ComingSoonPage.css */
+.coming-soon-page {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  } */
+  
+  h1 {
+    color: #333;
+    margin-top: 20px;
+    background-color: #c1c7dc;
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block; /* Allows the h1 to be centered when text-align is set to center */
+  }

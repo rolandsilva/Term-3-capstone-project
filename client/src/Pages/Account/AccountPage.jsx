@@ -3,6 +3,7 @@ import { useAuth } from "../../hooks/useAuth";
 import { useProvideAuth } from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
 import api from "../../utils/api.utils";
 
 import "./AccountPage.css";
@@ -112,26 +113,35 @@ const AccountPage = () => {
   //   return orderItemsList;
   // };
 
-
   const renderOrdersArray = (items) => {
     console.log("items: ", items);
-    
+
     const orderItemsList = items.map(({ _id, createdAt, orderTotal }) => (
       <li key={_id}>
-        <p>Order ID: {_id}</p>
+        <Link
+          key={_id}
+          to={{
+            pathname: `/account-orders/${_id}`,
+            state: { order: items },
+          }}
+        >
+          Order ID: {_id}
+          {/* <Link to="/account-order" className="accountorderlink">
+          Order ID: {_id}
+          <p>Order ID: {_id}</p> */}
+        </Link>
+
         <p>Date: {new Date(createdAt).toLocaleDateString()}</p>
         <p>Total: ${orderTotal.toFixed(2)}</p>
       </li>
     ));
-    
+
+    // <Link>Order ID: {_id}</Link>
+
     console.log("orderItemsList", orderItemsList);
-    
+
     return <ul>{orderItemsList}</ul>;
   };
-
-
-
-
 
   if (loading) {
     return <div>Loading...</div>;
@@ -157,12 +167,10 @@ const AccountPage = () => {
         <section className="ordersplacedsection">
           <div className="ordersplacedtitle">Orders Placed</div>
           <div className="orderinfo">
-          {/* <h2>Order List</h2> */}
-          {orders && renderOrdersArray(orders)}
+            {/* <h2>Order List</h2> */}
+            {orders && renderOrdersArray(orders)}
           </div>
         </section>
-
-
       </div>
       <section className="account-password-container">
         <div className="info-title">Change Password</div>
@@ -197,7 +205,11 @@ const AccountPage = () => {
             onChange={handleInputChange}
             required
           />
-          <button className="passwordbutton" type="submit" disabled={passwordFormData.loading}>
+          <button
+            className="passwordbutton"
+            type="submit"
+            disabled={passwordFormData.loading}
+          >
             {passwordFormData.loading ? "Loading..." : "Change Password"}
           </button>
         </form>

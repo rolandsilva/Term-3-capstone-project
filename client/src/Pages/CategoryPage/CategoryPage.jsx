@@ -88,17 +88,20 @@ const CategoryPage = () => {
         <div className="filtercontainer">
           <div>
             <h3 className="filterby">Filter by:</h3>
-            <div classname="filterText">
+            <div className="filterText">
+            <Link to="/category-filter-by" className="comparebutton">
               <h3 className="filterByCategory">Category</h3>
-              <h3>Price</h3>
-              <h3>Highest Rated</h3>
-              <h3>Most Popular</h3>
-              <h3>In Stock</h3>
-              <h3>On Sale</h3>
+              </Link>
+
+              <h3 className="filterByCategory">Price</h3>
+              <h3 className="filterByCategory">Highest Rated</h3>
+              <h3 className="filterByCategory">Most Popular</h3>
+              <h3 className="filterByCategory">In Stock</h3>
+              <h3 className="filterByCategory">On Sale</h3>
             </div>
             <hr className="divider" />
             {/* <h3 className="filerByLineSpace"></h3> */}
-            <h3>Be sure to sign up for Daily Specials and Flash Sales</h3>
+            <h3 className="filterBySpecials">Be sure to sign up for Daily Specials and Flash Sales</h3>
           </div>
           <div className="chat">
             <p>Any Questions ?</p>
@@ -109,8 +112,8 @@ const CategoryPage = () => {
           {category &&
             category.map((productItem) => (
               <Link to={`/product/${productItem.id}`}>
-                <figure>
-                  <img src={productItem.image_url} id="iPhone15" />
+                <figure className="imagnamecontainer">
+                  <img src={productItem.image_url} id="itemimage" />
                   <figcaption>{productItem.name}</figcaption>
                 </figure>
               </Link>

@@ -18,9 +18,29 @@ const ordersSchema = new mongoose.Schema(
           type: String,
           required: true,
         },
+        name: {
+          type: String,
+          required: true,
+        },
+        
+        category: {
+          type: String,
+          required: true,
+        },
+
+        price: {
+          type: Number,
+          required: true,
+        },
+      
 
         itemQuantity: {
           type: Number,
+          required: true,
+        },
+
+        image_url: {
+          type: String,
           required: true,
         },
       },

@@ -29,6 +29,7 @@ import TechSupportPage from "./Pages/TechSupportPage";
 import AccountOrdersPage from "./Pages/AccountOrdersPage";
 import TradeInPage from "./Pages/TradeInPage";
 import CompareProductsPage from "./Pages/CompareProductsPage";
+import CatFilterBySearchPage from "./Pages/CatFilterBySearchPage";
 
 function App() {
   return (
@@ -52,7 +53,9 @@ function App() {
             <Route path="/contact-us" element={<ContactUsPage />} />
             <Route path="/trade-in-info" element={<TradeInPage />} />
             <Route path="/compare-products-info" element={<CompareProductsPage />} />
+            <Route path="/category-filter-by" element={<CatFilterBySearchPage />} />
             <Route path="/account-orders" element={<AccountOrdersPage />} />
+            <Route path="/account-orders/:_id" element={<AccountOrdersPage />} />
             {/* Protected Routes */}
             <Route path="/account" element={<ProtectedRoute />}>
               <Route path="/account" element={<AccountPage />} />

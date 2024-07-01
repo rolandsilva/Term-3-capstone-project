@@ -8,25 +8,24 @@ export async function handleGetOrders(req, res) {
 
 export async function handleGetOrdersByCustomerId(req, res) {
   const orders = await Customer.findById(req.customer.id).populate("orders");
-  console.log(orders)
+  console.log(orders);
   res.send(orders);
 }
 
 export async function handleCreateOrder(req, res, next) {
-  const {
-    orderNumber,
-    customerDetails,
-    items,
-    couponRate,
-    orderTotal,
-  } = req.body;
+  const { orderNumber, customerDetails, items, couponRate, orderTotal } =
+    req.body;
   // const { orderNumber, items, couponRate, orderTotal } = req.body;
   // const { orderNumber, orderContents, couponRate, orderTotal } = req.body;
   console.log("req.body", req.body);
   // I create a new array with the productNbr and itemQuantity as the model expects in the orderContents field.
   const itemsWithProductNumberAndQuantity = items.map((item) => ({
     productNbr: item.productNbr,
+    name: item.name,
+    category: item.category,
+    price: item.price,
     itemQuantity: item.quantity,
+    image_url: item.image_url,
   }));
 
   const orderData = {
@@ -48,10 +47,7 @@ export async function handleCreateOrder(req, res, next) {
 
     // If the customerDetails is provided. Save it to the customer's shipping address. Save the _id from the shipping address to the customer's shippingAddress field.
 
-    if (
-      customerDetails.shippingFirstName &&
-      customerDetails.shippingLastName
-    ) {
+    if (customerDetails.shippingFirstName && customerDetails.shippingLastName) {
       // destruture the shipping information from the customerDetails object that is from the req.body.
       const {
         shippingFirstName,
