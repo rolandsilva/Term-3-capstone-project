@@ -169,6 +169,11 @@
     height: auto;
     max-height: 200px;
     margin-bottom: 10px;
+    outline: 2px solid black;
+}
+
+.compare-img {
+width: 300px;
 }
 
 

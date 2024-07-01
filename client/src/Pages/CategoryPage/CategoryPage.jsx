@@ -123,13 +123,15 @@ const CategoryPage = () => {
               <img src="/bw_devices.png" alt="Compare" className="img-fluid" />
             </a> */}
           <Link to="/compare-products-info" className="comparebutton">
-            <img src="/bw_devices.png" alt="Compare" className="img-fluid" />
+            {/* <img src="/bw_devices.png" alt="Compare" className="img-fluid" /> */}
+            <img src="/bw_devices.png" alt="Compare" className="compare-img" />
           </Link>
           {/* <a href="#trade" className="tradebutton">
               <img src="/tradeindevice.png" alt="Trade" className="img-fluid" />
             </a> */}
           <Link to="/trade-in-info" className="tradebutton">
-            <img src="/tradeindevice.png" alt="Trade" className="img-fluid" />
+            {/* <img src="/tradeindevice.png" alt="Trade" className="img-fluid" /> */}
+            <img src="/tradeindevice.png" alt="Trade" className="trade-image" />
           </Link>
           {/* </div> */}
         </div>
