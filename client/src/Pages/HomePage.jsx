@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import api from "../utils/api.utils";
 import { exampleProductData } from "../exampleData";
 const HomePage = () => {
-  const [products, setProducts] = useState(0);
+  const [categoryItem, setCategoryItem] = useState(0);
   const [loading, setLoading] = useState(0);
   const [error, setError] = useState(0);
 
@@ -12,9 +12,10 @@ const HomePage = () => {
     const getProducts = async () => {
       setLoading(true);
       try {
-        const products = await api.get(`/products/`);
+        const products = await api.get(`/products/categoryItem`);
+        // const products = await api.get(`/products/`);
         console.log(products);
-        setProducts(products.data);
+        setCategoryItem(products.data);
         setLoading(false);
       } catch (err) {
         console.error(err.message);
@@ -44,11 +45,7 @@ const HomePage = () => {
               className="featuredimg"
             />
           </div>
-          {/* {exampleProductData.map(product => {
-                return (<Link to={`/products/${product.id}`}>
-                  <img src={product.image_url} id="macbooks" />
-                  <figcaption>{product.name}</figcaption>
-                </Link>)})} */}
+
           <div className="searchcontainer">
             <div
               className="searchbar"
@@ -77,7 +74,15 @@ const HomePage = () => {
               </div>
             </div>
             <div className="productimgcontainer">
-              <Link to="/categories/macbooks">
+              {categoryItem && categoryItem.map((product) => {
+                return (
+                  <Link key={product.category} to={`/categories/${product.category}`}>
+                    <img src={product.image_url} id="macbooks" />
+                    <figcaption>{product.name}</figcaption>
+                  </Link>
+                );
+              })}
+              {/* <Link to="/categories/macbooks">
                 <figure>
                   <img src="./M3mbpmax.png" />
                   <figcaption>Apple MacBooks</figcaption>
@@ -130,7 +135,7 @@ const HomePage = () => {
                   <img src="./accessories_120dpi.png" />
                   <figcaption>Apple Accessories</figcaption>
                 </figure>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

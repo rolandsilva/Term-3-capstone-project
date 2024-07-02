@@ -5,6 +5,7 @@ import {
   // handleCreateProduct,
   handleGetProductById,
   handleGetProducts,
+  handleGetCategoryProducts,
   // handleLikeProduct,
   handleGetProductsByCategories,
 } from "../controllers/products.controller";
@@ -12,6 +13,7 @@ import {
 const productsRoutes = Router();
 
 productsRoutes.route("/").get(handleGetProducts)//.post(handleCreateProduct);
+productsRoutes.route("/categoryItem").get(handleGetCategoryProducts)//.post(handleCreateProduct);
 
 productsRoutes.route("/:id").get(handleGetProductById);
 

@@ -12,6 +12,27 @@ export async function  handleGetProducts(req, res) {
     }
   }
 
+  export async function  handleGetCategoryProducts(req, res) {
+    try {
+        const product = await Products.find();
+        const firstItemsOfEachCategory = Object.values(
+            product.reduce((acc, item) => {
+              if (!acc[item.category]) {
+                acc[item.category] = item;
+              }
+              return acc;
+            }, {})
+          );
+          
+          console.log(firstItemsOfEachCategory);
+
+        res.send(firstItemsOfEachCategory);
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({error: "Error retrieving product"});
+    }
+  }
+
   export async function  handleGetProductById(req, res) {
     const id = req.params.id;
     // const product = await Products.find({id: id});

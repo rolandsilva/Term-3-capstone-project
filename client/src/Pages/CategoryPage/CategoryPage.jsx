@@ -129,10 +129,12 @@ const CategoryPage = () => {
           {category &&
             category.map((productItem) => (
               <Link to={`/product/${productItem.id}`}>
-                <figure className="imagnamecontainer">
+                <div className="testdiv">
+                <figure className="imagenamecontainer">
                   <img src={productItem.image_url} id="itemimage" />
                   <figcaption>{productItem.name}</figcaption>
                 </figure>
+                </div>
               </Link>
             ))}
         </div>

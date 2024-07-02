@@ -108,7 +108,7 @@ function Header() {
                   as={Link}
                   className="d-flex align-items-center"
                   to={"/categories/macbooks"}
-                  style={{ color: "white", marginRight: "20px" }}
+                  style={{ color: "white", marginRight: "20px",  whiteSpace: "nowrap"}}
                 >
                   MacBooks {">"}
                 </Nav.Link>
@@ -116,7 +116,7 @@ function Header() {
                   as={Link}
                   className="d-flex align-items-center"
                   to={"/categories/ipads"}
-                  style={{ color: "white", marginRight: "20px" }}
+                  style={{ color: "white", marginRight: "20px",  whiteSpace: "nowrap"}}
                 >
                   iPads {">"}
                 </Nav.Link>
@@ -124,7 +124,7 @@ function Header() {
                   as={Link}
                   className="d-flex align-items-center"
                   to={"/categories/airpods"}
-                  style={{ color: "white", marginRight: "20px" }}
+                  style={{ color: "white", marginRight: "20px",  whiteSpace: "nowrap" }}
                 >
                   AirPods {">"}
                 </Nav.Link>
@@ -132,7 +132,7 @@ function Header() {
                   as={Link}
                   className="d-flex align-items-center"
                   to="/categories/iwatches"
-                  style={{ color: "white", marginRight: "20px" }}
+                  style={{ color: "white", marginRight: "20px",  whiteSpace: "nowrap" }}
                 >
                   iWatches {">"}
                 </Nav.Link>
@@ -140,7 +140,7 @@ function Header() {
                   as={Link}
                   className="d-flex align-items-center"
                   to={"/categories/macs"}
-                  style={{ color: "white", marginRight: "20px" }}
+                  style={{ color: "white", marginRight: "20px",  whiteSpace: "nowrap" }}
                 >
                   Macs {">"}
                 </Nav.Link>
@@ -148,7 +148,7 @@ function Header() {
                   as={Link}
                   className="d-flex align-items-center"
                   to={"/categories/iphones"}
-                  style={{ color: "white", marginRight: "20px" }}
+                  style={{ color: "white", marginRight: "20px",  whiteSpace: "nowrap" }}
                 >
                   iPhones {">"}
                 </Nav.Link>
@@ -156,7 +156,7 @@ function Header() {
                   as={Link}
                   className="d-flex align-items-center"
                   to={"/categories/imacs"}
-                  style={{ color: "white", marginRight: "20px" }}
+                  style={{ color: "white", marginRight: "20px",  whiteSpace: "nowrap" }}
                 >
                   iMacs {">"}
                 </Nav.Link>
@@ -164,7 +164,7 @@ function Header() {
                   as={Link}
                   className="d-flex align-items-center"
                   to={"/categories/displays"}
-                  style={{ color: "white", marginRight: "20px" }}
+                  style={{ color: "white", marginRight: "20px",  whiteSpace: "nowrap" }}
                 >
                   Displays {">"}
                 </Nav.Link>
@@ -172,7 +172,7 @@ function Header() {
                   as={Link}
                   className="d-flex align-items-center"
                   to={"/categories/accessories"}
-                  style={{ color: "white", marginRight: "20px" }}
+                  style={{ color: "white", marginRight: "20px",  whiteSpace: "nowrap" }}
                 >
                   Accessories {">"}
                 </Nav.Link>
@@ -206,7 +206,7 @@ function Header() {
                       as={Link}
                       className="d-flex align-items-center"
                       to={"/login"}
-                      style={{ color: "white", marginRight: "20px" }}
+                      style={{ color: "white", marginRight: "20px"}}
                     >
                       Login
                     </Nav.Link>
