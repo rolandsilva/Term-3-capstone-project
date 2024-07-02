@@ -58,11 +58,11 @@ const CategoryPage = () => {
             id="searchInput"
             className="form-control"
             style={{
+              width: "300px",
               fontSize: "25px",
               height: "auto", // Adjust height to auto
-              padding: "5px", // Adjust padding as needed
+              padding: "0px", // Adjust padding as needed
               margin: "10px",
-              // margin: "10px 0",
             }}
           />
         </div>
@@ -89,15 +89,32 @@ const CategoryPage = () => {
           <div>
             <h3 className="filterby">Filter by:</h3>
             <div className="filterText">
-            <Link to="/category-filter-by" className="comparebutton">
+            <Link to="/category-filter-by" className="comparelink">
               <h3 className="filterByCategory">Category</h3>
               </Link>
 
+              <Link to="/category-filter-by" className="comparelink">
               <h3 className="filterByCategory">Price</h3>
+              </Link>
+
+              <Link to="/category-filter-by" className="comparelink">
               <h3 className="filterByCategory">Highest Rated</h3>
+              </Link>
+
+              <Link to="/category-filter-by" className="comparelink">
               <h3 className="filterByCategory">Most Popular</h3>
+              </Link>
+
+              <Link to="/category-filter-by" className="comparelink">
               <h3 className="filterByCategory">In Stock</h3>
+              </Link>
+
+              <Link to="/category-filter-by" className="comparelink">
               <h3 className="filterByCategory">On Sale</h3>
+              </Link>
+              {/* <h3 className="filterByCategory">Price</h3>
+              <h3 className="filterByCategory">In Stock</h3>
+              <h3 className="filterByCategory">On Sale</h3> */}
             </div>
             <hr className="divider" />
             {/* <h3 className="filerByLineSpace"></h3> */}
@@ -129,11 +146,9 @@ const CategoryPage = () => {
             {/* <img src="/bw_devices.png" alt="Compare" className="img-fluid" /> */}
             <img src="/bw_devices.png" alt="Compare" className="compare-img" />
           </Link>
-          {/* <a href="#trade" className="tradebutton">
-              <img src="/tradeindevice.png" alt="Trade" className="img-fluid" />
-            </a> */}
+
           <Link to="/trade-in-info" className="tradebutton">
-            {/* <img src="/tradeindevice.png" alt="Trade" className="img-fluid" /> */}
+ 
             <img src="/tradeindevice.png" alt="Trade" className="trade-image" />
           </Link>
           {/* </div> */}
