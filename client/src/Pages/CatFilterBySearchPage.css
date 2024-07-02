@@ -1,20 +1,43 @@
 /* ComingSoonPage.css */
 .coming-soon-page {
-    font-family: Arial, sans-serif;
-  }
-  
-  /* .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-  } */
-  
-  h1 {
-    color: #333;
-    margin-top: 20px;
-    background-color: #c1c7dc;
-    padding: 20px;
-    border-radius: 8px;
-    display: inline-block; /* Allows the h1 to be centered when text-align is set to center */
-  }
+  font-family: Arial, sans-serif;
+}
+
+/* .container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+} */
+
+  /* justify-content: center; */
+    /* margin: 0 auto; */
+
+    /* .containerdiv-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+    } */
+
+.containerdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c1c1c1;
+  outline: 2px solid black;
+  width: 60%;
+  height: 100px;
+  margin-top: 40px;
+  margin-left: 300px;
+  font-size: 40px;
+  color: black;
+}
+
+
+p {
+  font-size: 30px;
+  color: green;
+  margin-top: 20px;
+}
