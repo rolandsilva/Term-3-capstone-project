@@ -172,69 +172,49 @@ const AccountPage = () => {
           </div>
         </section>
       </div>
-
-      {/* ******** end of account orders div ****** */}
-
-      {/* ****** start of password info  div ****** */}
-
-      {/* <section className="account-password-container"> */}
-
-      <div>
-        <div className="account-password-info-container">
-          <section className="account-password-section">
-            <div className="info-title">Change Password</div>
-            <form
-              className="account-password-form"
-              onSubmit={handleChangePassword}
-            >
-              <label htmlFor="currentPassword">Current Password</label>
-              <input
-                type="password"
-                id="currentPassword"
-                name="currentPassword"
-                autoComplete="current-password"
-                value={passwordFormData.currentPassword}
-                onChange={handleInputChange}
-                required
-              />
-              <label htmlFor="password">New Password</label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                autoComplete="new-password"
-                value={passwordFormData.password}
-                onChange={handleInputChange}
-                required
-              />
-              <label htmlFor="confirmPassword">Confirm Password</label>
-              <input
-                type="password"
-                id="confirmPassword"
-                name="confirmPassword"
-                autoComplete="new-password"
-                value={passwordFormData.confirmPassword}
-                onChange={handleInputChange}
-                required
-              />
-              <button
-                className="passwordbutton"
-                type="submit"
-                disabled={passwordFormData.loading}
-              >
-                {passwordFormData.loading ? "Loading..." : "Change Password"}
-              </button>
-            </form>
-          </section>
-
-          <section className="account-info-section">
-            <div className="info-title">Info box section</div>
-            <div className="account-info-box">
-              <p>test info box size</p>
-            </div>
-          </section>
-        </div>
-      </div>
+      <section className="account-password-container">
+      {/* <section className="account-password-info-container"> */}
+        <div className="info-title">Change Password</div>
+        <form className="account-password-form" onSubmit={handleChangePassword}>
+          <label htmlFor="currentPassword">Current Password</label>
+          <input
+            type="password"
+            id="currentPassword"
+            name="currentPassword"
+            autoComplete="current-password"
+            value={passwordFormData.currentPassword}
+            onChange={handleInputChange}
+            required
+          />
+          <label htmlFor="password">New Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            autoComplete="new-password"
+            value={passwordFormData.password}
+            onChange={handleInputChange}
+            required
+          />
+          <label htmlFor="confirmPassword">Confirm Password</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            autoComplete="new-password"
+            value={passwordFormData.confirmPassword}
+            onChange={handleInputChange}
+            required
+          />
+          <button
+            className="passwordbutton"
+            type="submit"
+            disabled={passwordFormData.loading}
+          >
+            {passwordFormData.loading ? "Loading..." : "Change Password"}
+          </button>
+        </form>
+      </section>
     </>
   );
 };
