@@ -42,64 +42,29 @@ const HomePage = () => {
   //     [id]: value,
   //   }));
   // };
-  const options = ["product-Name", "product-Model"];
-  const [selectBy, setSelectBy] = useState("");
-  // const [selectedProduct, setSelectedProduct] = useState("");
-  const [filterProduct, setFilterProducts] = useState("");
+
+  const [selectedProduct, setSelectedProduct] = useState("");
   const [selectedProductModel, setSelectedProductModel] = useState("");
 
-  const handleSelectByChange = (event) => {
-    setSelectBy((prevState) => event.target.value);
+  const handleSelectChange = (event) => {
+    setSelectedProduct(event.target.value);
     console.log(event.target.value);
-    console.log(selectBy);
-    //   if (selectBy === "product-Name") {
-    //     setFilterProducts(allProducts.map((products) => {
-    //       return products.name
-    //     }))
-    //   }
-    //  else if (selectBy === "product-Model") {
-    //     setFilterProducts(allProducts.map((products) => {
-    //       return products.productNbr
-    //     }))
-    //  }
-    //  elses
-    //  setFilterProducts([])
-    //   console.log(filterProduct)
-    // const productMatched = allProducts.filter(
-    //   (product) => product.name === event.target.value
-    // );
-    // console.log(productMatched);
-    // navigate(`/product/${productMatched[0].id}`);
+    const productMatched = allProducts.filter(
+      (product) => product.name === event.target.value
+    );
+    console.log(productMatched);
+    navigate(`/product/${productMatched[0].id}`);
   };
 
   const handleSelectChangeModel = (event) => {
     setSelectedProductModel(event.target.value);
     console.log(event.target.value);
     const productModelMatched = allProducts.filter(
-      (product) =>
-        product.productNbr === event.target.value ||
-        product.name === event.target.value
+      (product) => product.productNbr === event.target.value
     );
     console.log(productModelMatched);
     navigate(`/product/${productModelMatched[0].id}`);
   };
-
-  useEffect(() => {
-    if (selectBy === "product-Name") {
-      setFilterProducts(
-        allProducts.map((products) => {
-          return products.name;
-        })
-      );
-    } else if (selectBy === "product-Model") {
-      setFilterProducts(
-        allProducts.map((products) => {
-          return products.productNbr;
-        })
-      );
-    } else setFilterProducts([]);
-    console.log(filterProduct);
-  }, [selectBy]);
 
   useEffect(() => {
     const getProducts = async () => {
@@ -144,32 +109,40 @@ const HomePage = () => {
           <div className="searchcontainer">
             <div
               className="searchbar"
+              style={{
+                display: "flex",
+                backgroundColor: "#c1c8dc",
+                border: "1px solid black",
+                padding: "4px",
+                marginLeft: "19px",
+              }}
             >
               <h3 className="searchtext">
                 Search by Category (click image below)
               </h3>
               <div className="searchInputContainer">
-                <label className="searchLabel">Select by </label>
+                <label className="searchLabel">
+                  Name{" "}
+                </label>
                 {/* <input id="searchInput" onChange={handleSearch} /> */}
                 <select
                   id="searchInput"
-                  name="selectBy"
-                  value={selectBy}
-                  onChange={handleSelectByChange}
+                  name="product"
+                  value={selectedProduct}
+                  onChange={handleSelectChange}
                 >
-                  <option value="">name or model</option>
-                  <option value="product-Name">name</option>
-                  <option value="product-Model">model</option>
+                  <option value="">Name</option>
 
-                  {/* {allProducts &&
-                    options.map((options, index) => (
-                      <option key={index} value={options}>
-                        {options}
-                      </option>
-                    ))} */}
+                  {allProducts && allProducts.map((product, index) => (
+                    <option key={index} value={product.name}>
+                      {product.name}
+                    </option>
+                  ))}
                 </select>
 
-                <label className="searchLabel"> </label>
+                <label className="searchLabel">
+                   Model {" "}
+                </label>
                 {/* <input id="searchInput" onChange={handleSearch} /> */}
                 <select
                   id="searchInput"
@@ -179,16 +152,17 @@ const HomePage = () => {
                 >
                   {/* <ProductPage to'"x" product="product"} */}
 
-                  <option value="">pick one</option>
+                  <option value="">Model</option>
 
-                  {filterProduct &&
-                    filterProduct.map((product, index) => (
-                      <option key={index} value={product}>
-                        {product}
-                      </option>
-                    ))}
+                  {allProducts && allProducts.map((product, index) => (
+                    <option key={index} value={product.productNbr}>
+                      {product.productNbr}
+                    </option>
+                  ))}
                 </select>
 
+
+                
                 {/* <input type="submit" /> */}
               </div>
             </div>

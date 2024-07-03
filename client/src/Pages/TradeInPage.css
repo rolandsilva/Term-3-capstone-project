@@ -3,19 +3,20 @@
     padding: 20px;
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
+    margin-bottom: ;
   }
   
-  h1{
-    margin: 20px 0px 20px 0px;
+  h2{
+    margin: 30px 0px 20px 0px;
     color: #333;
     font-weight: bold;
   }
   
-  h1 {
+  h2 {
     font-size: 2em;
   }
   
-  h2 {
+  h3 {
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 1.75em;
@@ -25,6 +26,7 @@
   
   ol {
     padding-left: 20px;
+    text-align: left;
   }
   
   li {
@@ -45,6 +47,7 @@
   ul {
     list-style-type: disc;
     padding-left: 20px;
+    text-align: left;
   }
   
   ul li {
@@ -58,13 +61,13 @@
       padding: 10px;
     }
   
-    h1 {
+    /* h2 {
       font-size: 1.5em;
     }
   
-    h2 {
+    h3 {
       font-size: 1.2em;
-    }
+    } */
   
     ol, ul {
       padding-left: 15px;
