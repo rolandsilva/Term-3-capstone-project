@@ -8,6 +8,7 @@ import api from "../../utils/api.utils";
 
 import "./AccountPage.css";
 
+
 const initialPasswordFormData = {
   currentPassword: "",
   password: "",

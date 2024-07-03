@@ -3,17 +3,77 @@ import "./Homepage.css";
 import { Link } from "react-router-dom";
 import api from "../utils/api.utils";
 import { exampleProductData } from "../exampleData";
+import { useNavigate } from "react-router-dom";
 const HomePage = () => {
   const [categoryItem, setCategoryItem] = useState(0);
+  const [allProducts, setAllProducts] = useState(0);
   const [loading, setLoading] = useState(0);
   const [error, setError] = useState(0);
+  const [searchParameter, setSearchParameter] = useState(null);
+  const navigate = useNavigate();
+
+  // ****** create arrays for datalist
+  // check search parameter
+  // if === item in prodNameArray go to product detail page
+  // else if item in prodNbrArray go ot product detail page
+  // else if item in prodCategoryArray go to product category page
+  // else return message not valid name, nbr or category
+
+  //display to product page with search by parameter
+
+  const prodNameArray = [
+    "2024 M4 MacBook Pro Laptop",
+    "2024 Mac Mini",
+    "2024 Pro Display XDE",
+    "iPad Pro",
+  ];
+
+  const prodNbrArray = [];
+  const prodCategoryArray = [];
+
+  const initialSearchParameter = {
+    searchInput: "",
+  };
+
+  // const handleSearch = (e) => {
+  //   const { id, value } = e.target;
+  //   setSearchParameter((prev) => ({
+  //     ...prev,
+  //     [id]: value,
+  //   }));
+  // };
+
+  const [selectedProduct, setSelectedProduct] = useState("");
+  const [selectedProductModel, setSelectedProductModel] = useState("");
+
+  const handleSelectChange = (event) => {
+    setSelectedProduct(event.target.value);
+    console.log(event.target.value);
+    const productMatched = allProducts.filter(
+      (product) => product.name === event.target.value
+    );
+    console.log(productMatched);
+    navigate(`/product/${productMatched[0].id}`);
+  };
+
+  const handleSelectChangeModel = (event) => {
+    setSelectedProductModel(event.target.value);
+    console.log(event.target.value);
+    const productModelMatched = allProducts.filter(
+      (product) => product.productNbr === event.target.value
+    );
+    console.log(productModelMatched);
+    navigate(`/product/${productModelMatched[0].id}`);
+  };
 
   useEffect(() => {
     const getProducts = async () => {
       setLoading(true);
       try {
         const products = await api.get(`/products/categoryItem`);
-        // const products = await api.get(`/products/`);
+        const allProducts = await api.get(`/products/`);
+        setAllProducts(allProducts.data);
+        console.log(allProducts);
         console.log(products);
         setCategoryItem(products.data);
         setLoading(false);
@@ -34,7 +94,7 @@ const HomePage = () => {
   // fetch data from backend.
 
   // use backend to fetch data from database.
-
+  // console.log(searchParameter);
   return (
     <div className="maincontainer">
       <div className="imagescontainer">
@@ -60,82 +120,65 @@ const HomePage = () => {
               <h3 className="searchtext">
                 Search by Category (click image below)
               </h3>
-              <div>
-                <label
-                  style={{
-                    fontSize: "18px",
-                    padding: "0px 10px 0px 70px",
-                    fontWeight: "bold",
-                  }}
-                >
-                  Search by Product{" "}
+              <div className="searchInputContainer">
+                <label className="searchLabel">
+                  Name{" "}
                 </label>
-                <input id="searchInput" />
+                {/* <input id="searchInput" onChange={handleSearch} /> */}
+                <select
+                  id="searchInput"
+                  name="product"
+                  value={selectedProduct}
+                  onChange={handleSelectChange}
+                >
+                  <option value="">Name</option>
+
+                  {allProducts && allProducts.map((product, index) => (
+                    <option key={index} value={product.name}>
+                      {product.name}
+                    </option>
+                  ))}
+                </select>
+
+                <label className="searchLabel">
+                   Model {" "}
+                </label>
+                {/* <input id="searchInput" onChange={handleSearch} /> */}
+                <select
+                  id="searchInput"
+                  name="product"
+                  value={selectedProductModel}
+                  onChange={handleSelectChangeModel}
+                >
+                  {/* <ProductPage to'"x" product="product"} */}
+
+                  <option value="">Model</option>
+
+                  {allProducts && allProducts.map((product, index) => (
+                    <option key={index} value={product.productNbr}>
+                      {product.productNbr}
+                    </option>
+                  ))}
+                </select>
+
+
+                
+                {/* <input type="submit" /> */}
               </div>
             </div>
             <div className="productimgcontainer">
-              {categoryItem && categoryItem.map((product) => {
-                return (
-                  <Link key={product.category} to={`/categories/${product.category}`}>
-                    <img src={product.image_url} id="macbooks" />
-                    <figcaption>{product.name}</figcaption>
-                  </Link>
-                );
-              })}
-              {/* <Link to="/categories/macbooks">
-                <figure>
-                  <img src="./M3mbpmax.png" />
-                  <figcaption>Apple MacBooks</figcaption>
-                </figure>
-              </Link>
-              <Link to="/categories/ipads">
-                <figure>
-                  <img src="./ipadair.png" />
-                  <figcaption>Apple iPads</figcaption>
-                </figure>
-              </Link>
-              <Link to="/categories/airpods">
-                <figure>
-                  <img src="./airpodsmax.png" />
-                  <figcaption>Apple Air Pod</figcaption>
-                </figure>
-              </Link>
-              <Link to="/categories/iwatches">
-                <figure>
-                  <img src="./iwatchultra.png" />
-                  <figcaption>Apple iWatches</figcaption>
-                </figure>
-              </Link>
-              <Link to="/categories/macs">
-                <figure>
-                  <img src="./macpro.png" id="specialItem" />
-                  <figcaption>Apple Macs</figcaption>
-                </figure>
-              </Link>
-              <Link to="/categories/iphones">
-                <figure>
-                  <img src="./iphone152.png" id="ipads" />
-                  <figcaption>Apple iPhone 15</figcaption>
-                </figure>
-              </Link>
-              <Link to="/categories/imacs">
-                <figure>
-                  <img src="./imac.png" />
-                  <figcaption>Apple iMacs</figcaption>
-                </figure>
-              </Link>
-              <Link to="/categories/displays">
-                <figure>
-                  <img src="./retinadisplay.png" />
-                  <figcaption>Apple Displays</figcaption>
-                </figure>
-              </Link>
-              <Link to="/categories/accessories">
-                <figure>
-                  <img src="./accessories_120dpi.png" />
-                  <figcaption>Apple Accessories</figcaption>
-                </figure>
-              </Link> */}
+              {categoryItem &&
+                categoryItem.map((product) => {
+                  return (
+                    <Link
+                      key={product.category}
+                      to={`/categories/${product.category}`}
+                    >
+                      <img src={product.image_url} id="macbooks" />
+                      <figcaption>{product.category}</figcaption>
+                    </Link>
+                  );
+                })}
             </div>
           </div>
         </div>
