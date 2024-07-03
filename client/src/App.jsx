@@ -26,7 +26,7 @@ import GovernmentSalesPage from "./Pages/GovernmentSalesPage";
 import EducationalSalesPage from "./Pages/EducationSalesPage";
 import MilitarySalesPage from "./Pages/MilitarySalesPage";
 import TechSupportPage from "./Pages/TechSupportPage";
-import AccountOrdersPage from "./Pages/AccountOrdersPage";
+import AccountOrdersPage from "./Pages/AccountOrdersPage/AccountOrdersPage";
 import TradeInPage from "./Pages/TradeInPage";
 import CompareProductsPage from "./Pages/CompareProductsPage";
 import CatFilterBySearchPage from "./Pages/CatFilterBySearchPage";
@@ -60,7 +60,7 @@ function App() {
               path="/category-filter-by"
               element={<CatFilterBySearchPage />}
             />
-            <Route path="/account-orders" element={<AccountOrdersPage />} />
+            <Route path="/account/account-orders" element={<AccountOrdersPage />} />
             <Route
               path="/account-orders/:_id"
               element={<AccountOrdersPage />}

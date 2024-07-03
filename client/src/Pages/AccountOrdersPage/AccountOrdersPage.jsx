@@ -2,11 +2,11 @@ import React from "react";
 
 import { useState, useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
-import { useAuth } from "../hooks/useAuth";
-import { useProvideAuth } from "../hooks/useAuth";
+import { useAuth } from "../../hooks/useAuth";
+import { useProvideAuth } from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 // import { toast } from "react-toastify";
-import api from "../utils/api.utils";
+import api from "../../utils/api.utils";
 import "./AccountOrdersPage.css";
 
 const initialPasswordFormData = {
@@ -104,10 +104,10 @@ const AccountOrdersPage = () => {
 
   return (
     <>
-      <div className="account-container">
+      <div className="accountorders-container">
   
 
-        <section className="account-info">
+        <section className="accountorders-info">
           <div className="info-title">User Account Information</div>
           <p>Account Number: {_id}</p>
           <p>First Name: {customerFirstName}</p>
@@ -120,9 +120,9 @@ const AccountOrdersPage = () => {
           <div className="middle-info-section-image">
             {/* <div className="info-title">middle</div> */}
             <div className="middle-info-content">
-              <p className="middle-info-contents-title">
+              <div className="middle-info-content-title">
                 Warranties and Registering
-              </p>
+              </div>
               <p>
                 Computer warranties offer a safeguard for consumers, providing
                 coverage for hardware malfunctions and defects that might arise
@@ -166,7 +166,7 @@ const AccountOrdersPage = () => {
             <div className="section-contents">
               {orderDetails && (
                 <>
-                  <p>Order Number: {orderId}</p>
+                  <div className="order-number">Order Number: {orderId}</div>
                   <p>Order Date: {orderDetails.createdAt}</p>
                   {orderDetails.orderContents.map((item) => (
                     <div key={item._id}>
