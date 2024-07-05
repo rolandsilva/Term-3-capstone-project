@@ -57,16 +57,17 @@ function Header() {
               <FontAwesomeIcon
                 className="ms-2 mb-1"
                 icon={faShoppingBag}
-                style={{ color: "white" }}
+                style={{ color: "white", marginRight: "15px" }}
               />
               {state.itemCount > 0 && (
                 <Badge
                   pill
-                  style={{ color: "black" }}
+                  style={{ color: "black"}}
                   variant="primary"
-                  className="mb-4 me-2"
+                  className="custom-badge"
                 >
-                  <p className="mb-0">{state.itemCount}</p>
+                 {state.itemCount}
+                  {/* <p className="mb-0">{state.itemCount}</p> */}
                 </Badge>
               )}
             </Nav.Link>
