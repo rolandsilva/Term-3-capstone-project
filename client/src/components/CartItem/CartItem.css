@@ -1,0 +1,7 @@
+#cartitemimage {
+    border: 2px solid black; /* Add a 2px solid black outline around the image */
+  }
+  
+  .item-link h4 {
+    margin-left: 10px; /* Adjust the margin-left as needed */
+  }

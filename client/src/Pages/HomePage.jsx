@@ -75,7 +75,13 @@ const HomePage = () => {
   const handleSelectChangeModel = (event) => {
     setSelectedProductModel(event.target.value);
     console.log(event.target.value);
-    const productModelMatched = allProducts.filter(
+    if (selectBy === "category")  {
+      const productModelMatched = categoryItem.filter(
+        (product) => product.category === event.target.value )
+      navigate(`/categories/${productModelMatched[0].category}`);
+    }
+    else {
+      const productModelMatched = allProducts.filter(
       (product) =>
         product.productNbr === event.target.value ||
         product.name === event.target.value
@@ -83,15 +89,42 @@ const HomePage = () => {
     console.log(productModelMatched);
     navigate(`/product/${productModelMatched[0].id}`);
   };
+}
+
+  //  navigate(`/categories/${productModelMatched[0].category}`);
+  // useEffect(() => {
+  //   if (selectBy === "product-Name") {
+  //     setFilterProducts(
+  //       allProducts.map((products) => {
+  //         return products.name;
+  //       })
+  //     );
+  //   } else if (selectBy === "product-Model") {
+  //     setFilterProducts(
+  //       allProducts.map((products) => {
+  //         return products.productNbr;
+  //       })
+  //     );
+  //   } else setFilterProducts([]);
+  //   console.log(filterProduct);
+  // }, [selectBy]);
+
 
   useEffect(() => {
-    if (selectBy === "product-Name") {
+    if (selectBy === "product-Category") {
+      setFilterProducts(
+        categoryItem.map((products) => {
+          return products.category;
+        })
+      );
+    } else if (selectBy === "product-Name") {
       setFilterProducts(
         allProducts.map((products) => {
           return products.name;
         })
       );
-    } else if (selectBy === "product-Model") {
+    }
+    else if (selectBy === "product-Model") {
       setFilterProducts(
         allProducts.map((products) => {
           return products.productNbr;
@@ -100,6 +133,11 @@ const HomePage = () => {
     } else setFilterProducts([]);
     console.log(filterProduct);
   }, [selectBy]);
+  console.log(filterProduct)
+
+  // if (loading) {
+  //   return <div>Loading...</div>;
+  // }
 
   useEffect(() => {
     const getProducts = async () => {
@@ -121,9 +159,36 @@ const HomePage = () => {
     getProducts();
   }, []);
 
+  // useEffect(() => {
+  //   if (selectBy === "product-Category") {
+  //     setFilterProducts(
+  //       categoryItem.map((products) => {
+  //         return products.category;
+  //       })
+  //     );
+  //   } else if (selectBy === "product-Name") {
+  //     setFilterProducts(
+  //       allProducts.map((products) => {
+  //         return products.name;
+  //       })
+  //     );
+  //   }
+  //   else if (selectBy === "product-Model") {
+  //     setFilterProducts(
+  //       allProducts.map((products) => {
+  //         return products.productNbr;
+  //       })
+  //     );
+  //   } else setFilterProducts([]);
+  //   console.log(filterProduct);
+  // }, [selectBy]);
+  // console.log(filterProduct)
+
   if (loading) {
     return <div>Loading...</div>;
   }
+
+
   //use api call fetch data mocked with mock Data
   // console.log(exampleProductData);
   // fetch data from backend.
@@ -157,7 +222,8 @@ const HomePage = () => {
                   value={selectBy}
                   onChange={handleSelectByChange}
                 >
-                  <option value="">name or model</option>
+                  <option value="">category,name,model</option>
+                  <option value="product-Category">category</option>
                   <option value="product-Name">name</option>
                   <option value="product-Model">model</option>
 

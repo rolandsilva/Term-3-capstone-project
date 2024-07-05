@@ -6,7 +6,7 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 // import { useUI, useProvideCart, useCurrency } from "../../hooks";
 import useUI from "../../hooks/useUI";
 import useProvideCart from "../../hooks/useCart";
-// import "./CartItem.scss";
+import "./CartItem.css";
 import ItemCounter from "../ItemCounter";
 
 function CartItem({ item }) {
@@ -16,10 +16,10 @@ function CartItem({ item }) {
   return (
     <div className="item-box">
       <div className="item-details">
-        <Container>
-          <Row className="mb-2 align-items-center">
+        {/* <Container> */}
+          <Row className="mb-4 align-items-center" >
             <Col xs="9">
-              <div className="d-flex gap-2 align-items-center">
+              <div className="d-flex gap-2 align-items-center" >
                 <Image
                 id="cartitemimage"
                   className="item-image mr-2 w-50 h-25"
@@ -63,7 +63,8 @@ function CartItem({ item }) {
               <ItemCounter item={item} />
             </Col>
           </Row>
-        </Container>
+          <hr></hr>
+        {/* </Container> */}
       </div>
     </div>
   );
