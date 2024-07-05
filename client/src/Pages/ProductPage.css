@@ -1,15 +1,11 @@
-/* .productcontainer {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 0px 20px 0px;
-    align-items: center;
-} */
+/* Product Page CSS */
 
 .productcontainer {
     display: flex;
     flex-direction: column;
     margin: 20px 0px 20px 0px;
     align-items: center;
+    height: 1250px;
 }
 
 .h2AddToCartBtnContainer {
@@ -17,43 +13,51 @@
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
+    margin-top: 20px;;
 }
 
-.productcontainer h2 {
+.h2AddToCartBtnContainer h2 {
+    font-weight: bold;
+    color: blue;
+    background-color: #c1c8dc;
+    font-size: 60px;
+    outline: 1px solid black;
+    width: 400px;
+    height: 80px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: fit-content;
+    margin: 0px;
+}
+
+.h2AddToCartBtnContainer .cartButton {
     font-weight: bold;
     color: blue;
     background-color: #c1c8dc;
     font-size: 40px;
     outline: 1px solid black;
-    width: 400px;
-}
-
-#cartButton {
-    background-color: #c1c8dc;
-    font-weight: bold;
+    min-width: fit-content;
+    height: 80px;
     border-radius: 0;
-    outline: 1px solid black;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: fit-content;
+    padding: 40px;
 }
 
 .producttitles {
     font-weight: bold;
     color: #4464bc;
-    font-size: 20px;
-    margin-left: 50px;
-}
-
-.featureTitle {
-    font-weight: bold;
-    color: #4464bc;
-    font-size: 20px;
-    margin-left: 50px;
-    margin-top: 20px;
-    text-decoration: underline;
+    font-size: 30px;
+    /* margin-left: 50px; */
+    text-align: left;
 }
 
 .productDescription {
-    font-size: 16px;
+    font-size: 30px;
     color: black;
     margin-left: 10px;
 }
@@ -65,13 +69,14 @@
     gap: 40px;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 60px;
 
 }
 
 .productNameContainer {
     display: flex;
     flex-direction: column;
+    justify-content: left;
     height: auto;
     width: auto;
     margin: 10px;
@@ -79,15 +84,34 @@
 
 .productImageContainer {
     display: flex;
-    width: auto;
+    width: 500px;
+    height: 400px;
     justify-content: center;
 }
 
+.productImageContainer img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
 
 .featuresSpecificationsContainer {
     display: flex;
     flex-direction: column;
     margin: 0 100px;
+}
+
+.featureTitle {
+    font-weight: bold;
+    color: #5c81e7;
+    font-size: 40px;
+    margin-left: 50px;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+
+.featureSpecs {
+    font-size: 30px;
 }
 /* .imgDiv {
     outline: 1px solid black;

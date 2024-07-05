@@ -4,9 +4,11 @@
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
+    height: 800px;;
     margin: 0 auto;
     padding: 20px;
+
   }
 
 h1 {
@@ -14,7 +16,7 @@ h1 {
   justify-content: center;
   color: #333;
   /* margin-bottom: 20px; */
-  margin: 20px auto;
+  margin: 30px auto;
   outline: 2px solid black;
   color: black;
   background-color: #c1c7dc;
@@ -25,12 +27,14 @@ h1 {
 }
 
 .comparison-table {
+  width: 1400px;
   overflow-x: auto;
 }
 
 .comparison-table table {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 20px;
   margin-bottom: 40px;
 }
 

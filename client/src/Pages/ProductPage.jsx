@@ -55,11 +55,15 @@ const ProductPage = () => {
     <div className="productcontainer">
       <div className="h2AddToCartBtnContainer">
       <h2>Product Page</h2>
-      {/* <button type="button" id="cartButton" onclick="alert('Button clicked!')">Add to Cart</button> */}
-      <button type="button" id="cartButton" onClick={handleAddToCart}>Add to Cart</button>
+    
+      <button type="button" className="cartButton" onClick={handleAddToCart}>Add to Cart</button>
+
       </div>
+
       <div className="productNameImageContainer">
+
         <div className="productNameContainer">
+          
           <div className="producttitles">
             Product Name:{" "}
             <span className="productDescription">{product.name}</span>
@@ -75,19 +79,29 @@ const ProductPage = () => {
           <div className="producttitles">
             Product Price: $
             <span className="productDescription">${product.price}</span>
+          
           </div>
+
         </div>
+
+
         <div className="productImageContainer">
           <img src={product.image_url} className="imgDiv" alt={product.name} />
         </div>
+
       </div>
+
       <div className="featuresSpecificationsContainer">
+
         <span className="featureTitle">Product Features: </span>
-        {product.features}
+        <span className="featureSpecs">{product.features}</span>
+
         <span className="featureTitle">Product Specifications: </span>
-        {product.specifications}
+        <span className="featureSpecs">{product.specifications}</span>
+
         <span className="featureTitle">Product Availability: </span>
-        {product.availability}
+        <span className="featureSpecs">{product.availability}</span>
+
       </div>
 
       {/* <div className = "producttitles">{product.name} </div> */}

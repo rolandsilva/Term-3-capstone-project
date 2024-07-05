@@ -50,11 +50,28 @@
     }
 
     #cart {
-        padding-right: 20PX;;
+        padding-right: 20px;
+        margin-right: 10;
     }
 
     .cartcontainer {
-
         padding-right: 20px;
     }
+
+    .custom-badge {
+        background-color: blue; /* or your desired color */
+        color: black;
+        font-size: 12px;
+        /* padding: 2px 6px; */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem 1rem;
+      }
+
+      .cart-icon {
+        margin-right: 10px; /* Add margin to the right of the cart icon */
+      }
+
+    
     

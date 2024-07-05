@@ -60,15 +60,15 @@ function Header() {
                 style={{ color: "white" }}
               />
               {state.itemCount > 0 && (
-                  <Badge
-                    pill
-                    style={{ color: "black" }}
-                    variant="primary"
-                    className="mb-4 me-2"
-                  >
-                    <p className="mb-0">{state.itemCount}</p>
-                  </Badge>
-                )}
+                <Badge
+                  pill
+                  style={{ color: "black" }}
+                  variant="primary"
+                  className="mb-4 me-2"
+                >
+                  <p className="mb-0">{state.itemCount}</p>
+                </Badge>
+              )}
             </Nav.Link>
           </Navbar.Brand>
           {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
@@ -108,7 +108,11 @@ function Header() {
                   as={Link}
                   className="d-flex align-items-center"
                   to={"/categories/macbooks"}
-                  style={{ color: "white", marginRight: "20px",  whiteSpace: "nowrap"}}
+                  style={{
+                    color: "white",
+                    marginRight: "20px",
+                    whiteSpace: "nowrap",
+                  }}
                 >
                   MacBooks {">"}
                 </Nav.Link>
@@ -116,7 +120,11 @@ function Header() {
                   as={Link}
                   className="d-flex align-items-center"
                   to={"/categories/ipads"}
-                  style={{ color: "white", marginRight: "20px",  whiteSpace: "nowrap"}}
+                  style={{
+                    color: "white",
+                    marginRight: "20px",
+                    whiteSpace: "nowrap",
+                  }}
                 >
                   iPads {">"}
                 </Nav.Link>
@@ -124,7 +132,11 @@ function Header() {
                   as={Link}
                   className="d-flex align-items-center"
                   to={"/categories/airpods"}
-                  style={{ color: "white", marginRight: "20px",  whiteSpace: "nowrap" }}
+                  style={{
+                    color: "white",
+                    marginRight: "20px",
+                    whiteSpace: "nowrap",
+                  }}
                 >
                   AirPods {">"}
                 </Nav.Link>
@@ -132,7 +144,11 @@ function Header() {
                   as={Link}
                   className="d-flex align-items-center"
                   to="/categories/iwatches"
-                  style={{ color: "white", marginRight: "20px",  whiteSpace: "nowrap" }}
+                  style={{
+                    color: "white",
+                    marginRight: "20px",
+                    whiteSpace: "nowrap",
+                  }}
                 >
                   iWatches {">"}
                 </Nav.Link>
@@ -140,7 +156,11 @@ function Header() {
                   as={Link}
                   className="d-flex align-items-center"
                   to={"/categories/macs"}
-                  style={{ color: "white", marginRight: "20px",  whiteSpace: "nowrap" }}
+                  style={{
+                    color: "white",
+                    marginRight: "20px",
+                    whiteSpace: "nowrap",
+                  }}
                 >
                   Macs {">"}
                 </Nav.Link>
@@ -148,7 +168,11 @@ function Header() {
                   as={Link}
                   className="d-flex align-items-center"
                   to={"/categories/iphones"}
-                  style={{ color: "white", marginRight: "20px",  whiteSpace: "nowrap" }}
+                  style={{
+                    color: "white",
+                    marginRight: "20px",
+                    whiteSpace: "nowrap",
+                  }}
                 >
                   iPhones {">"}
                 </Nav.Link>
@@ -156,7 +180,11 @@ function Header() {
                   as={Link}
                   className="d-flex align-items-center"
                   to={"/categories/imacs"}
-                  style={{ color: "white", marginRight: "20px",  whiteSpace: "nowrap" }}
+                  style={{
+                    color: "white",
+                    marginRight: "20px",
+                    whiteSpace: "nowrap",
+                  }}
                 >
                   iMacs {">"}
                 </Nav.Link>
@@ -164,7 +192,11 @@ function Header() {
                   as={Link}
                   className="d-flex align-items-center"
                   to={"/categories/displays"}
-                  style={{ color: "white", marginRight: "20px",  whiteSpace: "nowrap" }}
+                  style={{
+                    color: "white",
+                    marginRight: "20px",
+                    whiteSpace: "nowrap",
+                  }}
                 >
                   Displays {">"}
                 </Nav.Link>
@@ -172,12 +204,19 @@ function Header() {
                   as={Link}
                   className="d-flex align-items-center"
                   to={"/categories/accessories"}
-                  style={{ color: "white", marginRight: "20px",  whiteSpace: "nowrap" }}
+                  style={{
+                    color: "white",
+                    marginRight: "20px",
+                    whiteSpace: "nowrap",
+                  }}
                 >
                   Accessories {">"}
                 </Nav.Link>
               </div>
-              <div className="cartdiv" style={{display: "flex", marginLeft: "10px"}}>
+              <div
+                className="cartdiv"
+                style={{ display: "flex", marginLeft: "10px" }}
+              >
                 {" "}
                 {isLoggedIn ? (
                   <>
@@ -186,7 +225,7 @@ function Header() {
                       className="d-flex align-items-center"
                       to={"/"}
                       style={{ color: "white", marginRight: "20px" }}
-                    onClick={logout}
+                      onClick={logout}
                     >
                       LogOut
                     </Nav.Link>
@@ -200,13 +239,13 @@ function Header() {
                     </Nav.Link>
                   </>
                 ) : (
-                  <div style={{display: "flex"}}>
+                  <div style={{ display: "flex" }}>
                     {" "}
                     <Nav.Link
                       as={Link}
                       className="d-flex align-items-center"
                       to={"/login"}
-                      style={{ color: "white", marginRight: "20px"}}
+                      style={{ color: "white", marginRight: "20px" }}
                     >
                       Login
                     </Nav.Link>
@@ -221,7 +260,6 @@ function Header() {
                   </div>
                 )}
               </div>
-              
             </Nav>
           </Navbar.Collapse>
         </Container>
