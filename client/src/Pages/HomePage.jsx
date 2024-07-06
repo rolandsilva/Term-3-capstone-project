@@ -12,36 +12,7 @@ const HomePage = () => {
   const [searchParameter, setSearchParameter] = useState(null);
   const navigate = useNavigate();
 
-  // ****** create arrays for datalist
-  // check search parameter
-  // if === item in prodNameArray go to product detail page
-  // else if item in prodNbrArray go ot product detail page
-  // else if item in prodCategoryArray go to product category page
-  // else return message not valid name, nbr or category
 
-  //display to product page with search by parameter
-
-  const prodNameArray = [
-    "2024 M4 MacBook Pro Laptop",
-    "2024 Mac Mini",
-    "2024 Pro Display XDE",
-    "iPad Pro",
-  ];
-
-  const prodNbrArray = [];
-  const prodCategoryArray = [];
-
-  const initialSearchParameter = {
-    searchInput: "",
-  };
-
-  // const handleSearch = (e) => {
-  //   const { id, value } = e.target;
-  //   setSearchParameter((prev) => ({
-  //     ...prev,
-  //     [id]: value,
-  //   }));
-  // };
   const options = ["product-Name", "product-Model"];
   const [selectBy, setSelectBy] = useState("");
   // const [selectedProduct, setSelectedProduct] = useState("");
@@ -52,30 +23,12 @@ const HomePage = () => {
     setSelectBy((prevState) => event.target.value);
     console.log(event.target.value);
     console.log(selectBy);
-    //   if (selectBy === "product-Name") {
-    //     setFilterProducts(allProducts.map((products) => {
-    //       return products.name
-    //     }))
-    //   }
-    //  else if (selectBy === "product-Model") {
-    //     setFilterProducts(allProducts.map((products) => {
-    //       return products.productNbr
-    //     }))
-    //  }
-    //  elses
-    //  setFilterProducts([])
-    //   console.log(filterProduct)
-    // const productMatched = allProducts.filter(
-    //   (product) => product.name === event.target.value
-    // );
-    // console.log(productMatched);
-    // navigate(`/product/${productMatched[0].id}`);
   };
 
   const handleSelectChangeModel = (event) => {
     setSelectedProductModel(event.target.value);
     console.log(event.target.value);
-    if (selectBy === "category")  {
+    if (selectBy === "product-Category")  {
       const productModelMatched = categoryItem.filter(
         (product) => product.category === event.target.value )
       navigate(`/categories/${productModelMatched[0].category}`);
@@ -90,25 +43,6 @@ const HomePage = () => {
     navigate(`/product/${productModelMatched[0].id}`);
   };
 }
-
-  //  navigate(`/categories/${productModelMatched[0].category}`);
-  // useEffect(() => {
-  //   if (selectBy === "product-Name") {
-  //     setFilterProducts(
-  //       allProducts.map((products) => {
-  //         return products.name;
-  //       })
-  //     );
-  //   } else if (selectBy === "product-Model") {
-  //     setFilterProducts(
-  //       allProducts.map((products) => {
-  //         return products.productNbr;
-  //       })
-  //     );
-  //   } else setFilterProducts([]);
-  //   console.log(filterProduct);
-  // }, [selectBy]);
-
 
   useEffect(() => {
     if (selectBy === "product-Category") {
@@ -159,30 +93,6 @@ const HomePage = () => {
     getProducts();
   }, []);
 
-  // useEffect(() => {
-  //   if (selectBy === "product-Category") {
-  //     setFilterProducts(
-  //       categoryItem.map((products) => {
-  //         return products.category;
-  //       })
-  //     );
-  //   } else if (selectBy === "product-Name") {
-  //     setFilterProducts(
-  //       allProducts.map((products) => {
-  //         return products.name;
-  //       })
-  //     );
-  //   }
-  //   else if (selectBy === "product-Model") {
-  //     setFilterProducts(
-  //       allProducts.map((products) => {
-  //         return products.productNbr;
-  //       })
-  //     );
-  //   } else setFilterProducts([]);
-  //   console.log(filterProduct);
-  // }, [selectBy]);
-  // console.log(filterProduct)
 
   if (loading) {
     return <div>Loading...</div>;

@@ -86,19 +86,19 @@
 .shipaddresscreditcardcontainer {
   display: flex;
   gap: 69px;
-  outline: 2px solid rgb(218, 204, 10);
+  // outline: 2px solid rgb(218, 204, 10);
 }
 
 .shippingsection div {
   font-size: 20px;
   width: 100%;
-  outline: 2px solid rgb(229, 62, 207);
+  // outline: 2px solid rgb(229, 62, 207);
   // padding: 5px;
 }
 
 .shippingaddresscontainer {
   margin-top: 10px;
-  outline: 2px solid rgb(6, 244, 49);
+  // outline: 2px solid rgb(6, 244, 49);
 }
 
 .shippingcheckboxsection {
@@ -115,7 +115,7 @@
 }
 
 .shippingcontainerimageContent p {
-  outline: 2px solid rgb(90, 74, 230);
+  // outline: 2px solid rgb(90, 74, 230);
   font-size: 20px;
 }
 
@@ -124,7 +124,7 @@
   color: black;
   border: 2px solid black;
   padding: 10px;
-  outline: 2px solid black;
+  // outline: 2px solid black;
   margin-top: 10px;
   // display: inline-block;
   // white-space: nowrap;
@@ -150,7 +150,7 @@
   width: 100%;
   // max-width: 90%;
   font-size: 60px;
-  outline: 2px solid rgb(229, 62, 62);
+  // outline: 2px solid rgb(229, 62, 62);
   display: flex; /* Use flexbox to center the text */
   flex-direction: column;
   justify-content: center; /* Center horizontally */
@@ -180,7 +180,7 @@
 .creditcardsection h4 {
   background-color: #c1c8dc;
   color: black;
-  border: 2px solid black;
+  // border: 2px solid black;
   padding: 10px;
   outline: 2px solid black;
   // display: inline-block;

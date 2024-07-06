@@ -37,7 +37,7 @@ function Header() {
         expand="lg"
         style={{ backgroundColor: "#688ac6" }}
       >
-        <Container id="headercontainer">
+        <Container id="headercontainer" className="custom-container">
           <Navbar.Brand className="brandcontainer">
             <Nav.Link as={Link} to={"/"}>
               <div id="headerdiv1">
@@ -55,18 +55,22 @@ function Header() {
             >
               <span id="cart">Cart</span>
               <FontAwesomeIcon
-                className="ms-2 mb-1"
+                className=""
                 icon={faShoppingBag}
-                style={{ color: "white", marginRight: "15px" }}
+                style={{
+                  color: "white",
+                  marginRight: "25px",
+                  fontSize: "40px",
+                }}
               />
               {state.itemCount > 0 && (
                 <Badge
                   pill
-                  style={{ color: "black"}}
+                  style={{ color: "black" }}
                   variant="primary"
                   className="custom-badge"
                 >
-                 {state.itemCount}
+                  {state.itemCount}
                   {/* <p className="mb-0">{state.itemCount}</p> */}
                 </Badge>
               )}
@@ -97,14 +101,6 @@ function Header() {
                 </ToggleButtonGroup>
               } */}
               <div className="linkcontainer">
-                {/* <Nav.Link
-                  // as={Link}
-                  className="d-flex align-items-center"
-                  to={`/`}
-                  style={{ color: "white", marginRight: "20px" }}
-                >
-                  Home Page
-                </Nav.Link> */}
                 <Nav.Link
                   as={Link}
                   className="d-flex align-items-center"
@@ -220,41 +216,41 @@ function Header() {
               >
                 {" "}
                 {isLoggedIn ? (
-                  <>
+                  <div id="logindiv" style={{ display: "flex" }}>
                     <Nav.Link
                       as={Link}
-                      className="d-flex align-items-center"
+                      className="d-flex align-items-center custom-login"
                       to={"/"}
-                      style={{ color: "white", marginRight: "20px" }}
+                      style={{ color: "lightblue", marginRight: "20px" }}
                       onClick={logout}
                     >
                       LogOut
                     </Nav.Link>
                     <Nav.Link
                       as={Link}
-                      className="d-flex align-items-center"
+                      className="d-flex align-items-center custom-login"
                       to={"/account"}
-                      style={{ color: "white", marginRight: "20px" }}
+                      style={{ color: "lightblue", marginRight: "20px" }}
                     >
                       Account
                     </Nav.Link>
-                  </>
+                  </div>
                 ) : (
-                  <div style={{ display: "flex" }}>
+                  <div id="logindiv" style={{ display: "flex" }}>
                     {" "}
                     <Nav.Link
                       as={Link}
-                      className="d-flex align-items-center"
+                      className="d-flex align-items-center custom-login"
                       to={"/login"}
-                      style={{ color: "white", marginRight: "20px" }}
+                      style={{ color: "lightblue", marginRight: "20px" }}
                     >
                       Login
                     </Nav.Link>
                     <Nav.Link
                       as={Link}
-                      className="d-flex align-items-center"
+                      className="d-flex align-items-center custom-login"
                       to={"/register"}
-                      style={{ color: "white", marginRight: "20px" }}
+                      style={{ color: "lightblue", marginRight: "20px" }}
                     >
                       Register
                     </Nav.Link>

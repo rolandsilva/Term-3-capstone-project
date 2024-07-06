@@ -1,5 +1,10 @@
+
+/* .main {
+    max-width: 1200px;
+} */
 .maincontainer {
     display: flex;
+    /* max-width: 1200px; */
     flex-direction: row;
 }
 
@@ -10,7 +15,8 @@
 
 .featurescontainer {
     width: 100%;
-    outline: 10px solid blue;
+    max-width: 1500px;
+    /* outline: 10px solid blue; */
 }
 
 .featuredimg {
@@ -21,7 +27,7 @@
     max-width: 1500px;
     width: 100%;
     height: auto;
-    outline: 5px solid orange;
+    /* outline: 5px solid orange; */
 }
 
 /* .featurescontainer {
@@ -94,7 +100,7 @@
     height: auto;
     margin-left: 25px;
     margin-right: 20px;
-    outline: 5px solid green;
+    /* outline: 5px solid green; */
     /* flex-grow: 1; */
     /* padding-left: 10px; */
 }
