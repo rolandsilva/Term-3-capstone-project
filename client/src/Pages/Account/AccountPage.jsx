@@ -8,7 +8,6 @@ import api from "../../utils/api.utils";
 
 import "./AccountPage.css";
 
-
 const initialPasswordFormData = {
   currentPassword: "",
   password: "",
@@ -151,9 +150,9 @@ const AccountPage = () => {
   return (
     <>
       <div className="account-container">
-        <section className="account-info">
+        <section className="account-user-info">
           <div className="info-title">User Account Information</div>
-          <p>Account Number: {_id}</p>
+          <p className="acctnbr">Account Number: {_id}</p>
           <p>First Name: {customerFirstName}</p>
           <p>Last Name: {customerLastName}</p>
           <p>Address 1: {customerAddress1}</p>
@@ -229,9 +228,31 @@ const AccountPage = () => {
           </section>
 
           <section className="account-info-section">
-            <div className="info-title">Info box section</div>
+            <div className="info-title">Tips for Better Passwords</div>
             <div className="account-info-box">
-              <p>test info box size</p>
+              <p>
+                Use a Mix of Characters: Combine uppercase and lowercase
+                letters, numbers, and special characters (such as !, @, #, $, %,
+                etc.) to make your password harder to guess. For example,
+                “P@ssw0rd!23” is much stronger than “password123”.
+              </p>
+              <p>
+                Make it Long and Unique: Aim for at least 12-16 characters. The
+                longer your password, the more secure it is. Avoid using common
+                words, phrases, or easily guessable information like your name
+                or birthdate.
+              </p>
+              <p>
+                Avoid Reusing Passwords: Never use the same password for
+                multiple accounts. If one account gets compromised, using the
+                same password for others makes them vulnerable too. Consider
+                using a password manager to keep track of unique passwords for
+                each account.
+              </p>
+              <p>Use Passphrases:
+              	Create a passphrase by stringing together random words or a sentence that’s easy for you to remember but hard for others to guess. For example, “PurpleDragonSunsetBeach2024!” is both long and complex.</p>
+              <p>Enable Two-Factor Authentication (2FA):
+              	Wherever possible, enable two-factor authentication. This adds an extra layer of security by requiring not just your password, but also a second form of verification (like a code sent to your phone) to access your account.</p>
             </div>
           </section>
         </div>

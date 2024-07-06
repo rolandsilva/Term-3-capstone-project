@@ -4,7 +4,7 @@
   /* justify-content: space-around; */
 }
 
-.account-info {
+.account-user-info {
   width: 40%;
   outline: 2px solid black;
   /* border: 5px solid red; */
@@ -21,10 +21,23 @@
   padding: 5px;
 }
 
-.account-info p {
-  font-size: 1.5em;
+.account-user-info p.acctnbr  {
+  /* font-size: 2.5em; */
+  font-size: 30px;
+  color:rgb(21, 138, 48);
+  font-weight: bolder;
   margin: 0;
   padding: 5px;
+  /* outline: 2px solid green; */
+}
+.account-user-info .info-title p  {
+  /* font-size: 2.5em; */
+  font-size: 40px;
+  color:rgb(6, 6, 6);
+  /* font-weight: bold; */
+  margin: 0;
+  padding: 5px;
+  /* outline: 2px solid red; */
 }
 
 /* password section */
@@ -53,7 +66,7 @@
   width: 45%;
   outline: 2px solid black;
   /* border: 5px solid blue; */
-  height: 650px;
+  height: 848px;
   padding: 10px;
   overflow-x: hidden;
   overflow-y: auto;
@@ -64,11 +77,21 @@
   outline: 3px solid black;
   color: black;
   background-color: #c1c7dc;
-  font-size: 24px;
+  font-size: 35px;
   width: 75%;
   height: 60px;
   margin: 1em auto;
-  padding: 5px;
+  padding: 5px; 
+  /* outline: 1px solid black; */
+}
+
+.orderinfo a {
+  font-size: 35px;
+}
+
+.orderinfo p {
+  font-size: 35px;
+  margin-bottom: 30px;
 }
 
 .account-password-info-container {
@@ -92,22 +115,24 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-height: 300px;
+  max-height: 500px;
   /* margin: 0 auto; */
-  margin: 5px;
+  margin: 30px;
 }
 
 .account-password-form input {
   font-size: 1.5em;
   margin: 0.20em 0;
-  width: 30%;
+  width: 50%;
   padding: 5px;
-  height: 40px;
+  height: 50px;
 }
 
 .account-password-form label {
-  font-size: 1.2rem;
-  margin: 0.20em 0;
+  /* font-size: 1.2rem; */
+  font-size: 35px;
+  /* margin: 0.3em 0; */
+  margin-bottom: 29px;;
   padding: 5px;
   height: 35px;
 }
@@ -116,9 +141,18 @@
 .passwordbutton {
   background-color: #dcdfe8;
   outline: 2px solid black;
-  margin: 5px;
+  margin: 20px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
+.passwordbutton:hover {
+  background-color: #f6c70a;
+  outline: 2px solid black;
+  margin: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
 
 .account-password-info-container {
   display: flex;
@@ -151,10 +185,15 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  overflow-y: auto;
+  overflow-x: auto;
 }
 
-.account-info-box {
-  outline: 10px solid green;
+.account-info-box p {
+  /* margin: 20px 20px; */
+  font-size: 25px;
+  padding: 0px 30px;
+  /* outline: 10px solid green; */
 }
 
 @media (max-width: 768px) {
