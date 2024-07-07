@@ -8,7 +8,7 @@ import {
   faFacebookF,
   faTwitch,
 } from "@fortawesome/free-brands-svg-icons";
-import ContactUsPage from "../../Pages/ContactUSPage";
+import ContactUsPage from "../../Pages/ContactUs/ContactUsPage";
 
 const Footer = () => {
   return (
