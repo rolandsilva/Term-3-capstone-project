@@ -16,20 +16,20 @@ import CategoryPage from "./Pages/CategoryPage/CategoryPage";
 import ProductPage from "./Pages/ProductPage";
 import AccountPage from "./Pages/Account/AccountPage";
 import CheckoutPage from "./Pages/CheckoutPage";
-import ContactUsPage from "./Pages/ContactUSPage";
-import FAQPage from "./Pages/FAQPage";
+import ContactUsPage from "./Pages/ContactUs/ContactUsPage";
+import FAQPage from "./Pages/FAQ/FAQPage";
 import NotFoundPage from "./Pages/NotFoundPage";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
-import AboutUsPage from "./Pages/AboutUsPage";
-import BusinessSalesPage from "./Pages/BusinessSalesPage";
-import GovernmentSalesPage from "./Pages/GovernmentSalesPage";
-import EducationalSalesPage from "./Pages/EducationSalesPage";
-import MilitarySalesPage from "./Pages/MilitarySalesPage";
-import TechSupportPage from "./Pages/TechSupportPage";
+import AboutUsPage from "./Pages/AboutUs/AboutUsPage";
+import BusinessSalesPage from "./Pages/businessSales/BusinessSalesPage";
+import GovernmentSalesPage from "./Pages/GovernmentSales/GovernmentSalesPage";
+import EducationalSalesPage from "./Pages/EducationalSales/EducationSalesPage";
+import MilitarySalesPage from "./Pages/MilitarySales/MilitarySalesPage";
+import TechSupportPage from "./Pages/TechSupport/TechSupportPage";
 import AccountOrdersPage from "./Pages/AccountOrdersPage/AccountOrdersPage";
-import TradeInPage from "./Pages/TradeInPage";
-import CompareProductsPage from "./Pages/CompareProductsPage";
-import CatFilterBySearchPage from "./Pages/CatFilterBySearchPage";
+import TradeInPage from "./Pages/TradeIn/TradeInPage";
+import CompareProductsPage from "./Pages/CompareProducts/CompareProductsPage";
+import CatFilterBySearchPage from "./Pages/CatFilterBySearch/CatFilterBySearchPage";
 
 function App() {
   return (
