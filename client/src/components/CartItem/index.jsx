@@ -27,7 +27,8 @@ function CartItem({ item }) {
                 src={`${item.image_url}`}
               />
               <Link
-                to={`/p/${item._id}`}
+                to={`/product/${item.id}`}
+                // to={`/p/${item._id}`}
                 className="item-link one-line-ellipsis"
                 onClick={closeSidebar}
               >
