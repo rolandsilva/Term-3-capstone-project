@@ -1,12 +1,19 @@
 .military-sales {
     padding: 20px;
     font-family: Arial, sans-serif;
-    height:1000px;
-    font-size: 1.5em;
+    /* height:1000px;
+    font-size: 1.5em; */
   }
   
-  .title {
-    display: flex;
+  h1.militarysalesh1 {
+    text-align: center;
+    /* margin-bottom: 10px; */
+    margin: 30px auto;
+    font-size: 3em;
+    color: #333;
+    width: 800px;
+  }
+    /* display: flex;
     flex-direction: column;
     justify-self: center;
     text-align: center;
@@ -15,27 +22,29 @@
     margin-left: 20px;
     font-size: 2.5em;
     color: #333;
-  }
+  } */
   
   .subtitle {
     text-align: center;
     margin-bottom: 30px;
-    font-size: 1.5em;
+    font-size: 2em;
     color: #666;
   }
   
   .card {
     border: 1px solid #ddd;
     padding: 20px;
-    margin: 25px;
+    /* margin: 25px; */
+    margin-bottom: 20px;
     border-radius: 8px;
     background-color: #f9f9f9;
   }
   
-  .card h2 {
-    font-size: 80px;
-    margin-bottom: 10px;
-    height: 50px;
+h2.militarysalesh2 {
+    font-size: 3em;
+    /* font-size: 80px; */
+    margin-bottom: 20px;
+    /* height: 50px; */
     color: #333;
     /* outline: red 5px solid; */
   }
@@ -50,7 +59,10 @@
   }
   
   .card ul li {
+    list-style-type: none;
+    text-align: center;
     margin-bottom: 5px;
+    font-size: 1.0em;
   }
   
   .card-container {

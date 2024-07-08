@@ -204,10 +204,10 @@ const HomePage = () => {
           <p className="itemName">M4 iPad Pro</p>
         </div>
         <div className="contactInfo">
-          <h3>Call 800-123-4567</h3>
+          <h3 className="homepageh3">Call 800-123-4567</h3>
           <p className="questions">24/7 For any questions</p>
           <Link to="/FAQ">
-            <h4>click here to go to our FAQ Page</h4>
+            <p className="homepagep">click here for our FAQ Page</p>
           </Link>
         </div>
       </div>

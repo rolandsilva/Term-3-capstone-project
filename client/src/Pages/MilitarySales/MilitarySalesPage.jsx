@@ -4,10 +4,10 @@ import './MilitarySalesPage.css';
 const MilitarySalesPage = () => {
   return (
     <div className="military-sales">
-      <h1 className="title">Military and Veterans Sales</h1>
+      <h1 className="militarysalesh1">Military and Veterans Sales</h1>
       <p className="subtitle">Roland's Computer, Device, and Accessories Store - Proudly Serving Military and Veterans for 12 Years</p>
       <div className="card">
-        <h2>About Our Military and Veterans Sales Services</h2>
+        <h2 className="militarysalesh2">About Our Military and Veterans Sales Services</h2>
         <p>
           At Roland's, we are honored to support the technology needs of military personnel and veterans. For the past 12 years, we have been a trusted partner, providing the latest technology products and exceptional support to those who serve and have served our country.
         </p>
@@ -17,7 +17,7 @@ const MilitarySalesPage = () => {
       </div>
       <div className="card-container">
         <div className="card">
-          <h2>Our Services</h2>
+          <h2 className="militarysalesh2">Our Services</h2>
           <ul>
             <li>Bulk purchasing options</li>
             <li>Custom configurations</li>
@@ -26,7 +26,7 @@ const MilitarySalesPage = () => {
           </ul>
         </div>
         <div className="card">
-          <h2>Why Choose Us</h2>
+          <h2 className="militarysalesh2">Why Choose Us</h2>
           <ul>
             <li>Expert advice from knowledgeable staff</li>
             <li>High-quality products from leading brands</li>
@@ -35,7 +35,7 @@ const MilitarySalesPage = () => {
           </ul>
         </div>
         <div className="card">
-          <h2>Contact Us</h2>
+          <h2 className="militarysalesh2">Contact Us</h2>
           <p>
             Get in touch with our military and veterans sales team:
           </p>

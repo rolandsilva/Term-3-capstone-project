@@ -4,10 +4,11 @@ import './EducationSalesPage.css';
 const EducationalSalesPage = () => {
   return (
     <div className="educational-sales">
-      <h1 className="title">Educational Sales</h1>
-      <p className="subtitle">Roland's Computer, Device, and Accessories Store - Serving Educational Institutions for 12 Years</p>
+      <h1 
+      className="educationalsalesh1">Educational Sales</h1>
+ <p className="subtitle">Roland's Computer, Device, and Accessories Store - Serving Educational Institutions for 12 Years</p>
       <div className="card">
-        <h2>About Our Educational Sales Services</h2>
+        <h2 className="educationalsalesh2">About Our Educational Sales Services</h2>
         <p>
           At Roland's, we are dedicated to supporting the technology needs of educational institutions. For the past 12 years, we have been a trusted partner to schools, colleges, and universities, providing them with the latest technology products and exceptional support.
         </p>
@@ -17,7 +18,7 @@ const EducationalSalesPage = () => {
       </div>
       <div className="card-container">
         <div className="card">
-          <h2>Our Services</h2>
+          <h2 className="educationalsalesh2">Our Services</h2>
           <ul>
             <li>Bulk purchasing options</li>
             <li>Custom configurations</li>
@@ -26,7 +27,7 @@ const EducationalSalesPage = () => {
           </ul>
         </div>
         <div className="card">
-          <h2>Why Choose Us</h2>
+          <h2 className="educationalsalesh2">Why Choose Us</h2>
           <ul>
             <li>Expert advice from knowledgeable staff</li>
             <li>High-quality products from leading brands</li>
@@ -35,7 +36,7 @@ const EducationalSalesPage = () => {
           </ul>
         </div>
         <div className="card">
-          <h2>Contact Us</h2>
+          <h2 className="educationalsalesh2">Contact Us</h2>
           <p>
             Get in touch with our educational sales team:
           </p>

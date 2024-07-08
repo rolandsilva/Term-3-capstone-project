@@ -5,7 +5,7 @@ const TradeInPage = () => {
   return (
     <div className="trade-in-info">
       <div className="container">
-        <h1>How to Trade In Your Computer Equipment</h1>
+        <h1 className="tradeinh1">How to Trade In Your Computer Equipment</h1>
         <section className="trade-in-steps">
           <h2>Step-by-Step Guide</h2>
           <ol>
@@ -28,14 +28,14 @@ const TradeInPage = () => {
         </section>
 
         <section className="estimated-value">
-          <h2>Estimated Value</h2>
+          <h2 className="tradeinh2">Estimated Value</h2>
           <p>
             Our online estimator will provide you with an approximate value for your device based on its model and condition. Keep in mind that the final value may vary after our technicians inspect the device.
           </p>
         </section>
 
         <section className="packing-shipping">
-          <h2>Packing and Shipping Instructions</h2>
+          <h2 className="tradeinh2">Packing and Shipping Instructions</h2>
           <ul>
             <li>Use a sturdy box that can withstand shipping.</li>
             <li>Wrap your device in bubble wrap or other protective material.</li>

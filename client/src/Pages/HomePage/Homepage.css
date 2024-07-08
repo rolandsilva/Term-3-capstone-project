@@ -10,12 +10,11 @@
 
 .imagescontainer {
     width: 80%;
-    /* width: 80%; */
 }
 
 .featurescontainer {
-    width: 100%;
-    max-width: 1500px;
+    width: 101%;
+    max-width: 120%;
     /* outline: 10px solid blue; */
 }
 
@@ -23,70 +22,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 10px;
-    max-width: 1500px;
+    /* padding-left: 10px; */
+    margin-right: -5px;
     width: 100%;
     height: auto;
     /* outline: 5px solid orange; */
-}
-
-/* .featurescontainer {
-    width: 100%;
-} */
-
-.productimgcontainer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* grid-template-columns: repeat(5, 1fr); */
-    grid-template-rows: auto auto;
-    grid-gap: 5px;
-    border: 1px solid black;
-    border-top: none;
-    /* margin-left: 19px; */
-    margin-bottom: 10px;;
-    height: 550px;
-    /* max-width: 1500px; */
-    padding: 10px;
-    /* outline: 5px solid purple; */
-}
-
-.productimgcontainer a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 200px;
-    max-height: 200px;
-    width: 100%;
-}
-
-.productimgcontainer a figure {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 200px;
-    max-height: 200px;
-    width:70%;
-    gap: 10px;
-}
-
-.productimgcontainer img {
-    width: 100%;
-    height: auto;
-    max-width: 300px; /* Ensures all images have the same max width */
-    max-height: 170px; /* Ensures all images have the same max height */
-    object-fit: cover; /* Ensures the images maintain aspect ratio and are cropped if necessary*/
-    display: block; 
-}
-
-#specialItem {
-    grid-column: 5/6;
-    grid-row: 1/3;
-    max-width: 100px;
-    width: 100%;
-    height: 200px;
-    margin-top: 5px;
 }
 
 .searchcontainer {
@@ -94,12 +34,12 @@
     flex-direction: column;
     justify-content: space-between;
         /* width: 1142px; */
-    max-width: 1455px;
+    max-width: 98.5%;
     padding-left: 10px;
     width: 100%;
     height: auto;
-    margin-left: 25px;
-    margin-right: 20px;
+    margin-left: 30px;
+    /* margin-right: 20px; */
     /* outline: 5px solid green; */
     /* flex-grow: 1; */
     /* padding-left: 10px; */
@@ -157,6 +97,67 @@
     /* outline: 5px solid orange; */
 }
 
+.productimgcontainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: repeat(5, 1fr); */
+    grid-template-rows: auto auto;
+    grid-gap: 5px;
+    border: 1px solid black;
+    border-top: none;
+    /* margin-left: 19px; */
+    margin-bottom: 10px;;
+    height: 550px;
+    /* max-width: 1500px; */
+    padding: 10px;
+    /* outline: 5px solid purple; */
+}
+
+.productimgcontainer a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+    max-height: 200px;
+    width: 100%;
+}
+
+.productimgcontainer a figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+    max-height: 200px;
+    width:70%;
+    gap: 10px;
+    /* margin: 10px; */
+}
+
+.productimgcontainer img {
+    width: 120px;
+    height: auto;
+    margin: 10px;
+    /* max-width: 400px; 
+    max-height: 270px;  */
+    object-fit: cover; 
+    /* object-fit: contain; */
+    display: block; 
+    outline: red 2px solid;
+}
+
+#specialItem {
+    grid-column: 5/6;
+    grid-row: 1/3;
+    max-width: 100px;
+    width: 100%;
+    height: 200px;
+    margin-top: 5px;
+}
+
+
+
 figure {
     padding: 0;
     margin: 0;
@@ -167,11 +168,11 @@ figure {
     text-align: center;
 }
 
-#macbooks {
+/* #macbooks {
     max-width: 125px;
     width: 100%;
     height: auto;
-}
+} */
 
 #ipads {
     max-width: 80px;
@@ -193,58 +194,71 @@ figure {
     /* justify-content: center; */
     outline: 1px solid black;
     width: 98%;
-    margin: 10px 0px 0px 0px;
-    max-height: 750px;
-    outline: 5px solid rgb(255, 0, 136);
+    margin: 10px 0px 0px 15px;
+    max-height: 950px;
+    outline: 1px solid rgb(0, 0, 0);
 }
 
-.newProductbar {
+h2.newProductbar {
     background-color: #c1c8dc;
-    height: 40px;
-    font-size: 24px;
+    align-content: center;
+    height: 80px;
+    font-size: 30px;
     padding-top: 10px;
-
+    outline: black 1px solid;
 }
 
-#M3MBPimage {
+#m3mbp {
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     height: auto;
-    width: 160px;
+    width: 360px;
     max-width: 100%;
-    outline: 5px solid rgb(255, 115, 0);
+    /* outline: 10px solid orange; */
 }
 
-#m4ipadproimage {
+#m4ipadpro {
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     height: auto;
-    width: auto;
-    /* height: 200px;
-    width: 210px; */
+    width: 360px;
     max-width: 100%;
-    outline: 5px solid rgb(255, 115, 0);
+    /* outline: 10px solid orange; */
 }
 
 .itemName {
-    font-size: 20px;;
-    font-weight: bold;
+    font-size: 30px;
+    /* font-weight: bold; */
 }
 .contactInfo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    margin: 10px 10px 0px 10px;
+    /* margin: 10px 10px 0px 10px; */
     height: 100%;
     width: 100%;
     /* outline: 1px solid black; */
 }
 
+h3.homepageh3 {
+    margin-top: 20px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+p.homepagep {
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: blue
+}
+
 .questions {
-    font-size: 18px;
+    font-size: 22px;
+    margin: 5px;
 }
 
 @media screen {
