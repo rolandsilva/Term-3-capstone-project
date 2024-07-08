@@ -144,7 +144,7 @@
     object-fit: cover; 
     /* object-fit: contain; */
     display: block; 
-    outline: red 2px solid;
+    outline: red 5px solid;
 }
 
 #specialItem {
