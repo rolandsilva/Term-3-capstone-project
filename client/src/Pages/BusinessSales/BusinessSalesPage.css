@@ -1,19 +1,16 @@
 .business-sales {
     padding: 20px;
     font-family: Arial, sans-serif;
-    height: 900px;
+    height:1125px;
   }
   
-  .title {
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
+  h1.businesssalesh1 {
     text-align: center;
-    margin-bottom: 10px;
-    margin-top: 20px;
-    margin-left: 20px;
-    font-size: 2em;
+    /* margin-bottom: 10px; */
+    margin: 30px auto;
+    font-size: 3em;
     color: #333;
+    width: 600px;
   }
   
   .subtitle {
@@ -26,17 +23,15 @@
   .card {
     border: 1px solid #ddd;
     padding: 20px;
-    margin: 25px;
+    margin: 20px;
     border-radius: 8px;
     background-color: #f9f9f9;
   }
   
-  .card h2 {
-    font-size: 70px;
-    margin-bottom: 10px;
-    height: 50px;
+  h2.businesssalesh2 {
+    font-size: 3em;
+    margin-bottom: 20px;
     color: #333;
-    /* outline: red 5px solid; */
   }
   
   .card p, .card ul {
@@ -49,7 +44,10 @@
   }
   
   .card ul li {
+    list-style-type: none;
+    text-align: center;
     margin-bottom: 5px;
+    font-size: 1.0em;
   }
   
   .card-container {

@@ -1,20 +1,15 @@
 .government-sales {
     padding: 20px;
     font-family: Arial, sans-serif;
-    height:1000px;
-    font-size: 1.5em;
   }
   
-  .title {
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
+  h1.governmentsalesh1 {
     text-align: center;
-    margin-bottom: 10px;
-    margin-top: 20px;
-    margin-left: 20px;
-    font-size: 2.5em;
+    /* margin-bottom: 10px; */
+    margin: 30px auto;
+    font-size: 3em;
     color: #333;
+    width: 600px;
   }
   
   .subtitle {
@@ -27,15 +22,14 @@
   .card {
     border: 1px solid #ddd;
     padding: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     border-radius: 8px;
     background-color: #f9f9f9;
   }
   
-  .card h2 {
-    font-size: 80px;
-    margin-bottom: 10px;
-    height: 50px;
+  h2.governmentsalesh2 {
+    font-size: 3em;
+    margin-bottom: 20px;
     color: #333;
   }
   
@@ -49,7 +43,10 @@
   }
   
   .card ul li {
+    list-style-type: none;
+    text-align: center;
     margin-bottom: 5px;
+    font-size: 1.0em;
   }
   
   .card-container {

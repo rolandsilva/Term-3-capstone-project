@@ -4,10 +4,10 @@ import './GovernmentSalesPage.css';
 const GovernmentSalesPage = () => {
   return (
     <div className="government-sales">
-      <h1 className="title">Government Sales</h1>
+      <h1 className="governmentsalesh1">Government Sales</h1>
       <p className="subtitle">Roland's Computer, Device, and Accessories Store - Serving Government Agencies for 12 Years</p>
       <div className="card">
-        <h2>About Our Government Sales Services</h2>
+        <h2 className="governmentsalesh2">About Our Government Sales Services</h2>
         <p>
           At Roland's, we specialize in providing technology solutions for government agencies. For the past 12 years, we have been a trusted partner to many local, state, and federal agencies, offering the latest technology products and exceptional support.
         </p>
@@ -17,7 +17,7 @@ const GovernmentSalesPage = () => {
       </div>
       <div className="card-container">
         <div className="card">
-          <h2>Our Services</h2>
+          <h2 className="governmentsalesh2">Our Services</h2>
           <ul>
             <li>Bulk purchasing options</li>
             <li>Custom configurations</li>
@@ -26,7 +26,7 @@ const GovernmentSalesPage = () => {
           </ul>
         </div>
         <div className="card">
-          <h2>Why Choose Us</h2>
+          <h2 className="governmentsalesh2">Why Choose Us</h2>
           <ul>
             <li>Expert advice from knowledgeable staff</li>
             <li>High-quality products from leading brands</li>
@@ -35,7 +35,7 @@ const GovernmentSalesPage = () => {
           </ul>
         </div>
         <div className="card">
-          <h3>Contact Us</h3>
+          <h2 className="governmentsalesh2">Contact Us</h2>
           <p>
             Get in touch with our government sales team:
           </p>
