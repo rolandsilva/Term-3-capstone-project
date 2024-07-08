@@ -8,15 +8,11 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
+**************************************************
+Term 3  Capstone Project 
+**************************************************
 
-README.md
-
-    Capstone Project Development Plan:
-
-    Term 3 Capstone Project Development Plan
-
-Project Plan Capstone Project
-
+Term 3 Capstone Project Development Plan
 
  Project Title: Roland's Computers and Accessories
 
@@ -70,11 +66,11 @@ MVP Scope:
 Acceptance Test:
 	Given I am a user on the Rolands Computer and Accessories website		When I️  want to I️  should be able to access product information and order the products..			Then I should be able to get, edit, delete the products/accessories orders.
 
-Solution:
 
-
+**************************************************
 Mockup:
 
+**************************************************
 Mockup image 
 
 	  Update. 
@@ -383,21 +379,37 @@ APIs:
 	•	Social Media Integration
 	•	Order Processing
 
+**************************************************
+Capstone Project Development Plan Flow Chart
+
+
+
+**************************************************
+Capstone Project Reflections:
 
 
 
 
+**************************************************
+Capstone Project: future implementations and features: 
 
+Review System:
+	•	Star Rating
+	•	Text Reviews
+	•	Like/Dislike
+	•	Comments
 
+Social Media Integration:
+	•	Share Product Details
+	•	Login/Signup via Social Media Accounts
+	•	Page for products to allow interactive posts and communication
 
+Comparison Tool:
+	•	Select Products for Comparison
+	•	View Comparison Table
 
-
-
-
-    Capstone Project Development Plan Flow Chart
-
-    Capstone Project Reflections:
-
-    Capstone Project: future implementations and features:
-
+Order Management:
+	•	modify orders
+	•	modify products
+	•	customers
     
