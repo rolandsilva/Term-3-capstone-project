@@ -1,41 +1,135 @@
 .business-sales {
-    padding: 20px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  height: 900px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 2em;
+  color: #333;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.2em;
+  color: #666;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 25px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.card h2 {
+  font-size: 70px;
+  margin-bottom: 10px;
+  height: 50px;
+  color: #333;
+  outline: red 5px solid;
+}
+
+.card p, .card ul {
+  font-size: 1em;
+  color: #555;
+}
+
+.card ul {
+  padding-left: 20px;
+}
+
+.card ul li {
+  margin-bottom: 5px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.card-container .card {
+  flex: 1;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+// .business-sales {
+//     padding: 20px;
+//     font-family: Arial, sans-serif;
+//     height:1000px;
+//     font-size: 1.5em;
     
-    .title {
-      text-align: center;
-      margin-bottom: 10px;
-    }
+//     .title {
+//       display: flex;
+//       flex-direction: column;
+//       justify-self: center;
+//       text-align: center;
+//       margin-bottom: 10px;
+//       margin-top: 20px;
+//       margin-left: 20px;
+//       font-size: 2.5em;
+//       color: #333;
+//     }
   
-    .subtitle {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 1.2rem;
-      color: #666;
-    }
+//     .subtitle {
+//       text-align: center;
+//       margin-bottom: 30px;
+//       font-size: 1.2rem;
+//       color: #666;
+//     }
   
-    .card {
-      border: 1px solid #ddd;
-    }
+//     .card {
+//       border: 1px solid #ddd;
+//       padding: 20px;
+//       margin-bottom: 25px;
+//       border-radius: 8px;
+//       background-color: #f9f9f9;
+//     }
   
-    .card-title {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-    }
+//     .card-title {
+//       font-size: 1.5rem;
+//       margin-bottom: 10px;
+//     }
   
-    .card-text {
-      font-size: 1rem;
-      color: #555;
-    }
+//     .card-text {
+//       font-size: 1rem;
+//       color: #555;
+//     }
   
-    ul {
-      padding-left: 20px;
-    }
+//     ul {
+//       padding-left: 20px;
+//     }
   
-    ul li {
-      margin-bottom: 5px;
-    }
+//     ul li {
+//       margin-bottom: 5px;
+//     }
   
-    .btn-primary {
-      margin-top: 10px;
-    }
-  }
+//     .btn-primary {
+//       margin-top: 10px;
+//     }
+//   }

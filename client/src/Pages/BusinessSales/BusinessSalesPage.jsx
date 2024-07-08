@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import './BusinessSalesPage.scss';
+// import './BusinessSalesPage.scss';
+import './BusinessSalesPage.css';
 
 const BusinessSalesPage = () => {
   return (

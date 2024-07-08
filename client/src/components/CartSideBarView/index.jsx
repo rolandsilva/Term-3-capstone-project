@@ -9,7 +9,7 @@ import CartSummary from "../CartSummary";
 import CheckoutBox from "../CheckOutBox";
 import "./CartSidebarView.scss";
 import { useNavigate } from "react-router-dom";
-import "./CartSideCartView.css";
+
 
 function CartSidebarView() {
   const { closeSidebar, displaySidebar } = useUI();
