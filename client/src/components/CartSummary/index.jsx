@@ -30,9 +30,9 @@ function CartSummary({ cartTotal }) {
     //   config: { url: "coupons/verify/KENZIE40" },
     // });
     // console.log(res)
-  };
+  }
   return (
-    <div className="cart-summary">
+    <div className="cart-summary" style={{height: "175px"}}>
       <Container>
         {/* <div className="col-md-6 mb-3">
           <label htmlFor="couponCode">Coupon Code </label>

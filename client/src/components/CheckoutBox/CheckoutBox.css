@@ -6,6 +6,26 @@
 .checkout-actions {
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  margin: 10 0px 10px;
+  height: 60px;
   gap: 10px;
+}
+
+.checkout-actions button {
+  color: black;
+  height: 50px;
+  width: 250px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgb(197, 197, 197);
+}
+
+.checkout-actions button:hover {
+  color: black;
+  height: 50px;
+  width: 250px;
+  font-size: 20px;
+  font-weight: bold;
+  border: black 1px solid;
+  background-color: rgb(248, 149, 36);
 }

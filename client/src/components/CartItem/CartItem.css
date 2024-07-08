@@ -1,7 +1,22 @@
 #cartitemimage {
-    border: 2px solid black; /* Add a 2px solid black outline around the image */
+    border: 2px solid black; 
+    margin-left: 15px;
+    height: 250px;
+    width: 300px;
   }
   
   .item-link h4 {
-    margin-left: 10px; /* Adjust the margin-left as needed */
+    font-size: 30px;
+    padding-left: 10px;
+    font-weight: bold;
+    margin-left: 10px; 
+    /* outline: red solid 2px; */
+  }
+
+  /* button {
+    outline: red 5px solid;;
+  } */
+
+  .item-details {
+    padding: 15px;
   }
