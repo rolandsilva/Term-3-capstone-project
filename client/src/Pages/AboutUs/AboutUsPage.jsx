@@ -7,7 +7,7 @@ const AboutUsPage = () => {
     <Container className="about-us">
       <Row>
         <Col>
-          <h3 className="title">About Us</h3>
+          <h1 className="title">About Us</h1>
         </Col>
       </Row>
       <Row>
