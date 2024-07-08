@@ -1,10 +1,10 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import api from "../utils/api.utils";
+import api from "../../utils/api.utils";
 import "./ProductPage.css";
-import useProvideCart from "../hooks/useCart";
-import useUI from "../hooks/useUI";
+import useProvideCart from "../../hooks/useCart";
+import useUI from "../../hooks/useUI";
 
 const ProductPage = () => {
   const { id } = useParams();

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Homepage.css";
 import { Link } from "react-router-dom";
-import api from "../utils/api.utils";
-import { exampleProductData } from "../exampleData";
+import api from "../../utils/api.utils";
+import { exampleProductData } from "../../exampleData";
 import { useNavigate } from "react-router-dom";
 const HomePage = () => {
   const [categoryItem, setCategoryItem] = useState(0);
