@@ -1,0 +1,49 @@
+/* ComingSoonPage.css */
+/* body, html {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.chat-coming-soon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    /* height: 100%; */
+  }
+  
+  .chat-coming-soon-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+  }
+  
+  .containerdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c1c1c1;
+    outline: 2px solid black;
+    width: 100%;
+    height: 60px;
+    /* margin-top: 40px; */
+    font-size: 35px;
+    padding: 10px;
+    color: black;
+  }
+  
+  
+  p {
+    font-size: 30px;
+    color: black;
+    margin-top: 20px;
+  }

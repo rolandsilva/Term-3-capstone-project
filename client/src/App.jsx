@@ -29,6 +29,7 @@ import AccountOrdersPage from "./Pages/AccountOrdersPage/AccountOrdersPage";
 import TradeInPage from "./Pages/TradeIn/TradeInPage";
 import CompareProductsPage from "./Pages/CompareProducts/CompareProductsPage";
 import CatFilterBySearchPage from "./Pages/CatFilterBySearch/CatFilterBySearchPage";
+import ChatPage from "./Pages/ChatPage/ChatPage";
 
 function App() {
   return (
@@ -58,6 +59,10 @@ function App() {
             <Route
               path="/category-filter-by"
               element={<CatFilterBySearchPage />}
+            />
+                 <Route
+              path="/chat"
+              element={<ChatPage />}
             />
             <Route path="/account/account-orders" element={<AccountOrdersPage />} />
             <Route

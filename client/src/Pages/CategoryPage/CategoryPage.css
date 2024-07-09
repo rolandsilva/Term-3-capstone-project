@@ -110,6 +110,7 @@
 }
 
 .filterBySpecials {
+    margin-top: 4%;
     font-size: 30px;
     padding: 5px;
 }
@@ -236,9 +237,22 @@ color: green;
     outline: 1px solid black;
     justify-content: space-around;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 5px;
     font-size: 15px;
     font-weight: bold;
+    /* outline: 5px solid red; */
+}
+
+.chat p {
+margin: 5px;
+font-size: 28px;
+    /* outline: 5px solid green; */
+}
+
+.chat a {
+    font-size: 35px;
+    font-weight: bold;
+    /* outline: 5px solid orange; */
 }
 
 /* #specialItem {
