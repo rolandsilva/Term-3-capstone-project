@@ -55,8 +55,13 @@ const ChatPage = () => {
         <div className="advisorandinfocontainer">
           <div className="advisornameimagecontainer">
             <div className="advisorname">
-              <h3>Hi I am Steve Jobs,</h3>
+              <h3>Hi, I am Steve Jobs,</h3>
               <h4>How may I help you ?</h4>
+              <img className="advisorimage" src="/stevejobs.png"
+                  id="advisorimage"
+                  alt="Image of Steve Jobs"
+                  // className="M3MBPimage"
+                />
             </div>
           </div>
           <div className="chatinfocontainer">
