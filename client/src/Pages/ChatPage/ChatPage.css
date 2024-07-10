@@ -1,3 +1,7 @@
+.chat-page-container {
+  display: flex;
+}
+
 .chat-container {
     display: flex;
     flex-direction: column;
@@ -5,10 +9,12 @@
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
+    margin: 10px auto 20px auto;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    max-height: 1350px;
   }
   
   .chat-header {
@@ -21,6 +27,7 @@
   .chat-window {
     flex: 1;
     padding: 10px;
+
     overflow-y: auto;
     background-color: #f9f9f9;
   }
@@ -74,3 +81,19 @@
   .chat-input button:hover {
     background-color: #0056b3;
   }
+
+  .advisornameimagecontainer {
+    display: flex;
+    outline: 15px solid orange;
+  }
+
+  .advisorname {
+    font-weight: bold;
+  }
+
+  .chatinfocontainer {
+    display: flex;
+    height: 300px;
+    outline: 5px solid blue;
+  }
+

@@ -105,45 +105,55 @@ const HomePage = () => {
     <div className="maincontainer">
       <div className="imagescontainer">
         <div className="homecontainer">
-          {/* <div className="featurescontainer">
-            <img
-              src="./homepagefeaturedbox 72dpi.png"
-              className="featuredimg"
-            />
-          </div> */}
-
+        
           <div className="featuredproductcontainer">
             <h2 className="featuredproductbar">Featured Products</h2>
-            <div className="featuredimagename">
-              <img
-                src="/M3MBP.png"
-                id="m3mbp"
-                alt="M3 MacBook Pro"
-                // className="M3MBPimage"
-              />
-              <p className="itemName">M3 MacBook Pro</p>
+            <div className="allitemscontainer">
+              <div className="featureditemcontainer">
+              <Link to={`/product/1113`}>
+                <img
+                  src="/M3MBP.png"
+                  id="itemimage"
+                  alt="M3 MacBook Pro"
+                  // className="M3MBPimage"
+                />
+                <p className="itemName">M4 MacBook Max</p>
+                </Link>
+              </div>
+              <div className="featureditemcontainer">
+                <Link to={`/product/1130`}>
+                  <img
+                    src="/iwatchultra.png"
+                    id="itemimage"
+                    alt="M3 MacBook Pro"
+                    // className="M3MBPimage"
+                  />
+                  <p className="itemName">iWatch Ultra 2</p>
+                </Link>
+              </div>
+              <div className="featureditemcontainer">
+              <Link to={`/product/1133`}>
+                <img
+                  src="/airpods_2.png"
+                  id="itemimage"
+                  alt="Air Pods Pro 2nd gen"
+                  // className="M3MBPimage"
+                />
+                <p className="itemName">Air Pods Pro 2nd Gen</p>
+                </Link>
+              </div>
+              <div className="featureditemcontainer">
+              <Link to={`/product/1127`}>
+                <img
+                  src="/ipadProM4.png"
+                  id="itemimage"
+                  // alt="M4 iPad Pro"
+                  // className="M3MBPimage"
+                />
+                <p className="itemName">M4 iPad Pro</p>
+                </Link>
+              </div>
             </div>
-            <img
-              src="/iwatchultra.png"
-              id="iwatchultra"
-              alt="M3 MacBook Pro"
-              // className="M3MBPimage"
-            />
-            <p className="itemName">IWatch Ultra 2</p>
-            <img
-              src="/airpods_2.png"
-              id="airpods_2"
-              alt="Air Pods Pro 2nd gen"
-              // className="M3MBPimage"
-            />
-            <p className="itemName">Air Pods Pro 2nd Gen</p>
-            <img
-              src="/ipadProM4.png"
-              id="m4ipadpro"
-              // alt="M4 iPad Pro"
-              // className="M3MBPimage"
-            />
-            <p className="itemName">M4 iPad Pro</p>
           </div>
 
           <div className="searchcontainer">
