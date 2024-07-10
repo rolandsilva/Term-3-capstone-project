@@ -52,7 +52,9 @@ const ChatPage = () => {
           <input type="text" placeholder="Type a message..." />
           <button>Send</button>
         </div>
-        <div className="advisorandinfocontainer">
+
+      </div>
+      <div className="advisorandinfocontainer">
           <div className="advisornameimagecontainer">
             <div className="advisorname">
               <h3>Hi, I am Steve Jobs,</h3>
@@ -77,7 +79,6 @@ const ChatPage = () => {
             <p className="chatinfotext">10.	Be prepared to describe any troubleshooting steps you have already taken.</p>
           </div>
         </div>
-      </div>
     </div>
   );
 };
