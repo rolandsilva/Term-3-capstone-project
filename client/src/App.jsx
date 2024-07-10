@@ -29,7 +29,9 @@ import AccountOrdersPage from "./Pages/AccountOrdersPage/AccountOrdersPage";
 import TradeInPage from "./Pages/TradeIn/TradeInPage";
 import CompareProductsPage from "./Pages/CompareProducts/CompareProductsPage";
 import CatFilterBySearchPage from "./Pages/CatFilterBySearch/CatFilterBySearchPage";
+import FilterByPrice from "./Pages/FilterByPrice/FilterByPricePage";
 import ChatPage from "./Pages/ChatPage/ChatPage";
+import FilterByPricePage from "./Pages/FilterByPrice/FilterByPricePage";
 
 function App() {
   return (
@@ -60,11 +62,15 @@ function App() {
               path="/category-filter-by"
               element={<CatFilterBySearchPage />}
             />
-                 <Route
-              path="/chat"
-              element={<ChatPage />}
+            <Route
+              path="/filter-by-price"
+              element={<FilterByPricePage />}
             />
-            <Route path="/account/account-orders" element={<AccountOrdersPage />} />
+            <Route path="/chat" element={<ChatPage />} />
+            <Route
+              path="/account/account-orders"
+              element={<AccountOrdersPage />}
+            />
             <Route
               path="/account-orders/:_id"
               element={<AccountOrdersPage />}
@@ -90,6 +96,5 @@ function App() {
     </>
   );
 }
-
 
 export default App;

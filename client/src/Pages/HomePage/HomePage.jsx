@@ -12,7 +12,6 @@ const HomePage = () => {
   const [searchParameter, setSearchParameter] = useState(null);
   const navigate = useNavigate();
 
-
   const options = ["product-Name", "product-Model"];
   const [selectBy, setSelectBy] = useState("");
   // const [selectedProduct, setSelectedProduct] = useState("");
@@ -28,21 +27,21 @@ const HomePage = () => {
   const handleSelectChangeModel = (event) => {
     setSelectedProductModel(event.target.value);
     console.log(event.target.value);
-    if (selectBy === "product-Category")  {
+    if (selectBy === "product-Category") {
       const productModelMatched = categoryItem.filter(
-        (product) => product.category === event.target.value )
+        (product) => product.category === event.target.value
+      );
       navigate(`/categories/${productModelMatched[0].category}`);
-    }
-    else {
+    } else {
       const productModelMatched = allProducts.filter(
-      (product) =>
-        product.productNbr === event.target.value ||
-        product.name === event.target.value
-    );
-    console.log(productModelMatched);
-    navigate(`/product/${productModelMatched[0].id}`);
+        (product) =>
+          product.productNbr === event.target.value ||
+          product.name === event.target.value
+      );
+      console.log(productModelMatched);
+      navigate(`/product/${productModelMatched[0].id}`);
+    }
   };
-}
 
   useEffect(() => {
     if (selectBy === "product-Category") {
@@ -57,8 +56,7 @@ const HomePage = () => {
           return products.name;
         })
       );
-    }
-    else if (selectBy === "product-Model") {
+    } else if (selectBy === "product-Model") {
       setFilterProducts(
         allProducts.map((products) => {
           return products.productNbr;
@@ -67,7 +65,7 @@ const HomePage = () => {
     } else setFilterProducts([]);
     console.log(filterProduct);
   }, [selectBy]);
-  console.log(filterProduct)
+  console.log(filterProduct);
 
   // if (loading) {
   //   return <div>Loading...</div>;
@@ -93,11 +91,9 @@ const HomePage = () => {
     getProducts();
   }, []);
 
-
   if (loading) {
     return <div>Loading...</div>;
   }
-
 
   //use api call fetch data mocked with mock Data
   // console.log(exampleProductData);
@@ -109,17 +105,49 @@ const HomePage = () => {
     <div className="maincontainer">
       <div className="imagescontainer">
         <div className="homecontainer">
-          <div className="featurescontainer">
+          {/* <div className="featurescontainer">
             <img
               src="./homepagefeaturedbox 72dpi.png"
               className="featuredimg"
             />
+          </div> */}
+
+          <div className="featuredproductcontainer">
+            <h2 className="featuredproductbar">Featured Products</h2>
+            <div className="featuredimagename">
+              <img
+                src="/M3MBP.png"
+                id="m3mbp"
+                alt="M3 MacBook Pro"
+                // className="M3MBPimage"
+              />
+              <p className="itemName">M3 MacBook Pro</p>
+            </div>
+            <img
+              src="/iwatchultra.png"
+              id="iwatchultra"
+              alt="M3 MacBook Pro"
+              // className="M3MBPimage"
+            />
+            <p className="itemName">IWatch Ultra 2</p>
+            <img
+              src="/airpods_2.png"
+              id="airpods_2"
+              alt="Air Pods Pro 2nd gen"
+              // className="M3MBPimage"
+            />
+            <p className="itemName">Air Pods Pro 2nd Gen</p>
+            <img
+              src="/ipadProM4.png"
+              id="m4ipadpro"
+              // alt="M4 iPad Pro"
+              // className="M3MBPimage"
+            />
+            <p className="itemName">M4 iPad Pro</p>
           </div>
 
           <div className="searchcontainer">
-            <div
-              className="searchbar"
-            >
+            <div className="searchbar">
               <h3 className="searchtext">
                 Search by Category (click image below)
               </h3>
@@ -203,6 +231,7 @@ const HomePage = () => {
           />
           <p className="itemName">M4 iPad Pro</p>
         </div>
+
         <div className="contactInfo">
           <h3 className="homepageh3">Call 800-123-4567</h3>
           <p className="questions">24/7 For any questions</p>

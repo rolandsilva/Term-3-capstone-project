@@ -1,4 +1,4 @@
-.chat-container {
+.filterbyprice-container {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -11,21 +11,21 @@
     overflow: hidden;
   }
   
-  .chat-header {
+  .filterbyprice-header {
     background-color: #007bff;
     color: white;
     padding: 10px;
     text-align: center;
   }
   
-  .chat-window {
+  .filterbyprice-window {
     flex: 1;
     padding: 10px;
     overflow-y: auto;
     background-color: #f9f9f9;
   }
   
-  .chat-message {
+  .filterbyprice-message {
     margin-bottom: 10px;
   }
   
@@ -47,14 +47,36 @@
     margin-left: 10px;
   }
   
-  .chat-input {
+  .product-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .product-item img {
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+  }
+  
+  .product-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .filterbyprice-input {
     display: flex;
     padding: 10px;
     background-color: #fff;
     border-top: 1px solid #ccc;
   }
   
-  .chat-input input {
+  .filterbyprice-input input {
     flex: 1;
     padding: 10px;
     border: 1px solid #ccc;
@@ -62,7 +84,7 @@
     margin-right: 10px;
   }
   
-  .chat-input button {
+  .filterbyprice-input button {
     padding: 10px 15px;
     border: none;
     background-color: #007bff;
@@ -71,6 +93,7 @@
     cursor: pointer;
   }
   
-  .chat-input button:hover {
+  .filterbyprice-input button:hover {
     background-color: #0056b3;
   }
+  
