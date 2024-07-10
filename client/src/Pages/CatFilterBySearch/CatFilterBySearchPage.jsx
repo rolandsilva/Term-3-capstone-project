@@ -3,7 +3,7 @@ import "./CatFilterBySearchPage.css";
 
 const CatFilterBySearchPage = () => {
   return (
-    <div class="coming-soon-wrapper">
+    <div className="coming-soon-wrapper">
       <div className="coming-soon-page">
         <div className=".orders-placed-section">
           <div className="containerdiv">

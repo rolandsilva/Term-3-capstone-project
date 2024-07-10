@@ -189,23 +189,23 @@ const CategoryPage = () => {
                 <h3 className="filterByCategory">Category</h3>
               </Link> */}
 
-              <Link to="/category-filter-by" className="comparelink">
+              <Link to="/category-filter-by-price" className="comparelink">
                 <h3 className="filterByCategory">Price</h3>
               </Link>
 
-              <Link to="/category-filter-by" className="comparelink">
+              <Link to="/category-filter-by-highestrated" className="comparelink">
                 <h3 className="filterByCategory">Highest Rated</h3>
               </Link>
 
-              <Link to="/category-filter-by" className="comparelink">
+              <Link to="/category-filter-by-mostpopular" className="comparelink">
                 <h3 className="filterByCategory">Most Popular</h3>
               </Link>
 
-              <Link to="/category-filter-by" className="comparelink">
+              <Link to="/category-filter-by-instock" className="comparelink">
                 <h3 className="filterByCategory">In Stock</h3>
               </Link>
 
-              <Link to="/category-filter-by" className="comparelink">
+              <Link to="/category-filter-by-onsale" className="comparelink">
                 <h3 className="filterByCategory">On Sale</h3>
               </Link>
               {/* <h3 className="filterByCategory">Price</h3>

@@ -29,9 +29,12 @@ import AccountOrdersPage from "./Pages/AccountOrdersPage/AccountOrdersPage";
 import TradeInPage from "./Pages/TradeIn/TradeInPage";
 import CompareProductsPage from "./Pages/CompareProducts/CompareProductsPage";
 import CatFilterBySearchPage from "./Pages/CatFilterBySearch/CatFilterBySearchPage";
-import FilterByPrice from "./Pages/FilterByPrice/FilterByPricePage";
+import FilterByPricePage from "./Pages/FilterByPricePage/FilterByPricePage";
+import FilterByHighestRatedPage from "./Pages/FilterByHighestRatedPage/FilterByHighestRatedPage";
+import FilterByMostPopularPage from "./Pages/FilterByMostPopularPage/FilterByMostPopularPage";
+import FilterByInStockPage from "./Pages/FilterByInStockPage/FilterByInStockPage";
+import FilterByOnSalePage from "./Pages/FilterByOnSalePage/FilterByOnSalePage";
 import ChatPage from "./Pages/ChatPage/ChatPage";
-import FilterByPricePage from "./Pages/FilterByPrice/FilterByPricePage";
 
 function App() {
   return (
@@ -63,8 +66,24 @@ function App() {
               element={<CatFilterBySearchPage />}
             />
             <Route
-              path="/filter-by-price"
+              path="/category-filter-by-price"
               element={<FilterByPricePage />}
+            />
+            <Route
+              path="/category-filter-by-highestrated"
+              element={<FilterByHighestRatedPage />}
+            />
+            <Route
+              path="/category-filter-by-mostpopular"
+              element={<FilterByMostPopularPage />}
+            />
+            <Route
+              path="/category-filter-by-instock"
+              element={<FilterByInStockPage />}
+            />
+            <Route
+              path="/category-filter-by-onsale"
+              element={<FilterByOnSalePage />}
             />
             <Route path="/chat" element={<ChatPage />} />
             <Route
