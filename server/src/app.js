@@ -3,7 +3,7 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import { DB_URL } from "./config/db.config";
-import { API_URL, PORT } from "./confi  g/app.config";
+import { API_URL, PORT } from "./config/app.config";
 import router from "./routes";
 import path from "path";
 console.log("db_url from app.js server", DB_URL)
