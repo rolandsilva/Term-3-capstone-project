@@ -1,7 +1,7 @@
 import React from "react";
 import useUI from "../../hooks/useUI";
 import CartSidebarView from "../CartSideBarView";
-import "./CartSidebar.scss";
+import "./CartSideBar.scss";
 
 function CartSidebar() {
   const { displaySidebar, toggleSidebar } = useUI();
