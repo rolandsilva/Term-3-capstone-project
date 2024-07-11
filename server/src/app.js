@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 import { DB_URL } from "./config/db.config";
 import { API_URL, PORT } from "./config/app.config";
 import router from "./routes";
+import path from "path";
 
 mongoose
   .connect(DB_URL)
