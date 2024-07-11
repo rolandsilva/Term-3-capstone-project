@@ -20,7 +20,7 @@ import FAQPage from "./Pages/FAQ/FAQPage";
 import NotFoundPage from "./Pages/NotFoundPage";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import AboutUsPage from "./Pages/AboutUs/AboutUsPage";
-import BusinessSalesPage from "./Pages/businessSales/BusinessSalesPage";
+import BusinessSalesPage from "./Pages/BusinessSales/BusinessSalesPage";
 import GovernmentSalesPage from "./Pages/GovernmentSales/GovernmentSalesPage";
 import EducationalSalesPage from "./Pages/EducationalSales/EducationSalesPage";
 import MilitarySalesPage from "./Pages/MilitarySales/MilitarySalesPage";
