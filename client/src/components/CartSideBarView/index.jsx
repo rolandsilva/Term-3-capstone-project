@@ -7,7 +7,7 @@ import useProvideCart from "../../hooks/useCart";
 import CartList from "../CartList";
 import CartSummary from "../CartSummary";
 import CheckoutBox from "../CheckoutBox";
-import "./CartSidebarView.scss";
+import "./CartSideBarView.scss";
 import { useNavigate } from "react-router-dom";
 
 
