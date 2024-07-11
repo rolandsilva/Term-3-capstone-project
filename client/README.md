@@ -387,7 +387,9 @@ Capstone Project Development Plan Flow Chart
 **************************************************
 Capstone Project Reflections:
 
-
+There were many take aways from this project that now knowing I would have done differently.
+I learned the importance of inheritence and global css and standards.  Trying to use css, bootstrap, toastify and 
+sass was a real challenge and I did this to learn deeper how each works together or against each other. I figured to be able to reuse the code from Kenzie Cart  Learning was not a short cut to eliminate writing code and make things easier.  It was that to be able to repurpose the code it meant that I really had to understand all of it to be able to make it work for what I wanted it to do.   I also learned how important reusable code is.  In the near future I am going to not only implement features that I wanted to finish but there was not enough time, but I am going to refactor code so that the code snippets and components can be reusable to greatly reduce the reduncdancy of the code and lessen collisions and proliferating problems throughout the code and making it more efficient. Naming standards and better understanding what is needed will allow me to better plan a project.  There were so many things that I learned but also realized as I went along and learned more there were much better ways to do things. I knew the time frame we were working on and at times chose a direct but crude way to get the coding completed knowing that the mvp must be met and as I would go along I would learn more and better be able to go back a refactor code. I knew hitting the mvp was critical and I had been very ambitious in my goals.  We did refactor quite a bit of code but there is still allot that needs to be done. I am very excited and eager to complete the capstone to its fullest.  I have a great knowledge base to work from and it has also showed me where I really need to concentrate to get very proficient and fluent in coding. This is the first step to a very rewarding and exciting career.  I am very grateful to Kenzie and all the crew who went out of their way to help me get to this point. It is just the first of many steps on a path towards being a software engineer.
 
 
 **************************************************
@@ -413,3 +415,6 @@ Order Management:
 	•	modify products
 	•	customers
     
+
+
+
