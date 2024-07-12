@@ -144,7 +144,7 @@ const HomePage = () => {
               <div className="featureditemcontainer">
                 <Link to={`/product/1127`}>
                   <img
-                    src="/ipadProM4.png"
+                    src="/ipadprom4.png"
                     id="itemimage"
                     // alt="M4 iPad Pro"
                     // className="M3MBPimage"
@@ -236,7 +236,7 @@ const HomePage = () => {
           </Link>
           <Link to={`/product/1127`}>
             <img
-              src="/ipadProM4.png"
+              src="/ipadprom4.png"
               id="m4ipadpro"
               alt="M4 iPad Pro"
               className="M3MBPimage"
