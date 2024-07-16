@@ -1,4 +1,5 @@
-#headercontainer.container {
+.custom-container {
+/* #headercontainer { */
     display: flex;
     flex-direction: column;
     max-height: 150px;
@@ -9,22 +10,39 @@
 }
 
 
+    #headercontainer {
+        display: flex;
+        flex-direction: column;
+        /* max-height: 150px; */
+        height: 100%;
+        /* max-width: 1200px; */
+        width: 100%;
+        padding: 0px;
+        margin-left: 40px;
+        margin-top: 25px;
+    }
+
+
 #headercontainer span.navbar-brand {
     display: flex;
-    align-items: center;
+    align-items: start;
+    max-width: 100%;
 }
 
 #headerdiv1 {
-    font-size: 60px;
+    font-size: 2.3rem;
+    text-align: start;
+    width: 100%;
     color: white;
-    margin-left: 15%;
+
+    /* margin-left: 15%; */
 
 }
 
 .header {
     background-image: url("../public/Capstone\ home\ page\ gradient\ \ 1psd.png");
     background-size: cover;
-    height: 8vh;
+    height: 12%;
     width: 100%;
 }
 
@@ -32,23 +50,36 @@
     background: linear-gradient(to bottom, rgb(4, 4, 26), rgb(34, 96, 146));
 }
 
-#basic-navbar-nav {
+#links-navbar {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     width: 100%;
 }
 
 .brandcontainer {
     display: flex;
-    justify-content: flex-start;
+    justify-content:flex-start;
+    width: 100%;
     /* outline: 10px solid rgb(242, 83, 154); */
 }
 
 .linkcontainer {
     display: flex;
-    margin-left: 140px;
+    /* margin-left: 140px; */
     padding-left: 20px;
-    font-size: 26px;
+    font-size: 22px;
+    width: 100%;
+}
+
+#navitems {
+    width: 100%;
+}
+
+#navitems.linkcontainer {
+    max-width: 70%;
+}
+
+.titlecontainer {
     width: 100%;
 }
 
@@ -56,24 +87,27 @@
     display: flex;
     color: white;
     cursor: pointer;
-    margin-right: 20px;
-    margin-left: 40%;
+    /* margin-right: 20px;
+    margin-left: 40%; */
     font-size: 40px;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    justify-content: flex-end;
+    text-align: right;
+    width: 20%;
     /* outline: 5px solid rgb(255, 47, 182); */
 }
 
 #cart {
     padding-right: 20px;
     margin-right: 10;
-    font-size: 40px;
+    font-size: 30px;
+    width: 20%;
 }
 
 
 .cartcontainer .custom-badge {
-    height: 50px;
-    width: 50px;
+    height: 35px;
+    width: 35px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -90,8 +124,8 @@
 }
 
 #logindiv {
-    margin-left: 210px;
+    /* margin-left: 210px; */
     /* outline: 5px solid rgb(47, 255, 68); */
-    width: 200px;
-    font-size: 30px;
+    width: 30%;
+    font-size: 1.5rem;
 }

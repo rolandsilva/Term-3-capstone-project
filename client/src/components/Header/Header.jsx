@@ -37,9 +37,9 @@ function Header() {
         expand="lg"
         style={{ backgroundColor: "#688ac6" }}
       >
-        <Container id="headercontainer" className="custom-container">
-          <Navbar.Brand className="brandcontainer">
-            <Nav.Link as={Link} to={"/"}>
+        <div id="headercontainer" className="custom-container">
+          <div className="brandcontainer">
+            <Nav.Link as={Link} to={"/"} className="titlecontainer">
               <div id="headerdiv1">
                 Roland's Computers, Devices and Accessories
               </div>
@@ -75,16 +75,11 @@ function Header() {
                 </Badge>
               )}
             </Nav.Link>
-          </Navbar.Brand>
+          </div>
           {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
-          <Navbar.Collapse id="basic-navbar-nav">
+          <div id="links-navbar">
             <Nav
-              className="ms-auto"
-              style={{
-                display: "flex",
-                minWidth: "100%",
-                justifyContent: "space-between",
-              }}
+               id="navitems"
             >
               {/* {
                 <ToggleButtonGroup 
@@ -258,8 +253,8 @@ function Header() {
                 )}
               </div>
             </Nav>
-          </Navbar.Collapse>
-        </Container>
+          </div>
+        </div>
       </Navbar>
     </>
   );

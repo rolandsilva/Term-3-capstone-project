@@ -1,12 +1,12 @@
 #cartitemimage {
     border: 2px solid black; 
     margin-left: 15px;
-    height: 250px;
-    width: 300px;
+    height: auto;
+    width: 200px;
   }
   
-  .item-link h4 {
-    font-size: 30px;
+  .item-link h5 {
+    font-size: 20px;
     padding-left: 10px;
     font-weight: bold;
     margin-left: 10px; 

@@ -1,4 +1,7 @@
-* { margin: 0;
+* { 
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 :root {
@@ -16,8 +19,8 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
 }
 
 a {

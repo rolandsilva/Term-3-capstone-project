@@ -102,7 +102,7 @@ const HomePage = () => {
   // use backend to fetch data from database.
   // console.log(searchParameter);
   return (
-    <div className="maincontainer">
+    <div id="maincontainer">
       <div className="imagescontainer">
         <div className="homecontainer">
           <div className="featuredproductcontainer">
@@ -155,8 +155,8 @@ const HomePage = () => {
             </div>
           </div>
 
-          <div className="searchcontainer">
-            <div className="searchbar">
+          <div className="searchcategorycontainer">
+            <div className="searchbarcontainer">
               <h3 className="searchtext">
                 Search by Category (click image below)
               </h3>

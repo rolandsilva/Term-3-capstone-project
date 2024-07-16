@@ -1,14 +1,21 @@
 /* .main {
     max-width: 1200px;
 } */
-.maincontainer {
+#maincontainer {
     display: flex;
+    height: 100%;
     /* max-width: 1200px; */
     flex-direction: row;
+    /* outline: 5px orange solid; */
 }
 
 .imagescontainer {
     width: 80%;
+    height: 100%;
+}
+
+.homecontainer {
+    height: 100%;
 }
 
 /* ****  featured product container *****/
@@ -24,10 +31,9 @@
     /* width: 100%; */
     width: 98%;
     /* width: 1895px; */
-    margin: 10px 0px 0px 35px;
+    margin: 10px 0px 10px 35px;
     /* height: 200px; */
-    max-height: 800px;
-    margin-bottom: 20px;
+    height: 45%;
     outline: 1px solid rgb(0, 0, 0);
     /* outline: 10px solid blue; */
 }
@@ -50,53 +56,61 @@ h2.featuredproductbar {
     align-items: center;
     /* gap: 60px; */
     max-height: 600px;
-        flex-wrap: wrap;
+    overflow: auto;
+    flex-wrap: wrap;
     /* outline: 15px solid orange; */
     /* flex-direction: column; */
 }
+
 .featureditemcontainer {
     /* height: 300px; */
     max-height: 400px;
     padding: 0px 20px 0px 20px;
     /* outline: 15px solid rgb(243, 13, 182); */
 }
+
 .featureditemcontainer #itemimage {
     width: 220px;
     height: auto;
     margin: 10px;
-    object-fit:scale-down;
+    object-fit: scale-down;
     /* object-fit: scale-down; */
     display: block;
-
     /* outline: 15px solid purple; */
 }
 
-.searchcontainer {
+.featureditemcontainer a {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    /* width: 1142px; */
-    max-width: 98.5%;
-    /* padding-left: 10px; */
-    width: 100%;
-    height: auto;
-    margin-left: 30px;
-    /* padding-left: 10px; */
+    align-items: center;
+    /* outline: 15px solid purple; */
 }
 
-.searchbar {
+.searchcategorycontainer {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    max-width: 98.2%;
+    /* padding-left: 10px; */
+    width: 100%;
+    height: 53%;
+    margin-left: 33px;
+    /* padding-left: 10px; */
+    /* outline: 5px red solid; */
+}
+
+.searchbarcontainer {
     /* display: flex;
     max-width: 90%;
     justify-content: space-evenly; */
     justify-content: space-evenly;
-    /* outline: 5px solid green; */
-    /* align-items: center; */
     display: flex;
     width: 100%;
+    height: 15%;
     background-color: #c1c8dc;
     border: 1px solid black;
     padding: 10px;
-    /* margin-left: 19px; */
+
 
 }
 
@@ -146,7 +160,7 @@ h2.featuredproductbar {
     border-top: none;
     /* margin-left: 19px; */
     margin-bottom: 10px;
-    height: 600px;
+    height: 85%;
     /* max-width: 1500px; */
     padding: 20px 0px 20px 60px;
     overflow-y: auto;
@@ -213,7 +227,7 @@ figcaption {
     display: flex;
     flex-direction: column;
     width: 18%;
-    /* width: 20%; */
+    height: 100%;
 }
 
 .newProductscontainer {
@@ -223,7 +237,7 @@ figcaption {
     outline: 1px solid black;
     width: 98%;
     margin: 10px 0px 0px 15px;
-    max-height: 950px;
+    height: 70%;
     outline: 1px solid rgb(0, 0, 0);
 }
 
@@ -241,7 +255,7 @@ h2.newProductbar {
     margin-left: auto;
     margin-right: auto;
     height: auto;
-    width: 360px;
+    width: 260px;
     max-width: 100%;
     /* outline: 10px solid orange; */
 }
@@ -251,13 +265,14 @@ h2.newProductbar {
     margin-left: auto;
     margin-right: auto;
     height: auto;
-    width: 360px;
+    width: 260px;
     max-width: 100%;
     /* outline: 10px solid orange; */
 }
 
 .itemName {
     font-size: 30px;
+    margin: 5px;
     /* font-weight: bold; */
 }
 
@@ -267,7 +282,7 @@ h2.newProductbar {
     justify-content: center;
     gap: 10px;
     /* margin: 10px 10px 0px 10px; */
-    height: 100%;
+    height: 30%;
     width: 100%;
     /* outline: 1px solid black; */
 }

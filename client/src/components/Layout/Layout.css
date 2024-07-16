@@ -1,7 +1,6 @@
-/* .main {
-    max-width: 1200px;
-    height: calc(100vh - 74px);
-    margin: auto;
-    overflow-y: scroll;
+.main {
+height: 72%;
+width: 100%;
+/* outline: 10px green solid; */
   }
-   */
+  
