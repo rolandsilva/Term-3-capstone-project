@@ -1,7 +1,7 @@
 /* .main {
     max-width: 1200px;
 } */
-.maincontainer {
+.homepagemaincontainer {
     display: flex;
     /* max-width: 1200px; */
     flex-direction: row;

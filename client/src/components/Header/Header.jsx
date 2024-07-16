@@ -37,7 +37,7 @@ function Header() {
         expand="lg"
         style={{ backgroundColor: "#688ac6" }}
       >
-        <Container id="headercontainer" className="custom-container">
+        <Container id="headercontainer">
           <Navbar.Brand className="brandcontainer">
             <Nav.Link as={Link} to={"/"}>
               <div id="headerdiv1">

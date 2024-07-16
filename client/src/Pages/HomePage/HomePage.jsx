@@ -102,7 +102,7 @@ const HomePage = () => {
   // use backend to fetch data from database.
   // console.log(searchParameter);
   return (
-    <div className="maincontainer">
+    <div className="homepagemaincontainer">
       <div className="imagescontainer">
         <div className="homecontainer">
           <div className="featuredproductcontainer">
