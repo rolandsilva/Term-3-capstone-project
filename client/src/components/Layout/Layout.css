@@ -1,6 +1,8 @@
 .main {
-height: 72%;
+height: 76%;
 width: 100%;
-/* outline: 10px green solid; */
+/* outline: red solid 10px;
+z-index: 1000; */
   }
+  /* outline: 10px green solid; */
   

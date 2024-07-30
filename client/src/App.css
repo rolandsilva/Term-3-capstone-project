@@ -1,9 +1,18 @@
 #root {
   width: 100%;
+  /* width: 1600px; */
   margin: 0;
   height: 100vh;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
+
+
+
+/* Replace with your contact icon path */
+
+
 
 /* .logo {
   height: 6em;

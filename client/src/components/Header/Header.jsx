@@ -55,32 +55,33 @@ function Header() {
             >
               <span id="cart">Cart</span>
               <FontAwesomeIcon
-                className=""
+                className="shoppingBagIcon"
                 icon={faShoppingBag}
                 style={{
                   color: "white",
                   marginRight: "25px",
-                  fontSize: "40px",
+                  // fontSize: "40px",
                 }}
               />
               {state.itemCount > 0 && (
-                <Badge
-                  pill
-                  style={{ color: "black" }}
-                  variant="primary"
-                  className="custom-badge"
-                >
+                // <Badge
+                //   pill
+                //   style={{ color: "black" }}
+                //   variant="primary"
+                //   // className="custom-badge"
+                //   id="custom-badge"
+                // >
+                <div id="custom-badge">
                   {state.itemCount}
                   {/* <p className="mb-0">{state.itemCount}</p> */}
-                </Badge>
+                  </div>
+                // </Badge>
               )}
             </Nav.Link>
           </div>
           {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
           <div id="links-navbar">
-            <Nav
-               id="navitems"
-            >
+            <Nav id="navitems">
               {/* {
                 <ToggleButtonGroup 
                   name="currency"
@@ -95,6 +96,10 @@ function Header() {
                   </ToggleButton>
                 </ToggleButtonGroup>
               } */}
+
+              {/*  add div with select box for links, hidden in css  regular css display hidden in media query then in media query display hidden for link container */}
+
+              
               <div className="linkcontainer">
                 <Nav.Link
                   as={Link}

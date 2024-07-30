@@ -3,11 +3,12 @@
     flex-direction: column;
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
-    font-size: 22px;
-    height: 13%;
-    /* height: 200px; */
+    font-size: 18px;
+    height: 12%;
+    /* outline: red solid 5px; */
+
 }
 
 .footer-address {
@@ -15,7 +16,8 @@
     flex-direction: row;
     justify-content: space-between;
     min-width: 100%;
-    margin-bottom: 10px;
+    margin: 0px;
+    /* margin-bottom: 10px; */
 }
 
 .addressContainer {
@@ -23,14 +25,15 @@
     padding: 0;
     min-width: 20%;
     color: #9eaaca;
-    /* background-color: lightblue; */
+
 }
 
 .address-link {
     color: #9eaaca;
     text-decoration: none;
     margin-left: 40px;
-    font-size: 30px;
+    /* padding-top: 10px; */
+    font-size: 23px;
 }
 
 .address-link:hover {
@@ -41,18 +44,18 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* margin-bottom: 20px; */
     align-items: center;
     min-width: 40%;
-    font-size: 18px;
-    /* background-color: lightpink; */
+
+    font-size: 16px;
+
 }
 
 .footer-social-media a {
     color: #fff;
     margin: 0 10px;
     text-decoration: none;
-    font-size: 35px;
+    font-size: 26px;
 }
 
 .footer-links {
@@ -60,7 +63,7 @@
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 10px;
-    font-size: 30px;
+    font-size: 26px;
 }
 
 .footer-links a {
@@ -79,12 +82,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: lightgreen; */
 }
 
 .footer-contact a {
     color: #fff;
-    font-size: 30px;
+    font-size: 26px;
     text-decoration: none;
     display: flex;
     align-items: center;

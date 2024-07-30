@@ -212,6 +212,7 @@ const HomePage = () => {
                     <Link
                       key={product.category}
                       to={`/categories/${product.category}`}
+
                     >
                       <img src={product.image_url} id="macbooks" />
                       <figcaption>{product.category}</figcaption>
