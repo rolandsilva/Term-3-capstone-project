@@ -74,7 +74,7 @@ function Header() {
                 <div id="custom-badge">
                   {state.itemCount}
                   {/* <p className="mb-0">{state.itemCount}</p> */}
-                  </div>
+                </div>
                 // </Badge>
               )}
             </Nav.Link>
@@ -99,15 +99,12 @@ function Header() {
 
               {/*  add div with select box for links, hidden in css  regular css display hidden in media query then in media query display hidden for link container */}
 
-              
               <div className="linkcontainer">
                 <Nav.Link
                   as={Link}
-                  className="d-flex align-items-center"
+                  className="d-flex align-items-center custom-nav-link"
                   to={"/categories/macbooks"}
                   style={{
-                    color: "white",
-                    marginRight: "20px",
                     whiteSpace: "nowrap",
                   }}
                 >
@@ -115,11 +112,9 @@ function Header() {
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
-                  className="d-flex align-items-center"
+                  className="d-flex align-items-center custom-nav-link"
                   to={"/categories/ipads"}
                   style={{
-                    color: "white",
-                    marginRight: "20px",
                     whiteSpace: "nowrap",
                   }}
                 >
@@ -127,11 +122,9 @@ function Header() {
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
-                  className="d-flex align-items-center"
+                  className="d-flex align-items-center custom-nav-link"
                   to={"/categories/airpods"}
                   style={{
-                    color: "white",
-                    marginRight: "20px",
                     whiteSpace: "nowrap",
                   }}
                 >
@@ -139,11 +132,9 @@ function Header() {
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
-                  className="d-flex align-items-center"
+                  className="d-flex align-items-center custom-nav-link"
                   to="/categories/iwatches"
                   style={{
-                    color: "white",
-                    marginRight: "20px",
                     whiteSpace: "nowrap",
                   }}
                 >
@@ -151,11 +142,9 @@ function Header() {
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
-                  className="d-flex align-items-center"
+                  className="d-flex align-items-center custom-nav-link"
                   to={"/categories/macs"}
                   style={{
-                    color: "white",
-                    marginRight: "20px",
                     whiteSpace: "nowrap",
                   }}
                 >
@@ -163,11 +152,9 @@ function Header() {
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
-                  className="d-flex align-items-center"
+                  className="d-flex align-items-center custom-nav-link"
                   to={"/categories/iphones"}
                   style={{
-                    color: "white",
-                    marginRight: "20px",
                     whiteSpace: "nowrap",
                   }}
                 >
@@ -175,11 +162,9 @@ function Header() {
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
-                  className="d-flex align-items-center"
+                  className="d-flex align-items-center custom-nav-link"
                   to={"/categories/imacs"}
                   style={{
-                    color: "white",
-                    marginRight: "20px",
                     whiteSpace: "nowrap",
                   }}
                 >
@@ -187,11 +172,9 @@ function Header() {
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
-                  className="d-flex align-items-center"
+                  className="d-flex align-items-center custom-nav-link"
                   to={"/categories/displays"}
                   style={{
-                    color: "white",
-                    marginRight: "20px",
                     whiteSpace: "nowrap",
                   }}
                 >
@@ -199,17 +182,32 @@ function Header() {
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
-                  className="d-flex align-items-center"
+                  className="d-flex align-items-center custom-nav-link"
                   to={"/categories/accessories"}
                   style={{
-                    color: "white",
-                    marginRight: "20px",
                     whiteSpace: "nowrap",
                   }}
                 >
                   Accessories {">"}
                 </Nav.Link>
               </div>
+
+              {/* Dropdown for Small Devices */}
+              <div className="link-dropdown">
+                <select id="nav-select" onchange="navigateToPage(this)">
+                  <option value="/">Select Category</option>
+                  <option value="/categories/macbooks">MacBooks</option>
+                  <option value="/categories/ipads">iPads</option>
+                  <option value="/categories/airpods">AirPods</option>
+                  <option value="/categories/iwatches">iWatches</option>
+                  <option value="/categories/macs">Macs</option>
+                  <option value="/categories/iphones">iPhones</option>
+                  <option value="/categories/imacs">iMacs</option>
+                  <option value="/categories/displays">Displays</option>
+                  <option value="/categories/accessories">Accessories</option>
+                </select>
+              </div>
+
               <div
                 className="cartdiv"
                 style={{ display: "flex", marginLeft: "10px" }}
@@ -221,7 +219,8 @@ function Header() {
                       as={Link}
                       className="d-flex align-items-center custom-login"
                       to={"/"}
-                      style={{ color: "lightblue", marginRight: "20px" }}
+                      style={{ color: "lightblue", 
+                        marginRight: "20px" }}
                       onClick={logout}
                     >
                       LogOut
@@ -230,7 +229,8 @@ function Header() {
                       as={Link}
                       className="d-flex align-items-center custom-login"
                       to={"/account"}
-                      style={{ color: "lightblue", marginRight: "20px" }}
+                      style={{ color: "lightblue",
+                         marginRight: "20px" }}
                     >
                       Account
                     </Nav.Link>
@@ -242,7 +242,10 @@ function Header() {
                       as={Link}
                       className="d-flex align-items-center custom-login"
                       to={"/login"}
-                      style={{ color: "lightblue", marginRight: "20px" }}
+                      style={{ color: "red", 
+                        padding: "0px", 
+                        marginRight: "20px" }}
+
                     >
                       Login
                     </Nav.Link>
@@ -250,7 +253,9 @@ function Header() {
                       as={Link}
                       className="d-flex align-items-center custom-login"
                       to={"/register"}
-                      style={{ color: "lightblue", marginRight: "20px" }}
+                      style={{ color: "lightgreen", 
+                        padding: "0px", 
+                        marginRight: "20px" }}
                     >
                       Register
                     </Nav.Link>
