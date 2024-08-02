@@ -20,9 +20,9 @@ function CartItem({ item }) {
         <Row className="mb-4 align-items-center">
           <Col xs="9">
             <div className="d-flex gap-2 align-items-center">
-              <Image
+              <img
                 id="cartitemimage"
-                className="item-image"
+                className="img-fluid"
                 //  className="item-image mr-2 w-50 h-25"
                 src={`${item.image_url}`}
               />
@@ -32,7 +32,7 @@ function CartItem({ item }) {
                 className="item-link one-line-ellipsis"
                 onClick={closeSidebar}
               >
-                <h4>{item.name}</h4>
+                <h5>{item.name}</h5>
               </Link>
             </div>
           </Col>
@@ -49,15 +49,15 @@ function CartItem({ item }) {
         </Row>
         <Row className="mb-2 align-items-center">
           <Col xs="8">
-            <p className="item-label">price</p>
+            <p className="fs-3">price</p>
           </Col>
           <Col xs="4" className="d-flex justify-content-end">
-            <p className="price item-value">{` ${"$"} ${item.price}`}</p>
+            <p className="fs-3">{` ${"$"} ${item.price}`}</p>
           </Col>
         </Row>
         <Row className="mb-2 align-items-center">
           <Col xs="8">
-            <p className="item-label">quantity</p>
+            <p className="fs-3">quantity</p>
           </Col>
           <Col xs="4" className="d-flex justify-content-end">
             <ItemCounter item={item} />
