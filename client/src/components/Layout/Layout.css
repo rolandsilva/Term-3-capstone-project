@@ -1,8 +1,14 @@
 .main {
-height: 76%;
-width: 100%;
-/* outline: red solid 10px;
+  min-height: 76%;
+  width: 100%;
+  /* overflow: auto; */
+  /* outline: red solid 10px;
 z-index: 1000; */
-  }
-  /* outline: 10px green solid; */
-  
+}
+
+.footerdiv {
+  height: 10%;
+  ;
+}
+
+/* outline: 10px green solid; */
